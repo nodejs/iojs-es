@@ -1,10 +1,11 @@
-> NOTE: this, as is, would appreciate revision
+> NOTE: this, as is at the moment, would really appreciate revision
 
 # Glossary
 [a](#a) -
 [b](#b) -
 [c](#c) -
 [d](#d) -
+[e](#e) -
 [f](#f) -
 [g](#g) -
 [h](#h) -
@@ -34,5 +35,4 @@ some consistence, here you can find a glossary.
  * debug: depurar
 
 #f
-
  * flag: flag
