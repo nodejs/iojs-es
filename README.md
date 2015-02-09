@@ -14,12 +14,17 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new) con el título *Trad
 - Adrián Estrada ([@edsadr](https://github.com/edsadr))
 - Alexander Ramirez ([@RamirezAlex](https://github.com/RamirezAlex))
 - Johan Hernandez ([@bithavoc](https://github.com/bithavoc))
-- Javier Carrillo ([@stringparser](https://github.com/stringparser))
+- David Ayala ([@dayalav](https://github.com/dayalav))
+- Omar López ([@omarloren](https://github.com/omarloren))
 - Alejandro Oviedo ([@a0viedo](https://github.com/a0viedo))
+- Javier Carrillo ([@stringparser](https://github.com/stringparser))
+- Albert Razquin  ([@raxkin](https://github.com/raxkin))
+- David Sánchez ([@juanda95](https://github.com/juanda95))
+- luigi ([@007lva](https://github.com/007lva))
 - Eduardo Sorribas ([@sorribas](https://github.com/sorribas))
 - Sergio Lepore ([@sergiolepore](https://github.com/sergiolepore))
+- eafelix ([@eafelix](https://github.com/eafelix))
 - Esteban Beltran ([@academo](https://github.com/academo))
-- Omar López ([@omarloren](https://github.com/omarloren))
 
 ## En Redes Sociales
 
