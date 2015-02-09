@@ -12,6 +12,9 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new) con el título *Cola
 - Alexander Ramirez ([@RamirezAlex](https://github.com/RamirezAlex))
 - Johan Hernandez ([@bithavoc](https://github.com/bithavoc))
 - Javier Carrillo ([@stringparser](https://github.com/stringparser))
+- Alejandro Oviedo ([@a0viedo](https://github.com/a0viedo))
+- Eduardo Sorribas ([@sorribas](https://github.com/sorribas))
+- Sergio Lepore ([@sergiolepore](https://github.com/sergiolepore))
 
 ## En Redes Sociales
 
