@@ -1,7 +1,8 @@
 # iojs-es
-Localización y traducción de [io.js](https://iojs.org/) a Español
 
 [![Gitter chat](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/iojs/iojs-es)
+
+Localización y traducción de [io.js](https://iojs.org/) a Español
 
 ## ¿Quieres colaborar?
 Abre un [issue](https://github.com/iojs/iojs-es/issues/new) con el título *Colaborador* y cuéntanos acerca de ti.
