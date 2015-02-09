@@ -7,6 +7,9 @@ Localización y traducción de [io.js](https://iojs.org/) a Español
 ## ¿Quieres colaborar?
 Abre un [issue](https://github.com/iojs/iojs-es/issues/new) con el título *Colaborador* y cuéntanos acerca de ti.
 
+## ¿Quieres ayudarnos a traducir?
+Abre un [issue](https://github.com/iojs/iojs-es/issues/new) con el título *Traductor* y te indicaremos los documentos que están pendientes de traducción o revisión.
+
 ## Colaboradores
 - Adrián Estrada ([@edsadr](https://github.com/edsadr))
 - Alexander Ramirez ([@RamirezAlex](https://github.com/RamirezAlex))
