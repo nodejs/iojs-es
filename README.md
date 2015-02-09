@@ -15,6 +15,7 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new) con el título *Cola
 - Alejandro Oviedo ([@a0viedo](https://github.com/a0viedo))
 - Eduardo Sorribas ([@sorribas](https://github.com/sorribas))
 - Sergio Lepore ([@sergiolepore](https://github.com/sergiolepore))
+- Esteban Beltran ([@academo](https://github.com/academo))
 
 ## En Redes Sociales
 
