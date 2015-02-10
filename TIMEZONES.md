@@ -14,4 +14,6 @@ Colaborators by [time zone][x-timeZoneList]
 
 [u-stringparser]: http://github.com/stringparser
 [u-sergiolepore]: https://github.com/sergiolepore
+[u-academo]: https://github.com/academo
+[u-edsadr]: https://github.com/edsadr
 [x-timeZoneList]: http://en.wikipedia.org/wiki/List_of_time_zones_by_country
