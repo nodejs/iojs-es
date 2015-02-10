@@ -29,6 +29,8 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new) con el título *Trad
 ## En Redes Sociales
 
 - [https://www.facebook.com/iojses](https://www.facebook.com/iojses)
+- [https://medium.com/@es_iojs](https://medium.com/@es_iojs)
+- [https://twitter.com/es_iojs](https://twitter.com/es_iojs)
 
 ## The MIT License (MIT)
 
