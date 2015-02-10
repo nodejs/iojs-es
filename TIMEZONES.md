@@ -7,6 +7,7 @@ Colaborators by [time zone][x-timeZoneList]
 - [academo][u-academo], Medellín Colombia UTC−05:00
 - [edsadr][u-edsadr], Medellín Colombia UTC−05:00
 - [RamirezAlex][u-ramirezalex], Medellín Colombia UTC-05:00
+- [juanda95][u-juanda95], Medellin Colombia UTC−05:00
 
 <!--
   u- is for user
@@ -18,4 +19,5 @@ Colaborators by [time zone][x-timeZoneList]
 [u-academo]: https://github.com/academo
 [u-edsadr]: https://github.com/edsadr
 [u-ramirezalex]: http://github.com/RamirezAlex
+[u-juanda95]: https://github.com/juanda95
 [x-timeZoneList]: http://en.wikipedia.org/wiki/List_of_time_zones_by_country
