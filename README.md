@@ -23,7 +23,7 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new) con el título *Trad
 - Luigi Vargas ([@007lva](https://github.com/007lva))
 - Eduardo Sorribas ([@sorribas](https://github.com/sorribas))
 - Sergio Lepore ([@sergiolepore](https://github.com/sergiolepore))
-- eafelix ([@eafelix](https://github.com/eafelix))
+- Felix Enriquez ([@eafelix](https://github.com/eafelix))
 - Esteban Beltran ([@academo](https://github.com/academo))
 
 ## En Redes Sociales
