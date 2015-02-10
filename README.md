@@ -20,7 +20,7 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new) con el título *Trad
 - Javier Carrillo ([@stringparser](https://github.com/stringparser))
 - Albert Razquin  ([@raxkin](https://github.com/raxkin))
 - David Sánchez ([@juanda95](https://github.com/juanda95))
-- luigi ([@007lva](https://github.com/007lva))
+- Luigi Vargas ([@007lva](https://github.com/007lva))
 - Eduardo Sorribas ([@sorribas](https://github.com/sorribas))
 - Sergio Lepore ([@sergiolepore](https://github.com/sergiolepore))
 - eafelix ([@eafelix](https://github.com/eafelix))
