@@ -7,6 +7,7 @@ Colaborators by [time zone][x-timeZoneList]
 - [a0viedo][u-a0viedo], Buenos Aires UTC−03:00 (ART)
 - [eafelix][u-eafelix], Buenos Aires UTC−03:00 (ART)
 - [sergiolepore][u-sergiolepore], Córdoba Argentina UTC−03:00 (ART)
+- [ipeluffo][u-ipeluffo], Bahía Blanca Argentina UTC−03:00 (ART)
 - [julianduque][u-julianduque], Medellín Colombia UTC−05:00
 - [academo][u-academo], Medellín Colombia UTC−05:00
 - [edsadr][u-edsadr], Medellín Colombia UTC−05:00
@@ -28,4 +29,5 @@ Colaborators by [time zone][x-timeZoneList]
 [u-ramirezalex]: http://github.com/RamirezAlex
 [u-juanda95]: https://github.com/juanda95
 [u-dayalav]: https://github.com/dayalav
+[u-ipeluffo]: https://github.com/ipeluffo
 [x-timeZoneList]: http://en.wikipedia.org/wiki/List_of_time_zones_by_country
