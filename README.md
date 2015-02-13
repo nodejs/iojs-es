@@ -25,6 +25,9 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new) con el título *Trad
 - Sergio Lepore ([@sergiolepore](https://github.com/sergiolepore))
 - Felix Enriquez ([@eafelix](https://github.com/eafelix))
 - Esteban Beltran ([@academo](https://github.com/academo))
+- Fernando Cea ([@krosti](https://github.com/krosti))
+- Jose Alvarez ([@benoror](https://github.com/benoror))
+- Richard Cotrina ([@rcotrina94](https://github.com/rcotrina94))
 
 ## En Redes Sociales
 
