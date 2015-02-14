@@ -6,13 +6,13 @@ La versión 1.1.0 de io.js utiliza V8 4.1.0.14, que incluye las mejoras de ES6 s
 
 ## No más --harmony flag
 
-En joyent/node@0.12.x (V8 3.26), la flag `--harmony` habilita todas las mejoras **completed**, **staged** e **in progress** de ES6, en una sola (con la excepción de los semánticos non-standard/non-harmonious para `typeof` el cuál esta oculto bajo  `--harmony-typeof`).  Esto significaba que algunas mejoras experimentales o incluso dañadas cómo [proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy) estaban tan fácilmente disponibles para los desarrolladores como [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*), lo cual traía muy pocos o casi nulos problemas conocidos. Así, era mejor práctica habilitar sólo algunas mejoras usando flags harmony específicas (ej. `--harmony-generators`), o simplemente habilitarlas todas y después restringirlas una por una.
+En joyent/node@0.12.x (V8 3.26), la flag `--harmony` habilita todas las mejoras **completed**, **staged** e **in progress** de ES6, en una sola (con la excepción de los semánticos non-standard/non-harmonious para `typeof` el cuál está oculto bajo  `--harmony-typeof`).  Esto significaba que algunas mejoras experimentales o incluso dañadas, como [proxies](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Proxy), estaban tan fácilmente disponibles para los desarrolladores como [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*), lo cual traía muy pocos o casi nulos problemas conocidos. Así, era mejor práctica habilitar sólo algunas mejoras usando flags harmony específicas (ej. `--harmony-generators`), o simplemente habilitarlas todas y después restringirlas una por una.
 
 Con  io.js@1.x (V8 4.1+), toda la complejidad queda eliminada. Todas las mejoras harmony están ahora equitativamente separadas en tres grupos: **shipping**, **staged** e **in progress**.
 
 Todas las mejoras **shipping**, las que el equipo de V8 consideran estables, como [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*), [templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings), [nuevos métodos de  string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla#Additions_to_the_String_object) y muchas más están **disponibles por defecto en io.js** y **NO** requieren ningún tipo de configuración.
 * Y están las funcionalidades **staged** que son funcionalidades casi completas que no han sido totalmente probadas o actualizadas a la última especificación todavía y no son consideradas estables por el equipo de V8 (ej. podría haber algunos casos raros por descubrir). Este es probablemente el equivalente al estado de los [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*) en 3.26. Estas son las funcionalidades del tipo "use at your own risk" (usar bajo tu responsabilidad) que requieren una flag: `--es_staging` (o su sinónimo, `--harmony`).
-* Finalmente, todas la funcionalidades **in progress** se pueden activar individualmente por su respectiva harmony flag (ejemplo: `--harmony_arrow_functions`), aunque esto está no es recomendado a menos que sea para pruebas.
+* Finalmente, todas la funcionalidades **in progress** se pueden activar individualmente por su respectiva harmony flag (ejemplo: `--harmony_arrow_functions`), aunque esto no está recomendado a menos que sea para pruebas.
 
 ## ¿Qué características de ES6 vienen con io.js por defecto (no es necesaria la runtime flag)?
 
@@ -47,7 +47,7 @@ Todas las mejoras **shipping**, las que el equipo de V8 consideran estables, com
 
 * [Template strings](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings)
 
-Puedes ver una lista más detallada, incluyendo la comparación con otros motores, en la página del proyecto [compat-table](https://kangax.github.io/compat-table/es6/)
+Puedes ver una lista más detallada, incluyendo la comparación con otros motores, en la página del proyecto [compat-table](https://kangax.github.io/compat-table/es6/).
 
 ## ¿Qué funcionales de ES6 están detrás de la --es_staging flag?
 
