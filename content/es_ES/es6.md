@@ -10,8 +10,8 @@ En joyent/node@0.12.x (V8 3.26), la flag `--harmony` habilita todas las mejoras 
 
 Con  io.js@1.x (V8 4.1+), toda la complejidad queda eliminada. Todas las mejoras harmony están ahora equitativamente separadas en tres grupos: **shipping**, **staged** e **in progress**.
 
-Todas las mejoras **shipping**, las que el equipo de V8 consideran estables, como [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*), [templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings), [nuevos métodos de  string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla#Additions_to_the_String_object) y muchas más están **disponibles por defecto en io.js** y **NO** requieren ningún tipo de configuración.
-* Y están las funcionalidades **staged** que son funcionalidades casi completas que no han sido totalmente probadas o actualizadas a la última especificación todavía y no son consideradas estables por el equipo de V8 (ej. podría haber algunos casos raros por descubrir). Este es probablemente el equivalente al estado de los [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*) en 3.26. Estas son las funcionalidades del tipo "use at your own risk" (usar bajo tu responsabilidad) que requieren una flag: `--es_staging` (o su sinónimo, `--harmony`).
+* Todas las mejoras **shipping**, las que el equipo de V8 considera estables, como [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*), [templates](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/template_strings), [nuevos métodos de  string](https://developer.mozilla.org/en-US/docs/Web/JavaScript/New_in_JavaScript/ECMAScript_6_support_in_Mozilla#Additions_to_the_String_object) y muchas más están **disponibles por defecto en io.js** y **NO** requieren ningún tipo de configuración.
+* Luego están las funcionalidades **staged** que son funcionalidades casi completas que no han sido totalmente probadas o actualizadas a la última especificación todavía y no son consideradas estables por el equipo de V8 (ej. podría haber algunos casos raros por descubrir). Este es probablemente el equivalente al estado de los [generators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/function*) en 3.26. Estas son las funcionalidades del tipo "use at your own risk" (usar bajo tu responsabilidad) que requieren una flag: `--es_staging` (o su sinónimo, `--harmony`).
 * Finalmente, todas la funcionalidades **in progress** se pueden activar individualmente por su respectiva harmony flag (ejemplo: `--harmony_arrow_functions`), aunque esto no está recomendado a menos que sea para pruebas.
 
 ## ¿Qué características de ES6 vienen con io.js por defecto (no es necesaria la runtime flag)?
@@ -49,7 +49,7 @@ Todas las mejoras **shipping**, las que el equipo de V8 consideran estables, com
 
 Puedes ver una lista más detallada, incluyendo la comparación con otros motores, en la página del proyecto [compat-table](https://kangax.github.io/compat-table/es6/).
 
-## ¿Qué funcionales de ES6 están detrás de la --es_staging flag?
+## ¿Qué funcionalidades de ES6 están detrás de la --es_staging flag?
 
 * [Clases](https://github.com/lukehoban/es6features#classes) (sólo en strict mode)
 * [Object literal extensions](https://github.com/lukehoban/es6features#enhanced-object-literals)
@@ -58,7 +58,7 @@ Puedes ver una lista más detallada, incluyendo la comparación con otros motore
 
 ## Tengo mi infraestructura configurada para hacer uso de la `--harmony` flag  ¿Debo eliminarla?
 
-El comportamiento actual de `--harmony` flag en io.js es el de sólo activar funcionalidades **staged**. Después de todo, es ahora un sinónimo de `--es_staging`.  Como se mencionó anteriormente, estas son funcionalidades completadas que no han sido consideradas estables todavía. Si quieres ir por lo seguro, especialmente en entornos de producción, considera no utilizar esta flag hasta que venga por defecto en V8 y, consecuentemente, en io.js. Si la mantienes activada, debes prepararte para que actualizaciones futuras de io.js rompan tu código en caso que V8 cambie su semántica a siguiendo de forma mas cercana el estándar.
+El comportamiento actual de `--harmony` flag en io.js es el de sólo activar funcionalidades **staged**. Después de todo, es ahora un sinónimo de `--es_staging`.  Como se mencionó anteriormente, estas son funcionalidades completadas que no han sido consideradas estables todavía. Si quieres ir por lo seguro, especialmente en entornos de producción, considera no utilizar esta flag hasta que venga por defecto en V8 y, consecuentemente, en io.js. Si la mantienes activada, debes prepararte para que actualizaciones futuras de io.js rompan tu código en caso que V8 cambie su semántica para seguir de forma más cercana el estándar.
 
 ## ¿Cómo determino la versión de V8 que se distribuye con una versión en particular de io.js?
 
