@@ -10,6 +10,12 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Colaborador) co
 ## ¿Quieres ayudarnos a traducir?
 Abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Traductor) con el título *Traductor* y te indicaremos los documentos que están pendientes de traducción o revisión.
 
+## En Redes Sociales
+
+- [https://twitter.com/iojs_es](https://twitter.com/iojs_es)
+- [https://medium.com/@iojs_es](https://medium.com/@iojs_es)
+- [https://www.facebook.com/iojses](https://www.facebook.com/iojses)
+
 ## Colaboradores
 - Adrián Estrada ([@edsadr](https://github.com/edsadr))
 - Alexander Ramirez ([@RamirezAlex](https://github.com/RamirezAlex))
@@ -30,12 +36,6 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Traductor) con 
 - Richard Cotrina ([@rcotrina94](https://github.com/rcotrina94))
 - Ignacio Peluffo ([@ipeluffo](https://github.com/ipeluffo))
 - Sergio Flores ([@byoigres](https://github.com/byoigres))
-
-## En Redes Sociales
-
-- [https://www.facebook.com/iojses](https://www.facebook.com/iojses)
-- [https://medium.com/@iojs_es](https://medium.com/@iojs_es)
-- [https://twitter.com/iojs_es](https://twitter.com/iojs_es)
 
 ## The MIT License (MIT)
 
