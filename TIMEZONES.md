@@ -13,6 +13,7 @@ Colaborators by [time zone][x-timeZoneList]
 - [edsadr][u-edsadr], Medellín Colombia UTC−05:00
 - [RamirezAlex][u-ramirezalex], Medellín Colombia UTC-05:00
 - [juanda95][u-juanda95], Medellin Colombia UTC−05:00
+- [vrunoa][u-vrunoa], Rosario Argentina UTC−03:00 (ART)
 
 <!--
   u- is for user
@@ -30,4 +31,5 @@ Colaborators by [time zone][x-timeZoneList]
 [u-juanda95]: https://github.com/juanda95
 [u-dayalav]: https://github.com/dayalav
 [u-ipeluffo]: https://github.com/ipeluffo
+[u-vrunoa]: https://github.com/vrunoa
 [x-timeZoneList]: http://en.wikipedia.org/wiki/List_of_time_zones_by_country
