@@ -1,14 +1,13 @@
 ### Como io.js construyó un esfuerzo de traducción con 146 personas, 27 idiomas... en un día.
 
-Si le pides a una comunidad que lo construyan, lo harán.
+Si le pides a una comunidad que lo construyan, ellos vendran.
 
 En mi primer viaje a Korea me quedé estupefacto al darme cuenta que, no solo existía una **inmensa** comunidad de Node en Korea, sino además habían construido su propia red de soporte y recursos de los que no teníamos ni idea. Hasta ahora, es así cómo la importante comunidad multi-idioma ha funcionado, creando silos para apoyar sus comunidades locales.
 
 ![@isaacs, @mikeal and the play(node) organizers, Seoul, Korea, Fall of 2012](https://d262ilb51hltx0.cloudfront.net/max/1014/1*dgwsAsTXAJsvYBOdo1KZaw.png)
 
-Lo que quería hacer en lugar de Parte de la visión de io.js es un proyecto que pueda crecer y florecer a través de una comunidad que contribuya y maneje cada parte del proyecto. Cuando llegó el momento de crear un equipo de traducción, no sólo quería estructurar grupos que tradujeran un website y algo de documentación.
-
-En lugar de eso, quería crear un espacio para que los miembros de la comunidad se ayudaran los unos a otros en el lenguaje de su elección. Ellos pueden usar ese espacio no solo para traducir documentos sino para dar soporte a sus comunidades locales y conectar esa comunidad con el proyecto. En io.js tenemos esfuerzos colaborativos abiertos que se encargan de la evangelización, redes sociales e incluso nuestra hoja de ruta ¿Por qué no dejar a las comunidades no anglo-parlantes ser parte de eso?
+Parte de la visión de io.js es un proyecto que pueda crecer y florecer a través de una comunidad que contribuya y maneje cada parte del proyecto. Cuando llegó el momento de crear un equipo de traducción, no sólo quería estructurar grupos que tradujeran un website y algo de documentación. En lugar de eso, quería crear un espacio para que los miembros de la comunidad se ayudaran los unos a otros en el lenguaje de su elección. Ellos pueden usar ese espacio no solo para traducir documentos sino
+para dar soporte a sus comunidades locales y conectar esa comunidad con el proyecto. En io.js tenemos esfuerzos colaborativos abiertos que se encargan de la evangelización, redes sociales e incluso nuestra hoja de ruta ¿Por qué no dejar a las comunidades no anglo-parlantes ser parte de eso?
 
 ### ¡Vaya Sábado!
 
