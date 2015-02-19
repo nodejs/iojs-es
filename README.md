@@ -36,6 +36,7 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Traductor) con 
 - Richard Cotrina ([@rcotrina94](https://github.com/rcotrina94))
 - Ignacio Peluffo ([@ipeluffo](https://github.com/ipeluffo))
 - Sergio Flores ([@byoigres](https://github.com/byoigres))
+- Julian Duque ([@julianduque](https://github.com/julianduque))
 
 ## The MIT License (MIT)
 

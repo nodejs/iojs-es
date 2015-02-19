@@ -31,6 +31,12 @@
 In some cases the word depending on the person will vary its translation, to add
 some consistence, here you can find a glossary.
 
+#a
+ * array: [arreglo/vector](http://es.wikipedia.org/wiki/Vector_(inform%C3%A1tica))
+
+#b
+ * boolean: [booleano](http://es.wikipedia.org/wiki/Tipo_de_dato_l%C3%B3gico)
+
 #d
  * debug: depurar
 
