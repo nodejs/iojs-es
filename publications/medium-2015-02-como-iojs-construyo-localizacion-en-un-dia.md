@@ -1,10 +1,10 @@
 ### Como io.js construyó un esfuerzo de traducción con 146 personas, 27 idiomas... en un día.
 
-Si le pides a una comunidad que lo construyan, ellos vendran.
+Si le pides a una comunidad que lo construyan, ellos vendrán.
 
 En mi primer viaje a Korea me quedé estupefacto al darme cuenta que, no solo existía una **inmensa** comunidad de Node en Korea, sino además habían construido su propia red de soporte y recursos de los que no teníamos ni idea. Hasta ahora, es así cómo la importante comunidad multi-idioma ha funcionado, creando silos para apoyar sus comunidades locales.
 
-![@isaacs, @mikeal and the play(node) organizers, Seoul, Korea, Fall of 2012](https://d262ilb51hltx0.cloudfront.net/max/1014/1*dgwsAsTXAJsvYBOdo1KZaw.png)
+![@isaacs, @mikeal y los organizadores del play(node), Seoul, Korea, Otoño de 2012](https://d262ilb51hltx0.cloudfront.net/max/1014/1*dgwsAsTXAJsvYBOdo1KZaw.png)
 
 Parte de la visión de io.js es un proyecto que pueda crecer y florecer a través de una comunidad que contribuya y maneje cada parte del proyecto. Cuando llegó el momento de crear un equipo de traducción, no sólo quería estructurar grupos que tradujeran un website y algo de documentación. En lugar de eso, quería crear un espacio para que los miembros de la comunidad se ayudaran los unos a otros en el lenguaje de su elección. Ellos pueden usar ese espacio no solo para traducir documentos sino
 para dar soporte a sus comunidades locales y conectar esa comunidad con el proyecto. En io.js tenemos esfuerzos colaborativos abiertos que se encargan de la evangelización, redes sociales e incluso nuestra hoja de ruta ¿Por qué no dejar a las comunidades no anglo-parlantes ser parte de eso?
@@ -21,11 +21,11 @@ Cada persona que se apuntó comentando en el issue fue agregada a un equipo de s
 
 También les pedí que crearan una cuenta en Twitter para su idioma y cualquier otra red social que fuera relevante para en su comunidad. io.js ha tenido mucho éxito usando redes sociales para atraer contribuidores y atención a los issues principales y también las hemos usado para hablar de nuestro éxito para mantener a las personas con entusiasmo y motivación. El objetivo era tratar y producir un éxito similar en otros idiomas y claramente ampliar el alcance de estos equipos de "traductores" a "organizadores de comunidades".
 
-Como último paso, animé a estos equipos a que crearan un nuevo issue para traducir la última [actualización semanal de io.js](https://medium.com/node-js-javascript/io-js-week-of-february-6th-2015-e185388549a4). Esto fue un pequeño empujón para comenzar el proceso con el que estos grupos definirían y dividirían el trabajo. Algunas de las comunidades mas rápidas inmediatamente se pisaron un poco los unos a los otros, con más de una persona traduciendo las mismas cosas al mismo tiempo. Por supuesto esto lo resolvieron rápidamente, y debido a que trabajaron en el proceso con el cual iban colaborar ellos mismos, ahora tienen un mejor sentimiento de pertenencia sobre el mismo que si yo o alguien más le hubiera dado dicho proceso.
+Como último paso, animé a estos equipos a que crearan un nuevo issue para traducir la última [actualización semanal de io.js](https://medium.com/@iojs_es/io-js-semana-del-6-de-febrero-a4ee0fe487a3). Esto fue un pequeño empujón para comenzar el proceso con el que estos grupos definirían y dividirían el trabajo. Algunas de las comunidades mas rápidas inmediatamente se pisaron un poco los unos a los otros, con más de una persona traduciendo las mismas cosas al mismo tiempo. Por supuesto esto lo resolvieron rápidamente, y debido a que trabajaron en el proceso con el cual iban colaborar ellos mismos, ahora tienen un mejor sentimiento de pertenencia sobre el mismo que si yo o alguien más le hubiera dado dicho proceso.
 
 El verdadero regalo era ver lo que la gente hacía sin tener ninguna instrucción al respecto. Antes de terminar el día, la gente estaba traduciendo la web, añadiendo más colaboradores, creando cuentas de correo compartidas, y añadiendo diferentes estrategias para compartir las credenciales de cuentas entre los miembros del equipo.
 
-![Primera charla JS desde debajo del agua! JSConf.asia 2013, Filipinas](https://d262ilb51hltx0.cloudfront.net/max/1737/1*sfXB3BWvgQEmzEEw8Y_sjg.png)
+![¡Primera charla deJS bajo el agua! JSConf.asia 2013, Filipinas](https://d262ilb51hltx0.cloudfront.net/max/1737/1*sfXB3BWvgQEmzEEw8Y_sjg.png)
 
 #### Idioma vs. Ubicación
 
