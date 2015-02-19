@@ -10,16 +10,14 @@ Esfuerzo de localización para 29 idiomas, publicación de 1.2.0, y mucho más.
 El 13 de Febrero, io.js llegó al objetivo de 10,000 estrellas en GitHub. No podríamos haber hecho esto sin el soporte de la increíble comunidad tras JavaScript ¡Gracias a todos!
 
 ## Publicado io.js 1.2.0
-* **stream**: Construcción más simple para stream ([readable-stream/issues#102](https://github.com/iojs/readable-stream/issues/102))
-* **dns**: `lookup()` ahora soporta una opción boolean 'all', por defecto false pero cuando es activadada hará a este método devolver un array de todos los nombres resueltos para una dirección, véase, ([iojs/pull#744](https://github.com/iojs/io.js/pull/744))
-* **assert**: Elimina la propiedad prototype para comparación en `deepEqual()` (https://github.com/iojs/io.js/pull/636); introduce un método deepStrictEqual() para comparar deepEqual() pero hace igualdad estricta en primitivas (https://github.com/iojs/io.js/pull/639).
+* **stream**: [Construcción más simple para stream](https://github.com/iojs/readable-stream/issues/102)
+* **dns**: [`lookup()` ahora soporta una opción boolean 'all', por defecto false pero cuando es activadada hará a este método devolver un array de todos los nombres resueltos para una dirección](https://github.com/iojs/io.js/pull/744).
+* **assert**: Elimina la propiedad prototype para [comparación en `deepEqual()`](https://github.com/iojs/io.js/pull/636) e introduce un método `deepStrictEqual()` para [comparar `deepEqual()`](https://github.com/iojs/io.js/pull/639) pero hace igualdad estricta en primitivas.
+* **tracing**: [Añadir LTTng (Linux Trace Toolkit Next Generation) cuando se compila con `--with-lttng opción`. Los puntos Trace coinciden con los aquellos disponibles para DTrace y ETW](https://github.com/iojs/io.js/pull/702).
 * **docs**: Gran actualización de documentación, véase commits individuales; nueva página de Errores estudiando errores en JavaScript, temas específicos de V8, y detalles específicos a errores con io.js.
-* **tracing**: Añadir [LTTng](http://lttng.org/) (Linux Trace Toolkit Next Generation) cuando se compila con `--with-lttng opción`. Los puntos Trace coinciden con los aquellos disponibles para DTrace y ETW. ([iojs/issues#702](https://github.com/iojs/io.js/pull/702))
 * **npm** actualización a 2.5.1
 * **libuv** actualización a 1.4.0, véase libuv [ChangeLog](https://github.com/libuv/libuv/blob/v1.x/ChangeLog)
-* Añadir nuevos colaboradores:
-  * Aleksey Smolenchuk (@lxe)
-  * Shigeki Ohtsu (@shigeki)
+* Añadir nuevos colaboradores: Aleksey Smolenchuk ([@lxe](https://github.com/lxe)), Shigeki Ohtsu ([@shigeki](https://github.com/shigeki))
 
 ## Abrió nuestras puertas a la communidad internacional
 Véase el [artículo original](https://medium.com/@mikeal/how-io-js-built-a-146-person-27-language-localization-effort-in-one-day-65e5b1c49a62) en Medium.
