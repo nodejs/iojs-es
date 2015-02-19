@@ -8,10 +8,10 @@ El 13 de Febrero, io.js llegó al objetivo de 10,000 estrellas en GitHub. No pod
 
 ## Publicado io.js 1.2.0
 * **stream**: Construcción más simple para stream ([readable-stream/issues#102](https://github.com/iojs/readable-stream/issues/102))
-* **dns**: `lookup()` ahora soporta una opción boolean 'all', por defecto false pero cuando es activadada hará que a este método devolver un array de todoos los nombre resueltos para una dirección, véase, ([iojs/pull#744](https://github.com/iojs/io.js/pull/744))
+* **dns**: `lookup()` ahora soporta una opción boolean 'all', por defecto false pero cuando es activadada hará a este método devolver un array de todos los nombres resueltos para una dirección, véase, ([iojs/pull#744](https://github.com/iojs/io.js/pull/744))
 * **assert**: Elimina la propiedad prototype para comparación en `deepEqual()` (https://github.com/iojs/io.js/pull/636); introduce un método deepStrictEqual() para comparar deepEqual() pero hace igualdad estricta en primitivas (https://github.com/iojs/io.js/pull/639).
-* **tracing**: Añadir [LTTng](http://lttng.org/) (Linux Trace Toolkit Next Generation) cuando se comipla con `--with-lttng opción`. Los puntos Trace coinciden con los que aquellos disponibles para DTrace y ETW. (([iojs/issues#702](https://github.com/iojs/io.js/pull/702))
 * **docs**: Gran actualización de documentación, véase commits individuales; nueva página de Errores estudiando errores en JavaScript, temas específicos de V8, y detalles específicos a errores con io.js.
+* **tracing**: Añadir [LTTng](http://lttng.org/) (Linux Trace Toolkit Next Generation) cuando se compila con `--with-lttng opción`. Los puntos Trace coinciden con los aquellos disponibles para DTrace y ETW. ([iojs/issues#702](https://github.com/iojs/io.js/pull/702))
 * **npm** actualización a 2.5.1
 * **libuv** actualización a 1.4.0, véase libuv [ChangeLog](https://github.com/libuv/libuv/blob/v1.x/ChangeLog)
 * Añadir nuevos colaboradores:
@@ -19,10 +19,10 @@ El 13 de Febrero, io.js llegó al objetivo de 10,000 estrellas en GitHub. No pod
   * Shigeki Ohtsu (@shigeki)
 
 ## Abrió nuestras puertas a la communidad internacional
-Vease el [artículo original](https://medium.com/@mikeal/how-io-js-built-a-146-person-27-language-localization-effort-in-one-day-65e5b1c49a62) en Medium.
+Véase el [artículo original](https://medium.com/@mikeal/how-io-js-built-a-146-person-27-language-localization-effort-in-one-day-65e5b1c49a62) en Medium.
 * Añadido contribuidores interesados a los equipos de su idioma.
 * Equipos registraron cuentas en Twitter para sus equipos y otras redes sociales de interés.
-* Equipos llevaron a cabo sus propias maneras de trabajar juntos, y se convirtieron más en "organizadores de comunidad", en oposición a sólo "traductores"
+* Equipos llevaron a cabo sus propias maneras de trabajar juntos, y se convirtieron más en "organizadores de comunidad", en oposición a sólo "traductores".
 
 ### Estadísticas por Localizaciones:
 
@@ -62,14 +62,14 @@ Vease el [artículo original](https://medium.com/@mikeal/how-io-js-built-a-146-p
 * [`iojs-uk`](https://github.com/iojs/iojs-uk) Comunidad Ucraniana
 
 ## io.js y Node.js
-Vease el [artículo original](https://medium.com/@iojs/io-js-and-a-node-js-foundation-4e14699fb7be) en Medium.
+Véase el [artículo original](https://medium.com/@iojs/io-js-and-a-node-js-foundation-4e14699fb7be) en Medium.
 * Scott Hammond, CEO de Joyent, expresó su deseo de llevar io.js de vuelta a node.js.
 
 #### En solo unos pocos meses io.js...
 * Ha crecido a 23 miembros activos del equipo core
 * Tiene varios grupos de trabajo
-* Tiene 29 equipos de localización,
-* Ha atraído más contribuidores al projecto que nunca en la historia de node.js, y
+* Tiene 29 equipos de localización
+* Ha atraído más contribuidores al projecto que nunca en la historia de node.js
 * Ha sido capaz de publicar software de calidad a un buen ritmo con el soporte de una comunidad excepcional.
 
 > Estamos impacientes en dejar todo esto tras nosotros pero no podemos sacrificar el progreso que hemos hecho o los principios o gobernación abierta que nos han traído hasta aquí.
@@ -78,12 +78,12 @@ Vease el [artículo original](https://medium.com/@iojs/io-js-and-a-node-js-found
 * Charlas con la fundación node.js están en proceso.
 * Una vez la fundación tenga un modelo de gobernación técnica se podrá ver un issue en la cuenta de GitHub de io.js sobre sobre si io.js debe unirse.
 
-    * Esto será discutido y votado abiertamente en una reunión TC pública seguida de las reglas de gobernación que ya construidas.
+    * Esto será discutido y votado abiertamente en una reunión TC pública seguida de las reglas de gobernación construidas.
 
 > Para la comunidad, nada ha cambiado.
 
-### Que hacer ahora
-* Continua enviando PRs a io.js
+### Qué hacer ahora
+* Continúa enviando PRs a io.js
 * Únete a uno de los 27 [equipos de localización](https://github.com/iojs/website/issues/125)
 * Contribuye a grupos de io.js ([streams](https://github.com/iojs/readable-stream), [website](https://github.com/iojs/website), [evangelism](https://github.com/iojs/website/labels/evangelism), [tracing](https://github.com/iojs/tracing-wg), [build](https://github.com/iojs/build), [roadmap](https://github.com/iojs/roadmap)) y
-* Continua adoptando io.js en tus aplicaciones.
+* Continúa adoptando io.js en tus aplicaciones.
