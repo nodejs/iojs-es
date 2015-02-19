@@ -68,8 +68,8 @@ Véase el [artículo original](https://medium.com/@iojs/io-js-and-a-node-js-foun
 #### En solo unos pocos meses io.js...
 * Ha crecido a 23 miembros activos del equipo core
 * Tiene varios grupos de trabajo
-* Tiene 29 equipos de localización,
-* Ha atraído más contribuidores al projecto que nunca en la historia de node.js, y
+* Tiene 29 equipos de localización
+* Ha atraído más contribuidores al projecto que nunca en la historia de node.js
 * Ha sido capaz de publicar software de calidad a un buen ritmo con el soporte de una comunidad excepcional.
 
 > Estamos impacientes en dejar todo esto tras nosotros pero no podemos sacrificar el progreso que hemos hecho o los principios o gobernación abierta que nos han traído hasta aquí.
@@ -78,7 +78,7 @@ Véase el [artículo original](https://medium.com/@iojs/io-js-and-a-node-js-foun
 * Charlas con la fundación node.js están en proceso.
 * Una vez la fundación tenga un modelo de gobernación técnica se podrá ver un issue en la cuenta de GitHub de io.js sobre sobre si io.js debe unirse.
 
-    * Esto será discutido y votado abiertamente en una reunión TC pública seguida de las reglas de gobernación que ya construidas.
+    * Esto será discutido y votado abiertamente en una reunión TC pública seguida de las reglas de gobernación construidas.
 
 > Para la comunidad, nada ha cambiado.
 
