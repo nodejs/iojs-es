@@ -82,7 +82,7 @@ Véase el [artículo original](https://medium.com/@iojs/io-js-and-a-node-js-foun
 
 > Para la comunidad, nada ha cambiado.
 
-### Que hacer ahora
+### Qué hacer ahora
 * Continúa enviando PRs a io.js
 * Únete a uno de los 27 [equipos de localización](https://github.com/iojs/website/issues/125)
 * Contribuye a grupos de io.js ([streams](https://github.com/iojs/readable-stream), [website](https://github.com/iojs/website), [evangelism](https://github.com/iojs/website/labels/evangelism), [tracing](https://github.com/iojs/tracing-wg), [build](https://github.com/iojs/build), [roadmap](https://github.com/iojs/roadmap)) y
