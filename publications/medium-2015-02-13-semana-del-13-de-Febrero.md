@@ -1,3 +1,6 @@
+## io.js Semana del 13 de Febrero de 2015
+Esfuerzo de localización para 29 idiomas, publicación de 1.2.0, y mucho más.
+
 ## Soporte de io.js añadido por...
 * [Postmark](http://blog.postmarkapp.com/post/110829734198/its-official-were-getting-cozy-with-node-js)
 * [node-serialport](https://github.com/voodootikigod/node-serialport/issues/439)
