@@ -8,7 +8,7 @@ El 13 de Febrero, io.js llegó al objetivo de 10,000 estrellas en GitHub. No pod
 
 ## Publicado io.js 1.2.0
 * **stream**: Construcción más simple para stream ([readable-stream/issues#102](https://github.com/iojs/readable-stream/issues/102))
-* **dns**: `lookup()` ahora soporta una opción boolean 'all', por defecto false pero cuando es activadada hará a este método devolver un array de todos los nombre resueltos para una dirección, véase, ([iojs/pull#744](https://github.com/iojs/io.js/pull/744))
+* **dns**: `lookup()` ahora soporta una opción boolean 'all', por defecto false pero cuando es activadada hará a este método devolver un array de todos los nombres resueltos para una dirección, véase, ([iojs/pull#744](https://github.com/iojs/io.js/pull/744))
 * **assert**: Elimina la propiedad prototype para comparación en `deepEqual()` (https://github.com/iojs/io.js/pull/636); introduce un método deepStrictEqual() para comparar deepEqual() pero hace igualdad estricta en primitivas (https://github.com/iojs/io.js/pull/639).
 * **docs**: Gran actualización de documentación, véase commits individuales; nueva página de Errores estudiando errores en JavaScript, temas específicos de V8, y detalles específicos a errores con io.js.
 * **tracing**: Añadir [LTTng](http://lttng.org/) (Linux Trace Toolkit Next Generation) cuando se compila con `--with-lttng opción`. Los puntos Trace coinciden con los aquellos disponibles para DTrace y ETW. ([iojs/issues#702](https://github.com/iojs/io.js/pull/702))
