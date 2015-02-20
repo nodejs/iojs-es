@@ -4,7 +4,7 @@ Versión 1.3.0, MongoDB, la hoja de ruta y más.
 ## Publicado io.js 1.3.0
 Cambios notables incluídos:
 
-* **url**: `url.resolve('/path/to/file', '.')` ahora retorna `/path/to/` con la barra diagonal, `url.resolve('/', '.')` retorna `/` [#278](https://github.com/iojs/io.js/pull/278) (Amir Saboury)
+* **url**: `url.resolve('/path/to/file', '.')` ahora devuelve `/path/to/` con la barra diagonal, `url.resolve('/', '.')` devuelve `/` [#278](https://github.com/iojs/io.js/pull/278) (Amir Saboury)
 * **tls**: El paquete de cifrado por defecto usado por `tls` y `https` ha sido modificada por una que logra *Perfect Forward Secrecy* (Confidencialidad Directa Perfecta) con todos los navegadores web modernos. Adicionalmente, los cifrados RC4 inseguros fueron excluidos. Si absolutamente requieres RC4, por favor especifica tus propios paquetes de cifrado. [#826](https://github.com/iojs/io.js/pull/826) (Roman Reiss)
 
 ## Eventos Notables en la Comunidad
