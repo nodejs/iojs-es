@@ -11,7 +11,7 @@ Cambios notables incluídos:
 * **Gobierno de Node** - [William Bert](https://twitter.com/williamjohnbert) creó http://nodegovernance.io/ para alertar a Scott Hammond, CEO de Joyent, del deseo de la comunidad de que el modelo de gobierno abierto de io.js sea la base del Comité Técnico de la Fundación Node. La respuesta de la comunidad fue _fantástica_! 
 * **Mejora de Rendimiento de Node.js y io.js** - Raygun.io hizo tests de rendimiento con Node.js y io.js recientemente, y ambos están mejorando el rendimiento en cada versión! [Leer el artículo completo](https://raygun.io/blog/2015/02/node-js-performance-node-js-vs-io-js/).
 * **LTTng Básico** - [LTTing Básico](https://asciinema.org/a/16785) con io.js por el usuario jgalar en asciinema
-* **Diapositivas de la hoja de ruta de io.js** - Diapositivas de la hoja de ruta actual de io.js. 
+* **[Diapositivas de la hoja de ruta de io.js](http://roadmap.iojs.org/)** - Diapositivas de la hoja de ruta actual de io.js. 
 
 ### Soporte Añadido para io.js 
 * [TravisCI](https://travis-ci.org/) agregó io.js. El día que la última actualización semanal fue publicada, Hiro Asari (あさり) [twiteó](https://twitter.com/hiro_asari/status/566268486012633088) que cerca del 10% de los proyectos Node estaban corriendo io.js.
