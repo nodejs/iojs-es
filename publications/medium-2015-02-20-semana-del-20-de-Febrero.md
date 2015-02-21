@@ -5,7 +5,7 @@ Versión 1.3.0, MongoDB, la hoja de ruta y más.
 Cambios notables incluídos:
 
 * **url**: `url.resolve('/path/to/file', '.')` ahora devuelve `/path/to/` con la barra diagonal, `url.resolve('/', '.')` devuelve `/` [#278](https://github.com/iojs/io.js/pull/278) (Amir Saboury)
-* **tls**: El paquete de cifrado por defecto usado por `tls` y `https` ha sido modificada por una que logra *Perfect Forward Secrecy* (Confidencialidad Directa Perfecta) con todos los navegadores web modernos. Adicionalmente, los cifrados RC4 inseguros fueron excluidos. Si absolutamente requieres RC4, por favor especifica tus propios paquetes de cifrado. [#826](https://github.com/iojs/io.js/pull/826) (Roman Reiss)
+* **tls**: El paquete de cifrado por defecto usado por `tls` y `https` ha sido modificado por una que logra *Perfect Forward Secrecy* (Confidencialidad Directa Perfecta) con todos los navegadores web modernos. Adicionalmente, los cifrados RC4 inseguros fueron excluidos. Si absolutamente requieres RC4, por favor especifica tus propios paquetes de cifrado. [#826](https://github.com/iojs/io.js/pull/826) (Roman Reiss)
 
 ## Eventos Notables en la Comunidad
 * **Gobierno de Node** - [William Bert](https://twitter.com/williamjohnbert) creó http://nodegovernance.io/ para alertar a Scott Hammond, CEO de Joyent, del deseo de la comunidad de que el modelo de gobierno abierto de io.js sea la base del Comité Técnico de la Fundación Node. La respuesta de la comunidad fue _fantástica_! 
@@ -26,7 +26,7 @@ Cambios notables incluídos:
 * [Clever Cloud](https://www.clever-cloud.com/) agregó [soporte para io.js](https://www.clever-cloud.com/blog/features/2015/01/23/introducing-io.js/)
 
 ## Reunión de Grupo de Trabajo de io.js
-* Reunión de Grupo de Trabajo de Rastreo de io.js - 19 de Feb., 2015: [YouTube](https://www.youtube.com/watch?v=wvBVjg8jkv0) - [Minutas](https://docs.google.com/document/d/1_ApOMt03xHVkaGpTEPMDIrtkjXOzg3Hh4ZcyfhvMHx4/edit)
-* Reunión de Grupo de Trabajo de Build de io.js - 19 de Feb., 2015: [YouTube](https://www.youtube.com/watch?v=OKQi3pTF7fs) - [SoundCloud](https://soundcloud.com/iojs/iojs-build-wg-meeting-2015-02-19) - [Minutas](https://docs.google.com/document/d/1vRhsYBs4Hw6vRu55h5eWTwDzS1NctxdTvMMEnCbDs14/edit)
-* Reunión de Comité Técnico de io.js - 18 de Feb., 2015: [YouTube](https://www.youtube.com/watch?v=jeBPYLJ2_Yc) - [SoundCloud](https://soundcloud.com/iojs/iojs-tc-meeting-meeting-2015-02-18) - [Minutas](https://docs.google.com/document/d/1JnujRu6Rfnp6wvbvwCfxXnsjLySunQ_yah91pkvSFdQ/edit)
-* Reunión de Grupo de Trabajo de Sitio Web de io.js - 16 de Feb., 2015: [YouTube](https://www.youtube.com/watch?v=UKDKhFV61ZA) - [SoundCloud](https://soundcloud.com/iojs/iojs-website-wg-meeting-2015-02-16) - [Minutas](https://docs.google.com/document/d/1R8JmOoyr64tt-QOj27bD19ZOWg63CujW7GeaAHIIkUs/edit)
+* Reunión del Grupo de Trabajo de Tracing de io.js - 19 de Feb., 2015: [YouTube](https://www.youtube.com/watch?v=wvBVjg8jkv0) - [Minutas](https://docs.google.com/document/d/1_ApOMt03xHVkaGpTEPMDIrtkjXOzg3Hh4ZcyfhvMHx4/edit)
+* Reunión del Grupo de Trabajo de Build de io.js - 19 de Feb., 2015: [YouTube](https://www.youtube.com/watch?v=OKQi3pTF7fs) - [SoundCloud](https://soundcloud.com/iojs/iojs-build-wg-meeting-2015-02-19) - [Minutas](https://docs.google.com/document/d/1vRhsYBs4Hw6vRu55h5eWTwDzS1NctxdTvMMEnCbDs14/edit)
+* Reunión del Comité Técnico de io.js - 18 de Feb., 2015: [YouTube](https://www.youtube.com/watch?v=jeBPYLJ2_Yc) - [SoundCloud](https://soundcloud.com/iojs/iojs-tc-meeting-meeting-2015-02-18) - [Minutas](https://docs.google.com/document/d/1JnujRu6Rfnp6wvbvwCfxXnsjLySunQ_yah91pkvSFdQ/edit)
+* Reunión del Grupo de Trabajo de Sitio Web de io.js - 16 de Feb., 2015: [YouTube](https://www.youtube.com/watch?v=UKDKhFV61ZA) - [SoundCloud](https://soundcloud.com/iojs/iojs-website-wg-meeting-2015-02-16) - [Minutas](https://docs.google.com/document/d/1R8JmOoyr64tt-QOj27bD19ZOWg63CujW7GeaAHIIkUs/edit)
