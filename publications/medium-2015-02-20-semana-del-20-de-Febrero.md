@@ -5,7 +5,7 @@ Versión 1.3.0, MongoDB, la hoja de ruta y más.
 Cambios notables incluídos:
 
 * **url**: `url.resolve('/path/to/file', '.')` ahora devuelve `/path/to/` con la barra diagonal, `url.resolve('/', '.')` devuelve `/` [#278](https://github.com/iojs/io.js/pull/278) (Amir Saboury)
-* **tls**: El paquete de cifrado por defecto usado por `tls` y `https` ha sido modificado por una que logra *Perfect Forward Secrecy* (Confidencialidad Directa Perfecta) con todos los navegadores web modernos. Adicionalmente, los cifrados RC4 inseguros fueron excluidos. Si absolutamente requieres RC4, por favor especifica tus propios paquetes de cifrado. [#826](https://github.com/iojs/io.js/pull/826) (Roman Reiss)
+* **tls**: El paquete de cifrado por defecto usado por `tls` y `https` ha sido modificado por uno que logra *Perfect Forward Secrecy* (Confidencialidad Directa Perfecta) con todos los navegadores web modernos. Adicionalmente, los cifrados RC4 inseguros fueron excluidos. Si absolutamente requieres RC4, por favor especifica tus propios paquetes de cifrado. [#826](https://github.com/iojs/io.js/pull/826) (Roman Reiss)
 
 ## Eventos Notables en la Comunidad
 * **Gobierno de Node** - [William Bert](https://twitter.com/williamjohnbert) creó http://nodegovernance.io/ para alertar a Scott Hammond, CEO de Joyent, del deseo de la comunidad de que el modelo de gobierno abierto de io.js sea la base del Comité Técnico de la Fundación Node. La respuesta de la comunidad fue _fantástica_! 
