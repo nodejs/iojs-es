@@ -32,7 +32,7 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Traductor) con 
 - Felix Enriquez ([@eafelix](https://github.com/eafelix))
 - Esteban Beltran ([@academo](https://github.com/academo))
 - Fernando Cea ([@krosti](https://github.com/krosti))
-- Jose Alvarez ([@benoror](https://github.com/benoror))
+- Jose Alvarez ([@soybackend](https://github.com/soybackend))
 - Richard Cotrina ([@rcotrina94](https://github.com/rcotrina94))
 - Ignacio Peluffo ([@ipeluffo](https://github.com/ipeluffo))
 - Sergio Flores ([@byoigres](https://github.com/byoigres))
