@@ -14,7 +14,8 @@ Colaborators by [time zone][x-timeZoneList]
 - [RamirezAlex][u-ramirezalex], Medellín Colombia UTC-05:00
 - [juanda95][u-juanda95], Medellin Colombia UTC−05:00
 - [vrunoa][u-vrunoa], Rosario Argentina UTC−03:00 (ART)
-- [rcotrina94][u-rcotrina94], Chimbote Peru UTC-5:00 (PET)
+- [rcotrina94][u-rcotrina94], Chimbote Peru UTC−5:00 (PET)
+- 
 <!--
   u- is for user
   x- is for just a link
