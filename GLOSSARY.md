@@ -33,6 +33,7 @@ some consistence, here you can find a glossary.
 
 #a
  * array: [arreglo/vector](http://es.wikipedia.org/wiki/Vector_(inform%C3%A1tica))
+ * asynchronous: [asíncrono](http://es.wikipedia.org/wiki/Asincron%C3%ADa)
 
 #b
  * boolean: [booleano](http://es.wikipedia.org/wiki/Tipo_de_dato_l%C3%B3gico)
@@ -42,3 +43,6 @@ some consistence, here you can find a glossary.
 
 #f
  * flag: flag
+
+#s
+ * synchronous: [síncrono](http://www.sites.upiicsa.ipn.mx/polilibros/portal/polilibros/p_terminados/PolilibroFC/Unidad_II/Unidad%20II_5.htm)
