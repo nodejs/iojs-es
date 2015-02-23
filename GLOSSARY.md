@@ -38,11 +38,19 @@ some consistence, here you can find a glossary.
 #b
  * boolean: [booleano](http://es.wikipedia.org/wiki/Tipo_de_dato_l%C3%B3gico)
 
+#c
+ * cipher - noun: [cifrador](http://es.wikipedia.org/wiki/Cifrado_%28criptograf%C3%ADa%29)
+ * cipher - verb: [cifrar](http://es.wikipedia.org/wiki/Cifrado_%28criptograf%C3%ADa%29)
+
 #d
  * debug: depurar
+ * decipher: descifrar
 
 #f
  * flag: flag
+
+#h
+ * hash - noun: [hash](http://es.wikipedia.org/wiki/Funci%C3%B3n_hash)
 
 #s
  * synchronous: [síncrono](http://www.sites.upiicsa.ipn.mx/polilibros/portal/polilibros/p_terminados/PolilibroFC/Unidad_II/Unidad%20II_5.htm)
