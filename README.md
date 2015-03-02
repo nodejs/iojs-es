@@ -37,6 +37,7 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Traductor) con 
 - Ignacio Peluffo ([@ipeluffo](https://github.com/ipeluffo))
 - Sergio Flores ([@byoigres](https://github.com/byoigres))
 - Julian Duque ([@julianduque](https://github.com/julianduque))
+- Italo A. Casas ([@italoacasas](https://github.com/italoacasas))
 
 ## The MIT License (MIT)
 
