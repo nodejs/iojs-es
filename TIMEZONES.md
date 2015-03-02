@@ -15,12 +15,14 @@ Colaborators by [time zone][x-timeZoneList]
 - [juanda95][u-juanda95], Medellin Colombia UTC−05:00
 - [vrunoa][u-vrunoa], Rosario Argentina UTC−03:00 (ART)
 - [rcotrina94][u-rcotrina94], Chimbote Peru UTC−5:00 (PET)
+- [italoacasas][u-italoacasas], Miami Estados Unidos UTC−5:00 (EST)
 
 <!--
   u- is for user
   x- is for just a link
  -->
  
+[u-italoacasas]:http://github.com/italoacasas
 [u-julianduque]:http://github.com/julianduque
 [u-a0viedo]:http://github.com/a0viedo
 [u-eafelix]:http://github.com/eafelix
