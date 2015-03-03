@@ -1,13 +1,11 @@
 # Readline
 
-    Stability: 2 - Unstable
+    Estabilidad: 2 - Inestable
 
-To use this module, do `require('readline')`. Readline allows reading of a
-stream (such as `process.stdin`) on a line-by-line basis.
+Para usar este módulo haz `require('readline')`. Readline permite leer un stream
+stream (como `process.stdin`) línea por línea.
 
-Note that once you've invoked this module, your node program will not
-terminate until you've closed the interface. Here's how to allow your
-program to gracefully exit:
+Ten en cuenta que una utilices este módulo, tu programa node no acabará hasta hayas cerrado la interfaz. He aquí cómo hacer que tu programa acabe elegantemente:
 
     var readline = require('readline');
 
@@ -16,56 +14,51 @@ program to gracefully exit:
       output: process.stdout
     });
 
-    rl.question("What do you think of node.js? ", function(answer) {
-      // TODO: Log the answer in a database
-      console.log("Thank you for your valuable feedback:", answer);
-
+    rl.question("¿Qué piensas de node.js? ", function(answer) {
+      // TODO: Escribir la respuesta en una base de datos
+      console.log("Gracias por sus valiosos comentarios:", answer);
       rl.close();
     });
 
 ## readline.createInterface(options)
 
-Creates a readline `Interface` instance. Accepts an "options" Object that takes
-the following values:
+Crea una instancia `Iterface` readline. Acepta un objecto "opciones" que toma los siguientes valores:
 
- - `input` - the readable stream to listen to (Required).
+ - `input` - el stream leíble al que escuchar (Required).
 
- - `output` - the writable stream to write readline data to (Optional).
+ - `output` - el stream escribible al que escribir datos readline (Opcional).
 
- - `completer` - an optional function that is used for Tab autocompletion. See
-   below for an example of using this.
+ - `completer` - una función opcional que es usada para autocompletar comandos al usar el Tabulador. Ver abajo un ejemplo de cómo usar esto.
 
- - `terminal` - pass `true` if the `input` and `output` streams should be
-   treated like a TTY, and have ANSI/VT100 escape codes written to it.
-   Defaults to checking `isTTY` on the `output` stream upon instantiation.
+ - `terminal` - pasa `true` si los streams `input` y `output` deben de ser tratados como TTY, y han de escribirsele códigos de escape ANSI/VT100.
+   Por defecto se comprueba `isTTY` en el stream `output` una vez se está haciendo la instancia.
 
-The `completer` function is given the current line entered by the user, and
-is supposed to return an Array with 2 entries:
+A la función `completer` se le proporciona la línea que el usuario ha introducido, y se supone que ha de devolver un Array con dos elementos:
 
- 1. An Array with matching entries for the completion.
+ 1. Un Array con el autocompletado.
 
- 2. The substring that was used for the matching.
+ 2. The substring que se usó para obtener el Array anterior.
 
-Which ends up looking something like:
-`[[substr1, substr2, ...], originalsubstring]`.
+Lo que termina siendo algo como:
+`[[substr1, substr2, ...], substringoriginal]`.
 
-Example:
+Ejemplo:
 
     function completer(line) {
       var completions = '.help .error .exit .quit .q'.split(' ')
       var hits = completions.filter(function(c) { return c.indexOf(line) == 0 })
-      // show all completions if none found
+      // mostrar todas las posibilidades si no se encuentra ninguna
       return [hits.length ? hits : completions, line]
     }
 
-Also `completer` can be run in async mode if it accepts two arguments:
+Además `completer` puede ser llamado en modo asíncrona si acepta dos argumentos:
 
     function completer(linePartial, callback) {
       callback(null, [['123'], linePartial]);
     }
 
-`createInterface` is commonly used with `process.stdin` and
-`process.stdout` in order to accept user input:
+`createInterface` se usa comúnmente con `process.stdin` y
+`process.stdout` para aceptar entrada de usuario:
 
     var readline = require('readline');
     var rl = readline.createInterface({
@@ -73,201 +66,177 @@ Also `completer` can be run in async mode if it accepts two arguments:
       output: process.stdout
     });
 
-Once you have a readline instance, you most commonly listen for the
-`"line"` event.
+Una vez que tienes una instancia readline, lo más común es escuchar al evento `"line"`.
 
-If `terminal` is `true` for this instance then the `output` stream will get
-the best compatibility if it defines an `output.columns` property, and fires
-a `"resize"` event on the `output` if/when the columns ever change
-(`process.stdout` does this automatically when it is a TTY).
+Si `terminal` es `true` para esta instancia, el stream `output` obtendrá la mayor compatibilidad si define una propiedad `output.columns` y emite un evento `"resize"` en el `output` si/cuando la columnas cambian en algún momento
+(`process.stdout` hace esto automáticamente cuando es un TTY).
 
-## Class: Interface
+## Clase: Interface
 
-The class that represents a readline interface with an input and output
-stream.
+La clase que representa una interfaz readline con unos streams entrada y salida (input y output).
 
 ### rl.setPrompt(prompt)
 
-Sets the prompt, for example when you run `node` on the command line, you see
-`> `, which is node's prompt.
+Establece el prompt. Por ejemplo, cuando ejecutas `node` en la línea de comandos, verás `> `, que es el prompt de node.
 
 ### rl.prompt([preserveCursor])
 
-Readies readline for input from the user, putting the current `setPrompt`
-options on a new line, giving the user a new spot to write. Set `preserveCursor`
-to `true` to prevent the cursor placement being reset to `0`.
+Prepara readline a tener entrada (input) del usuario, dejando las opciones de `setPrompt` en ese momento en una nueva línea, dando al usuario un nuevo lugar donde escribir. Usa `preserveCursor` con el valor `true` para prevenir que la posición del cursor sea reestablecida a `0`.
 
-This will also resume the `input` stream used with `createInterface` if it has
-been paused.
+Esto también resume el stream `input` usado con `createInterface` si este estaba pausado.
 
-If `output` is set to `null` or `undefined` when calling `createInterface`, the
-prompt is not written.
+Si `output` tiene el valor `null` o `undefined` al llamar `createInterface`, el
+prompt no se escribe.
 
 ### rl.question(query, callback)
 
-Prepends the prompt with `query` and invokes `callback` with the user's
-response. Displays the query to the user, and then invokes `callback`
-with the user's response after it has been typed.
+Antepone el prompt con `query` e invoca `callback` con la respuesta dada por el usuario. Muestra la pregunta al usuario, y luego invoca `callback`
+con la respuesta del usuario después de que haya sido escrita.
 
-This will also resume the `input` stream used with `createInterface` if
-it has been paused.
+Esto también resume el stream `input` usado con `createInterface` si había sido pausado.
 
-If `output` is set to `null` or `undefined` when calling `createInterface`,
-nothing is displayed.
+Si `output` tiene el valor `null` o `undefined` al llamar `createInterface`,
+no se mostrará nada.
 
-Example usage:
+Ejemplo de uso:
 
-    interface.question('What is your favorite food?', function(answer) {
-      console.log('Oh, so your favorite food is ' + answer);
+    interface.question('¿Cual es tu comida favorita?', function(answer) {
+      console.log('Ah, así que tu comida favoria es' + answer);
     });
 
 ### rl.pause()
 
-Pauses the readline `input` stream, allowing it to be resumed later if needed.
+Pausa el stream input `input`, permitiendo que este sea resumido más tarde si es necesario.
 
-Note that this doesn't immediately pause the stream of events. Several events may be emitted after calling `pause`, including `line`.
+Nota que esto no pausa inmediatamente el flujo de eventos. Varios eventos pueden ser emitidos después de llamar `pause`, `line` inclusive.
 
 ### rl.resume()
 
-Resumes the readline `input` stream.
+Resume el stream `input` de readline.
 
 ### rl.close()
 
-Closes the `Interface` instance, relinquishing control on the `input` and
-`output` streams. The "close" event will also be emitted.
+Cierra la instancia `Interface`, renunciando al control de los streams `input` y
+`output`. También se emitirá un evento "close".
 
 ### rl.write(data[, key])
 
-Writes `data` to `output` stream, unless `output` is set to `null` or
-`undefined` when calling `createInterface`. `key` is an object literal to
-represent a key sequence; available if the terminal is a TTY.
+Escribe `data` al stream `output`, a no ser que `output` tenga el valor `null` o
+`undefined` cuando se llamó `createInterface`. `key` es un objeto literal representado una secucia de tecla; disponible si el terminal es un TTY.
 
-This will also resume the `input` stream if it has been paused.
+Esto también resume el stream `input` si estaba pausado.
 
 Example:
 
     rl.write('Delete me!');
-    // Simulate ctrl+u to delete the line written previously
+    // Simular ctrl+u para eliminar la línea escrita anteriormente
     rl.write(null, {ctrl: true, name: 'u'});
 
-## Events
+## Eventos
 
-### Event: 'line'
+### Evento: 'line'
 
 `function (line) {}`
 
-Emitted whenever the `input` stream receives a `\n`, usually received when the
-user hits enter, or return. This is a good hook to listen for user input.
+Emitido siempre que el stream `input` recibe un `\n`, usualmente recivido cuando el usuario presiona enter, o return. Es un buen lugar donde escuchar a la entrada del usuario.
 
-Example of listening for `line`:
+Ejemplo de escucha para `line`:
 
     rl.on('line', function (cmd) {
-      console.log('You just typed: '+cmd);
+      console.log('Acabas de escribir: '+cmd);
     });
 
-### Event: 'pause'
+### Evento: 'pause'
 
 `function () {}`
 
-Emitted whenever the `input` stream is paused.
+Emitido siempre que el stream `input`.
 
-Also emitted whenever the `input` stream is not paused and receives the
-`SIGCONT` event. (See events `SIGTSTP` and `SIGCONT`)
+También se emite cuando el stream `input` no está pausado y recibe el evento
+`SIGCONT`. (Ver eventos `SIGTSTP` y `SIGCONT`)
 
-Example of listening for `pause`:
+Ejemplo de esucha para `pause`:
 
     rl.on('pause', function() {
-      console.log('Readline paused.');
+      console.log('Readline ha sido pausado.');
     });
 
-### Event: 'resume'
+### Evento: 'resume'
 
 `function () {}`
 
-Emitted whenever the `input` stream is resumed.
+Emitido siempre que el stream `input` se ha resumido.
 
-Example of listening for `resume`:
+Ejemplo de escucha para `resume`:
 
     rl.on('resume', function() {
-      console.log('Readline resumed.');
+      console.log('Readline ha sido resumido.');
     });
 
-### Event: 'close'
+### Evento: 'close'
 
 `function () {}`
 
-Emitted when `close()` is called.
+Emitido cuando se llama `close()`.
 
-Also emitted when the `input` stream receives its "end" event. The `Interface`
-instance should be considered "finished" once this is emitted. For example, when
-the `input` stream receives `^D`, respectively known as `EOT`.
+También se emite cuando el stream `input` recibe su evento "end". La instancia `Interface` debe de considerarse "terminada" una vez este evento es emitido. Por ejemplo, cuando el stream `input` recibe `^D`, conocido respectivamente como `EOT`.
 
-This event is also called if there is no `SIGINT` event listener present when
-the `input` stream receives a `^C`, respectively known as `SIGINT`.
+Este evento también se llama si no hay un listener para el evento `SIGINT` cuando el stream `input` recibe un `^C`, conocido respectivamente como `SIGINT`.
 
-### Event: 'SIGINT'
+### Evento: 'SIGINT'
 
 `function () {}`
 
-Emitted whenever the `input` stream receives a `^C`, respectively known as
-`SIGINT`. If there is no `SIGINT` event listener present when the `input`
-stream receives a `SIGINT`, `pause` will be triggered.
+Se emite siempre que el stream `input` recibe `^C`, conocido respectivamente como `SIGINT`. Si no hay listener para el evento `SIGINT`, cuando el stream `input` recibe un `SIGINT`, `pause` será activado.
 
-Example of listening for `SIGINT`:
+Ejemplo de escucha para `SIGINT`:
 
     rl.on('SIGINT', function() {
-      rl.question('Are you sure you want to exit?', function(answer) {
+      rl.question('¿Estas seguro de que quieres salir?'
         if (answer.match(/^y(es)?$/i)) rl.pause();
       });
     });
 
-### Event: 'SIGTSTP'
+### Evento: 'SIGTSTP'
 
 `function () {}`
 
-**This does not work on Windows.**
+**Esto no funciona en Windows.**
 
-Emitted whenever the `input` stream receives a `^Z`, respectively known as
-`SIGTSTP`. If there is no `SIGTSTP` event listener present when the `input`
-stream receives a `SIGTSTP`, the program will be sent to the background.
+Emitido cuando el stream `input` recive un `^Z`, respectivamente conocido como `SIGTSTP`. Si no hay listener para el evento `SIGTSTP` cuando el `input` recibe `SIGTSTP`, el programa se pondrá en el background.
 
-When the program is resumed with `fg`, the `pause` and `SIGCONT` events will be
-emitted. You can use either to resume the stream.
+Cuando el programa se resume con `fg`, los eventos `pause` y `SIGCONT` serán emitidos. Puedes usar cualquiera de los dos para resumir el stream.
 
-The `pause` and `SIGCONT` events will not be triggered if the stream was paused
-before the program was sent to the background.
+Los eventos `pause` y `SIGCONT` no se activarán si los streams estaban pausados antes de que el programa fuera puesto en el background.
 
-Example of listening for `SIGTSTP`:
+Ejemplo de escucha para `SIGTSTP`:
 
     rl.on('SIGTSTP', function() {
-      // This will override SIGTSTP and prevent the program from going to the
+      // Esto sobreescribira SIGTSTP y evitará que el programa sea puesto en el
       // background.
-      console.log('Caught SIGTSTP.');
+      console.log('Se atrapó SIGTSTP.');
     });
 
-### Event: 'SIGCONT'
+### Evento: 'SIGCONT'
 
 `function () {}`
 
-**This does not work on Windows.**
+  **Esto no funciona en Windows.**
 
-Emitted whenever the `input` stream is sent to the background with `^Z`,
-respectively known as `SIGTSTP`, and then continued with `fg(1)`. This event
-only emits if the stream was not paused before sending the program to the
-background.
+Emitido cuando el stream `input` ha sido puesto en el background con `^Z`,
+respectivamente conocido como `SIGTSTP`, y luego continuado con `fg(1)`. Este evento se emite si el stream no fue pausado antes de poner el programa en el background.
 
-Example of listening for `SIGCONT`:
+Ejemplo de escucha para `SIGCONT`:
 
     rl.on('SIGCONT', function() {
-      // `prompt` will automatically resume the stream
+      // `prompt` resumirá automáticamente el stream
       rl.prompt();
     });
 
 
-## Example: Tiny CLI
+## Example: pequeña CLI
 
-Here's an example of how to use all these together to craft a tiny command
-line interface:
+He aquí un ejemplo de como se puede usar todo en conjunto para constuir una pequeña interfaz de línea de comandos:
 
     var readline = require('readline'),
         rl = readline.createInterface(process.stdin, process.stdout);
@@ -277,36 +246,36 @@ line interface:
 
     rl.on('line', function(line) {
       switch(line.trim()) {
-        case 'hello':
-          console.log('world!');
+        case 'hola':
+          console.log('¡mundo!');
           break;
         default:
-          console.log('Say what? I might have heard `' + line.trim() + '`');
+          console.log('¿Cómo? Puede que haya escuchado `' + line.trim() + '`');
           break;
       }
       rl.prompt();
     }).on('close', function() {
-      console.log('Have a great day!');
+      console.log('¡Que tengas un buen día!');
       process.exit(0);
     });
 
 ## readline.cursorTo(stream, x, y)
 
-Move cursor to the specified position in a given TTY stream.
+Mover el curor a la posición especificada en un stream TTY dado.
 
 ## readline.moveCursor(stream, dx, dy)
 
-Move cursor relative to it's current position in a given TTY stream.
+Mover el cursor relativo a su posición dada en un stream TTY dado.
 
 ## readline.clearLine(stream, dir)
 
-Clears current line of given TTY stream in a specified direction.
-`dir` should have one of following values:
+Limpia la línea actual del stream TTY dado en una dirección específica.
+`dir` debe de tener uno de los valores siguientes:
 
-* `-1` - to the left from cursor
-* `1` - to the right from cursor
-* `0` - the entire line
+* `-1` - hacia la izquierda del cursor
+* `1` - hacia la derecha del cursor
+* `0` - linea completa
 
 ## readline.clearScreenDown(stream)
 
-Clears the screen from the current position of the cursor down.
+Limpia la pantalla desde la posción actual del cursor hacia abajo.
