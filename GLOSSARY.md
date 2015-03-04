@@ -40,7 +40,7 @@ some consistence, here you can find a glossary.
 
 #c
  * cipher - noun: [cifrador](http://es.wikipedia.org/wiki/Cifrado_%28criptograf%C3%ADa%29)
- * cipher - verb: [cifrar](http://es.wikipedia.org/wiki/Cifrado_%28criptograf%C3%ADa%29)
+ * cipher - verb: [cifrar/encriptar](http://es.wikipedia.org/wiki/Cifrado_%28criptograf%C3%ADa%29)
 
 #d
  * debug: depurar
