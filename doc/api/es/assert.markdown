@@ -6,7 +6,7 @@ Este módulo se usa para escribir pruebas unitarias para tus aplicaciones, puede
 
 ## assert.fail(actual, esperado, mensage, operador)
 
-Lanza una execepción mostrando los valores para `actual` y `esperado` separado por el operador proporcionado.
+Lanza una excepción mostrando los valores para `actual` y `esperado` separados por el operador proporcionado.
 
 ## assert(valor, mensage), assert.ok(valor[, mensage])
 
