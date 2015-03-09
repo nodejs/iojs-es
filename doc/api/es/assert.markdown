@@ -18,7 +18,7 @@ Prueba superficialmente, la igualdad por coerción con el operador de igualdad (
 
 ## assert.notEqual(actual, expected[, message])
 
-Prueba shallow, coercive non-equality with the not equal comparison operator ( `!=` ).
+Prueba superficialmente, desigualdad por coerción con el operador de comparación de no igualdad ( `!=` ).
 
 ## assert.deepEqual(actual, expected[, message])
 
