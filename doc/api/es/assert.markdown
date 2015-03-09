@@ -4,39 +4,39 @@
 
 Este módulo se usa para escribir pruebas unitarias para tus aplicaciones, puedes acceder con `require('assert')`.
 
-## assert.fail(actual, esperado, mensage, operador)
+## assert.fail(actual, esperado, mensaje, operador)
 
 Lanza una excepción mostrando los valores para `actual` y `esperado` separados por el operador proporcionado.
 
-## assert(valor, mensage), assert.ok(valor[, mensage])
+## assert(valor, mensaje), assert.ok(valor[, mensaje])
 
-Prueba si el valor es válido, esto es equivalente a `assert.equal(true, !!valor, mensage);`
+Prueba si el valor es válido, esto es equivalente a `assert.equal(true, !!valor, mensaje);`
 
-## assert.equal(actual, esperado[, mensage])
+## assert.equal(actual, esperado[, mensaje])
 
 Prueba superficialmente, la igualdad por coerción con el operador de igualdad ( `==` ).
 
-## assert.notEqual(actual, esperado[, mensage])
+## assert.notEqual(actual, esperado[, mensaje])
 
 Tests shallow, coercive non-equality with the not equal comparison operator ( `!=` ).
 
-## assert.deepEqual(actual, esperado[, mensage])
+## assert.deepEqual(actual, esperado[, mensaje])
 
 Pruebas de igualdad por profundidad.
 
-## assert.notDeepEqual(actual, esperado[, mensage])
+## assert.notDeepEqual(actual, esperado[, mensaje])
 
 Pruebas cualquier desigualdad por profundidad.
 
-## assert.strictEqual(actual, esperado[, mensage])
+## assert.strictEqual(actual, esperado[, mensaje])
 
 Pruebas igualdad estricta, tal y como son determinadas por el operador de igualdad estricta ( `===` ).
 
-## assert.notStrictEqual(actual, esperado[, mensage])
+## assert.notStrictEqual(actual, esperado[, mensaje])
 
 Pruebas de igualdad no estricta, tal y como son determinadas por el operador de igualdad no estricta ( `!==` ).
 
-## assert.throws(bloque[, error][, mensage])
+## assert.throws(bloque[, error][, mensaje])
 
 Espera que `bloque` lance un error. `error` puede ser un constructor, `RegExp` o una functión de validación.
 
@@ -49,7 +49,7 @@ Validar instanceof usando el constructor:
       Error
     );
 
-Validar un mensage de error usando RegExp:
+Validar un mensaje de error usando RegExp:
 
     assert.throws(
       function() {
@@ -72,7 +72,7 @@ Validar un error con con una función:
       "Valor inesperado"
     );
 
-## assert.doesNotThrow(bloque[, mensage])
+## assert.doesNotThrow(bloque[, mensaje])
 
 Espera que `bloque` no lance un error, ver `assert.throws` para una descripción más detallada.
 
