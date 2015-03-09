@@ -78,4 +78,4 @@ Espera que `block` no lance un error, ver `assert.throws` para una descripción 
 
 ## assert.ifError(value)
 
-Prueba si value no es un value falos, lanza un error si el value es verdadero. Útil cuando se está probando el primer argumento, `error`para callbacks.
+Prueba si value no es un value falso, lanza un error si el value es verdadero. Útil cuando se está probando el primer argumento, `error`para callbacks.
