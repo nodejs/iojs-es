@@ -18,7 +18,7 @@ Prueba superficialmente, la igualdad por coerción con el operador de igualdad (
 
 ## assert.notEqual(actual, expected[, message])
 
-Prueba superficialmente, desigualdad por coerción con el operador de comparación de no igualdad ( `!=` ).
+Prueba superficialmente, desigualdad por coerción con el operador de comparación de desigualdad ( `!=` ).
 
 ## assert.deepEqual(actual, expected[, message])
 
@@ -30,15 +30,15 @@ Prueba por cualquier desigualdad en profundidad.
 
 ## assert.strictEqual(actual, expected[, message])
 
-Pruebas igualdad estricta, tal y como son determinadas por el operador de igualdad estricta ( `===` ).
+Prueba igualdad estricta, tal y como son determinadas por el operador de igualdad estricta ( `===` ).
 
 ## assert.notStrictEqual(actual, expected[, message])
 
-Pruebas de igualdad no estricta, tal y como son determinadas por el operador de igualdad no estricta ( `!==` ).
+Prueba de igualdad no estricta, tal y como es determinado por el operador de desigualdad estricto ( `!==` ).
 
 ## assert.throws(block[, error][, message])
 
-Espera que `block` lance un error. `error` puede ser un constructor, `RegExp` o una functión de validación.
+Espera que `block` lance un error. `error` puede ser un constructor, `RegExp` o una función de validación.
 
 Validar instanceof usando el constructor:
 
@@ -58,7 +58,7 @@ Validar un message de error usando RegExp:
       /value/
     );
 
-Validar un error con con una función:
+Validación de error personalizada:
 
     assert.throws(
       function() {
