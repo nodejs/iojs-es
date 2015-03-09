@@ -1,24 +1,24 @@
 # Assert
 
-    Estabilidad: 5 - blockada
+    Estabilidad: 5 - Bloqueada
 
 Este módulo se usa para escribir pruebas unitarias para tus aplicaciones, puedes acceder con `require('assert')`.
 
-## assert.fail(actual, expected, message, operador)
+## assert.fail(actual, expected, message, operator)
 
-Lanza una excepción mostrando los valuees para `actual` y `expected` separados por el operador proporcionado.
+Lanza una excepción mostrando los valores para `actual` y `expected` separados por el `operator` proporcionado.
 
 ## assert(value, message), assert.ok(value[, message])
 
-Prueba si el value es verdadero, esto es equivalente a `assert.equal(true, !!value, message);`
+Prueba si el `value` es verdadero, esto es equivalente a `assert.equal(true, !!value, message);`
 
 ## assert.equal(actual, expected[, message])
 
-Prueba superficialmente, la igualdad por coerción con el operador de igualdad ( `==` ).
+Prueba superficialmente la igualdad por coerción con el operador de igualdad ( `==` ).
 
 ## assert.notEqual(actual, expected[, message])
 
-Prueba superficialmente, desigualdad por coerción con el operador de comparación de desigualdad ( `!=` ).
+Prueba superficialmente la desigualdad por coerción con el operador de comparación de desigualdad ( `!=` ).
 
 ## assert.deepEqual(actual, expected[, message])
 
@@ -78,4 +78,4 @@ Espera que `block` no lance un error, ver `assert.throws` para una descripción 
 
 ## assert.ifError(value)
 
-Prueba si value no es un value falso, lanza un error si el value es verdadero. Útil cuando se está probando el primer argumento, `error`para callbacks.
+Prueba si value no es un value falso, lanza un error si el value es verdadero. Útil cuando se está probando el primer argumento, `error` para callbacks.
