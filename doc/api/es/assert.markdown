@@ -1,81 +1,81 @@
 # Assert
 
-    Estabilidad: 5 - Bloqueada
+    Estabilidad: 5 - blockada
 
 Este módulo se usa para escribir pruebas unitarias para tus aplicaciones, puedes acceder con `require('assert')`.
 
-## assert.fail(actual, esperado, mensaje, operador)
+## assert.fail(actual, expected, message, operador)
 
-Lanza una excepción mostrando los valores para `actual` y `esperado` separados por el operador proporcionado.
+Lanza una excepción mostrando los valuees para `actual` y `expected` separados por el operador proporcionado.
 
-## assert(valor, mensaje), assert.ok(valor[, mensaje])
+## assert(value, message), assert.ok(value[, message])
 
-Prueba si el valor es válido, esto es equivalente a `assert.equal(true, !!valor, mensaje);`
+Prueba si el value es válido, esto es equivalente a `assert.equal(true, !!value, message);`
 
-## assert.equal(actual, esperado[, mensaje])
+## assert.equal(actual, expected[, message])
 
 Prueba superficialmente, la igualdad por coerción con el operador de igualdad ( `==` ).
 
-## assert.notEqual(actual, esperado[, mensaje])
+## assert.notEqual(actual, expected[, message])
 
 Tests shallow, coercive non-equality with the not equal comparison operator ( `!=` ).
 
-## assert.deepEqual(actual, esperado[, mensaje])
+## assert.deepEqual(actual, expected[, message])
 
 Pruebas de igualdad por profundidad.
 
-## assert.notDeepEqual(actual, esperado[, mensaje])
+## assert.notDeepEqual(actual, expected[, message])
 
 Pruebas cualquier desigualdad por profundidad.
 
-## assert.strictEqual(actual, esperado[, mensaje])
+## assert.strictEqual(actual, expected[, message])
 
 Pruebas igualdad estricta, tal y como son determinadas por el operador de igualdad estricta ( `===` ).
 
-## assert.notStrictEqual(actual, esperado[, mensaje])
+## assert.notStrictEqual(actual, expected[, message])
 
 Pruebas de igualdad no estricta, tal y como son determinadas por el operador de igualdad no estricta ( `!==` ).
 
-## assert.throws(bloque[, error][, mensaje])
+## assert.throws(block[, error][, message])
 
-Espera que `bloque` lance un error. `error` puede ser un constructor, `RegExp` o una functión de validación.
+Espera que `block` lance un error. `error` puede ser un constructor, `RegExp` o una functión de validación.
 
 Validar instanceof usando el constructor:
 
     assert.throws(
       function() {
-        throw new Error("Valor inválido");
+        throw new Error("valor inválido");
       },
       Error
     );
 
-Validar un mensaje de error usando RegExp:
+Validar un message de error usando RegExp:
 
     assert.throws(
       function() {
-        throw new Error("Valor inválido");
+        throw new Error("valor inválido");
       },
-      /valor/
+      /value/
     );
 
 Validar un error con con una función:
 
     assert.throws(
       function() {
-        throw new Error("Valor inválido");
+        throw new Error("valor inválido");
       },
       function(err) {
         if ( (err instanceof Error) && /valor/.test(err) ) {
           return true;
         }
       },
-      "Valor inesperado"
+      "valor inesperado"
     );
 
-## assert.doesNotThrow(bloque[, mensaje])
+## assert.doesNotThrow(block[, message])
 
-Espera que `bloque` no lance un error, ver `assert.throws` para una descripción más detallada.
+Espera que `block` no lance un error, ver `assert.throws` para una descripción más detallada.
 
-## assert.ifError(valor)
+## assert.ifError(value)
 
-Prueba si valor no es un valor falos, lanza un error si el valor es verdadero. Útil cuando se está probando el primer argumento, `error`para callbacks.
+Prueba si value no es un value falos, lanza un error si el value es verdadero. Útil cuando se está probando el primer argumento, `error`para callbacks.
