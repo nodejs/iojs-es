@@ -26,7 +26,7 @@ Prueba la igualdad por profundidad.
 
 ## assert.notDeepEqual(actual, expected[, message])
 
-Pruebas cualquier desigualdad por profundidad.
+Prueba por cualquier desigualdad en profundidad.
 
 ## assert.strictEqual(actual, expected[, message])
 
