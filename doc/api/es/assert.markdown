@@ -10,7 +10,7 @@ Lanza una excepción mostrando los valuees para `actual` y `expected` separados 
 
 ## assert(value, message), assert.ok(value[, message])
 
-Prueba si el value es válido, esto es equivalente a `assert.equal(true, !!value, message);`
+Prueba si el value es verdadero, esto es equivalente a `assert.equal(true, !!value, message);`
 
 ## assert.equal(actual, expected[, message])
 
