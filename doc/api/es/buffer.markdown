@@ -2,17 +2,17 @@
 
     Estabilidad: 3 - Estable
 
-JavaScript puro acomoda bien Unicode pero no es amable con datos binarios.  Cuando estamos trabajando con streams TCP o el sistema de archivos, es necesario poder manipular streams octeto. Node tiene varias estrategias para manipular, crear y consumir streams octeto.
+JavaScript puro es amigable con Unicode pero no es amable con datos binarios.  Cuando estamos trabajando con streams TCP o el sistema de archivos, es necesario poder manipular streams en  octetos. Node tiene varias estrategias para manipular, crear y consumir streams en octetos.
 
-Los datos en bruto se guardan en instancias de la clase `Buffer`. Un `Buffer^ es similar a un array de enteros aunque correspondiente a asignación de memoria en bruto fuera de la pila de V8. Un `Buffer` no se puede redimensionar.
+Los datos en bruto se guardan en instancias de la clase `Buffer`. Un `Buffer` es similar a un array de enteros aunque correspondiente a asignación de memoria en bruto fuera del heap de V8. Un `Buffer` no se puede redimensionar.
 
-`Buffer` es una clase global, siendo bastante raro que uno necesite alguna vez utilizar `require('buffer')`.
+`Buffer` es una clase global, haciendo que sea bastante infrecuente que uno necesite utilizar `require('buffer')`.
 
-La conversión entre Buffers y una string de Javascript requiere de un método de  condificación explícito. He aquí las distintas codificaciones string.
+La conversión entre Buffers y strings en Javascript requiere de un método de codificación explícito. He aquí las distintas codificaciones de string.
 
-* `'ascii'` - sólo para datos ASCII de 7 bits.  Este método de codificación es muy rápido, y se deshace del conjunto de bits mayor.
+* `'ascii'` - sólo para datos ASCII de 7 bits. Este método de codificación es muy rápido, y descartará el bit superior si se establece.
 
-* `'utf8'` - codificación de múltiple byte para caracteres Unicode. Muchas páginas web y otros formatos de documentos usan UTF-8.
+* `'utf8'` - Caracteres Unicode codificados en múltiples bytes. Muchas páginas web y otros formatos de documentos usan UTF-8.
 
 * `'utf16le'` - 2 o 4 bytes, Unicode condificado mediante little-endian.
   Se soportan los pares suplentes (U+10000 a U+10FFFF).
@@ -21,7 +21,7 @@ La conversión entre Buffers y una string de Javascript requiere de un método d
 
 * `'base64'` - Codificación string Base64.
 
-* `'binary'` - Una forma de codificar datos en bruto en strings usando solo los 8 primeros bits de cada carácter. Este método de codificación es obsoleto y debe ser evitado en favor de objetos `Buffer` siempre que sea posible. Esta codificación se eliminará en futuras versiones de Node.
+* `'binary'` - Una forma de codificar datos binarios en bruto en strings usando solo los 8 primeros bits de cada carácter. Este método de codificación es obsoleto y debe ser evitado en favor de objetos `Buffer` siempre que sea posible. Esta codificación se eliminará en futuras versiones de Node.
 
 * `'hex'` - Codifica cada byte a dos caracteres hexadecimales.
 
@@ -46,7 +46,7 @@ Puede ser construida de distintas formas.
 
 * `tamaño` Numero
 
-Asigna un nuevo buffer octetos `tamaño`. Nota, `tamaño` no ha de tener un tamaño mayor a
+Asigna un nuevo buffer en octetos `tamaño`. Nota, `tamaño` no ha de tener un tamaño mayor a
 [kMaxLength](smalloc.html#smalloc_smalloc_kmaxlength). En caso contrario, un `RangeError` se lanzará aquí.
 
 ### new Buffer(array)
