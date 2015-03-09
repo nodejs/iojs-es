@@ -2,10 +2,9 @@
 
     Estabilidad: 2 - Inestable
 
-Para usar este módulo haz `require('readline')`. Readline permite leer un stream
-stream (como `process.stdin`) línea por línea.
+Para usar este módulo haz `require('readline')`. Readline permite leer desde un stream (como `process.stdin`) línea por línea.
 
-Ten en cuenta que una utilices este módulo, tu programa node no acabará hasta hayas cerrado la interfaz. He aquí cómo hacer que tu programa acabe elegantemente:
+Ten en cuenta que una utilices este módulo, tu programa node no terminará hasta hayas cerrado la interfaz. He aquí cómo hacer que tu programa termine elegantemente:
 
     var readline = require('readline');
 
@@ -22,7 +21,7 @@ Ten en cuenta que una utilices este módulo, tu programa node no acabará hasta 
 
 ## readline.createInterface(options)
 
-Crea una instancia `Iterface` readline. Acepta un objecto "opciones" que toma los siguientes valores:
+Crea una instancia `Iterface` de readline. Acepta un Object "opciones" que toma los siguientes valores:
 
  - `input` - el stream leíble al que escuchar (Required).
 
@@ -30,12 +29,12 @@ Crea una instancia `Iterface` readline. Acepta un objecto "opciones" que toma lo
 
  - `completer` - una función opcional que es usada para autocompletar comandos al usar el Tabulador. Ver abajo un ejemplo de cómo usar esto.
 
- - `terminal` - pasa `true` si los streams `input` y `output` deben de ser tratados como TTY, y han de escribirsele códigos de escape ANSI/VT100.
+ - `terminal` - pasa `true` si los streams `input` y `output` deben de ser tratados como TTY, y utilizan códigos de escape ANSI/VT100.
    Por defecto se comprueba `isTTY` en el stream `output` una vez se está haciendo la instancia.
 
 A la función `completer` se le proporciona la línea que el usuario ha introducido, y se supone que ha de devolver un Array con dos elementos:
 
- 1. Un Array con el autocompletado.
+ 1. Un Array con las entradas que coinciden para el autocompletado.
 
  2. The substring que se usó para obtener el Array anterior.
 
