@@ -27,7 +27,7 @@ La conversión entre Buffers y strings en Javascript requiere de un método de c
 
 Crear un typed array a partir de un `Buffer` funciona con las siguientes advertencias:
 
-1. La memoria del buffer se copia, no compartida.
+1. La memoria del buffer es copiada, no compartida.
 
 2. La memoria del buffer se interpreta como un array, no un byte array. Es decir, `new Uint32Array(new Buffer([1,2,3,4]))` crea un `Uint32Array` de 4 elementos `[1,2,3,4]`, no un `Uint32Array` con un sólo elemento
    `[0x1020304]` o `[0x4030201]`.
