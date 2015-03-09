@@ -18,11 +18,11 @@ Prueba superficialmente, la igualdad por coerción con el operador de igualdad (
 
 ## assert.notEqual(actual, expected[, message])
 
-Tests shallow, coercive non-equality with the not equal comparison operator ( `!=` ).
+Prueba shallow, coercive non-equality with the not equal comparison operator ( `!=` ).
 
 ## assert.deepEqual(actual, expected[, message])
 
-Pruebas de igualdad por profundidad.
+Prueba la igualdad por profundidad.
 
 ## assert.notDeepEqual(actual, expected[, message])
 
