@@ -264,7 +264,7 @@ Mover el curor a la posición especificada en un stream TTY dado.
 
 ## readline.moveCursor(stream, dx, dy)
 
-Mover el cursor relativo a su posición dada en un stream TTY dado.
+Mover el cursor relativo a su posición actual en un stream TTY dado.
 
 ## readline.clearLine(stream, dir)
 
