@@ -320,7 +320,7 @@ Ejemplo: construye un Buffer con el alfabeto ASCII, tomando un recorte y luego m
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 8 bits sin signo de un buffer en el offset especificado.
+Lee un entero de 8 bits sin signo del bufer en el offset especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -349,7 +349,7 @@ Ejemplo:
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 16 bits sin signo de un buffer en la posición especificada por el offset con el formato endiano especificado.
+Lee un entero de 16 bits sin signo del bufer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -383,7 +383,7 @@ Ejemplo:
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 32 bits sin signo de un buffer en la posición especificada por el offset con el formato endiano especificado.
+Lee un entero de 32 bits sin signo del bufer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -408,11 +408,11 @@ Ejemplo:
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 8 bits de un buffer en la posición especificada por el offset.
+Lee un entero de 8 bits del bufer desde la posición especificada por el offset.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
-Es como `buffer.readUInt8`, excepto que los contenidos del buffer son tratados como valores complementarios con signo de dos valores.
+Funciona como `buffer.readUInt8`, excepto que los contenidos del buffer son tratados como valores complementarios con signo de dos valores.
 
 ### buf.readInt16LE(offset[, noAssert])
 ### buf.readInt16BE(offset[, noAssert])
@@ -421,11 +421,11 @@ Es como `buffer.readUInt8`, excepto que los contenidos del buffer son tratados c
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 16 bits de un buffer en la posición especificada por el offset con el formato endiano especificado.
+Lee un entero de 16 bits del bufer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
-Es como  `buffer.readUInt16*`, excepto que los contenidos del buffer contents se tratan signos complementarios de dos valores.
+Funciona como  `buffer.readUInt16*`, excepto que los contenidos del buffer se tratan signos complementarios a dos valores.
 
 ### buf.readInt32LE(offset[, noAssert])
 ### buf.readInt32BE(offset[, noAssert])
@@ -434,11 +434,11 @@ Es como  `buffer.readUInt16*`, excepto que los contenidos del buffer contents se
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 32 bits de un buffer en la posición especificada por el offset con el formato endiano especificado.
+Lee un entero de 32 bits del bufer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
-Es como `buffer.readUInt32*`, excepto que los contenidos del buffer contents se tratan signos complementarios de dos valores.
+Funciona como `buffer.readUInt32*`, excepto que los contenidos del buffer se tratan signos complementarios a dos valores.
 
 ### buf.readFloatLE(offset[, noAssert])
 ### buf.readFloatBE(offset[, noAssert])
@@ -447,7 +447,7 @@ Es como `buffer.readUInt32*`, excepto que los contenidos del buffer contents se 
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un float de 32 bits de un buffer en la posición especificada por el offset con el formato endiano especificado.
+Lee un float de 32 bits del bufer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -457,7 +457,7 @@ Ejemplo:
 
     buf[0] = 0x00;
     buf[1] = 0x00;
-    buf[2] = 0x80;
+    buf[2] = 0x80;  
     buf[3] = 0x3f;
 
     console.log(buf.readFloatLE(0));
@@ -471,7 +471,7 @@ Ejemplo:
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un float de 64 bits de un buffer en la posición especificada por el offset con el formato endiano especificado.
+Lee un float de 64 bits del bufer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -521,7 +521,7 @@ Ejemplo:
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un entero sin signo de 16 bits válido.
+Escribe `value` en el buffer en el offset especificado con el formato endian dado. Nota que `value` ha de ser un entero sin signo de 16 bits válido.
 
 Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
@@ -548,7 +548,7 @@ Ejemplo:
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un entero sin signo de 32 bits válido.
+Escribe `value` en el buffer en el offset especificado con el formato endian dado. Nota que `value` ha de ser un entero sin signo de 32 bits válido.
 
 Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
@@ -572,11 +572,11 @@ Ejemplo:
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un entero con signo de 8 bits válido.
+Escribe `value` en el buffer en el offset especificado con el formato endian dado. Nota que `value` ha de ser un entero con signo de 8 bits válido.
 
 Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
-Es como `buffer.writeUInt8`, excepto que valor se se escriben con signos complementarios de dos valores en el `buffer`.
+Funciona como `buffer.writeUInt8`, excepto que valor se escriben con signos complementarios a dos valores en el `buffer`.
 
 ### buf.writeInt16LE(value, offset[, noAssert])
 ### buf.writeInt16BE(value, offset[, noAssert])
@@ -585,11 +585,11 @@ Es como `buffer.writeUInt8`, excepto que valor se se escriben con signos complem
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un entero con signo de 16 bits válido.
+Escribe `value` en el buffer en el offset especificado con el formato endian dado. Nota que `value` ha de ser un entero con signo de 16 bits válido.
 
 Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
-Es como `buffer.writeUInt16*`, excepto que valor se se escriben con signos complementarios de dos valores en el `buffer`.
+Funciona como `buffer.writeUInt16*`, excepto que valor se escriben con signos complementarios a dos valores en el `buffer`.
 
 ### buf.writeInt32LE(value, offset[, noAssert])
 ### buf.writeInt32BE(value, offset[, noAssert])
@@ -598,11 +598,11 @@ Es como `buffer.writeUInt16*`, excepto que valor se se escriben con signos compl
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un entero con signo de 32 bits válido.
+Escribe `value` en el buffer en el offset especificado con el formato endian dado. Nota que `value` ha de ser un entero con signo de 32 bits válido.
 
 Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
-Es como `buffer.writeUInt32*`, excepto que valor se se escriben con signos complementarios de dos valores en el `buffer`.
+Funciona como `buffer.writeUInt32*`, excepto que valor se escriben con signos complementarios a dos valores en el `buffer`.
 
 ### buf.writeFloatLE(value, offset[, noAssert])
 ### buf.writeFloatBE(value, offset[, noAssert])
@@ -611,7 +611,7 @@ Es como `buffer.writeUInt32*`, excepto que valor se se escriben con signos compl
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que, el comportamiento no está determinado si `value` no es un float de 32 bit válido.
+Escribe `value` en el buffer en el offset especificado con el formato endian dado. Nota que, el comportamiento no está determinado si `value` no es un float de 32 bit válido.
 
 Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
@@ -636,7 +636,7 @@ Ejemplo:
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un double de 64 bit válido.
+Escribe `value` en el buffer en el offset especificado con el formato endian dado. Nota que `value` ha de ser un double de 64 bit válido.
 
 Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
