@@ -29,24 +29,22 @@ Crear un typed array a partir de un `Buffer` funciona con las siguientes adverte
 
 1. La memoria del buffer es copiada, no compartida.
 
-2. La memoria del buffer se interpreta como un array, no un byte array. Es decir, `new Uint32Array(new Buffer([1,2,3,4]))` crea un `Uint32Array` de 4 elementos `[1,2,3,4]`, no un `Uint32Array` con un sólo elemento
-   `[0x1020304]` o `[0x4030201]`.
+2. La memoria del buffer se interpreta como un array, no un byte array. Es decir, `new Uint32Array(new Buffer([1,2,3,4]))` crea un `Uint32Array` de 4 elementos `[1,2,3,4]`, no un `Uint32Array` con un sólo elemento `[0x1020304]` o `[0x4030201]`.
 
-NOTE: Node.js v0.8 simplemente mantenía una referencia a el buffer en  `array.buffer` en lugar de clonarlo.
+NOTE: Node.js v0.8 simplemente mantenía una referencia al buffer en `array.buffer` en lugar de clonarlo.
 
-Aunque más eficiente, introduce incompatibilidades sutiles con la especificación de typed arrays.  `ArrayBuffer#slice()` hace una copia del "slice" mientras que
-`Buffer#slice()` crea una vista.
+Aunque más eficiente, introduce incompatibilidades sutiles con la especificación de typed arrays. `ArrayBuffer#slice()` hace una copia del "slice" mientras que `Buffer#slice()` crea una vista.
 
 ## Clase: Buffer
 
 La clase Buffer es un typo global para tratar directamente con datos binaros.
 Puede ser construida de distintas formas.
 
-### new Buffer(tamaño)
+### new Buffer(size)
 
-* `tamaño` Numero
+* `size` Number
 
-Asigna un nuevo buffer en octetos `tamaño`. Nota, `tamaño` no ha de tener un tamaño mayor a
+Asigna un nuevo buffer en octetos acorde a `size`. Nota, `size` no ha de tener un tamaño mayor a
 [kMaxLength](smalloc.html#smalloc_smalloc_kmaxlength). En caso contrario, un `RangeError` se lanzará aquí.
 
 ### new Buffer(array)
@@ -59,35 +57,35 @@ Asigna un nuevo buffer usando un `array` de octetos.
 
 * `buffer` {Buffer}
 
-Copia los datos del `buffer` pasados a una nueva istancia `Buffer`.
+Copia los datos del `buffer` pasados como parámetros a una nueva instancia `Buffer`.
 
-### new Buffer(str[, codificado])
+### new Buffer(str[, encoding])
 
 * `str` String - string a codificar.
-* `codificado` String - codifcado a use, Opcional.
+* `encoding` String - codifcado a use, Opcional.
 
-Asigna un nuevo buffer conteniendo `str`. Por defecto `codificado` es `'utf8'`.
+Asigna un nuevo buffer conteniendo `str`. Por defecto `encoding` es `'utf8'`.
 
-### Método de Clase: Buffer.isEncoding(codificado)
+### Método de Clase: Buffer.isEncoding(encoding)
 
-* `codificado` {String} string codificado a probar
+* `encoding` {String} string encoding a probar
 
-Devuelve true si el `codificado` es un argumento de codificado válido, o false en caso contrario.
+Devuelve true si el `encoding` es un argumento de codificado válido, o false en caso contrario.
 
 ### Método de Clase: Buffer.isBuffer(obj)
 
-* `obj` Objeto
+* `obj` Object
 * Devuelve: Boolean
 
 Prueba si `obj` es un `Buffer`.
 
-### Método de Clase: Buffer.byteLength(string[, codificado])
+### Método de Clase: Buffer.byteLength(string[, encoding])
 
 * `string` String
-* `codificado` String, Opcional, por defecto: 'utf8'
+* `encoding` String, Opcional, por defecto: 'utf8'
 * Devuelve: Number
 
-Da la longtiud real en bytes para el argumento string. Por defecto, `codificado` es `'utf8'`. Este valor no es el mismo que `String.prototype.length` ya que este último devuelve el número de *caractéres* en una string.
+Da la longtiud real en bytes paral argumento string. Por defecto, `encoding` es `'utf8'`. Este valor no es el mismo que `String.prototype.length` ya que este último devuelve el número de *caractéres* en una string.
 
 Ejemplo:
 
@@ -98,21 +96,21 @@ Ejemplo:
 
     // ½ + ¼ = ¾: 9 caractéres, 12 bytes
 
-### Método de Clase: Buffer.concat(lista[, longitudTotal])
+### Método de Clase: Buffer.concat(lista[, totalLength])
 
 * `lista` {Array} Lista de objetos Buffer a concatenar.
-* `longitudTotal` {Number} Longtiud total de los buffers una vez concatenados.
+* `totalLength` {Number} Longtiud total de los buffers una vez concatenados.
 
 Devuelve un buffer resultante al concatenar todos los buffers de la lista juntos.
 
-Si la lista no tiene elementos, o si la longitudTotal es 0, entonces se devuleve un buffer de longitud cero.
+Si la lista no tiene elementos, o si la totalLength es 0, entonces se devuleve un buffer de longitud cero.
 
 Si la lista tiene exactamente un item, se devuelve el primero elemento de la lista.
 
 Si la lista tiene más de un elemento, se crea un nuevo Buffer.
 
-Si no se proporciona la longitudTotal, será leida de los buffers en la lista.
-Sin embargo, esto añade un loop adicional a la función, así que será más rápido dar la longitud de forma explícita.
+Si no se proporciona la totalLength, será leída de los buffers de la lista.
+Sin embargo, esto añade un bucle adicional a la función, así que será más rápido dar la longitud de forma explícita.
 
 ### Método de Clase: Buffer.compare(buf1, buf2)
 
@@ -129,52 +127,52 @@ Equivalente a [`buf1.compare(buf2)`](#buffer_buf_compare_otherbuffer). Útil par
 
 * Number
 
-El tamaño del buffer en bytes. Tengase en cuenta que no es necesariamente el tamaño del contenido. `length` hace referencia a la cantidad de memoria asignada para el objeto buffer. No cambia cuando el tamaño del contenido de los buffers cambia.
+El tamaño del buffer en bytes. Tengase en cuenta que no es necesariamente el tamaño del contenido. `length` hace referencia a la cantidad de memoria asignada paral objeto buffer. No cambia cuando el contenido del buffer es modificado.
 
     buf = new Buffer(1234);
 
     console.log(buf.length);
-    buf.write("string", 0, "ascii");
+    buf.write("some string", 0, "ascii");
     console.log(buf.length);
 
     // 1234
     // 1234
 
-### buf.write(string[, offset][, longitud][, codificado])
+### buf.write(string[, offset][, length][, encoding])
 
-* `string` String - datos a ser escrito sen el buffer
+* `string` String - datos a ser escritos en el buffer
 * `offset` Number, Opcional, Por defecto: 0
-* `longitud` Number, Opcional, Por defecto: `buffer.length - offset`
-* `codificado` String, Opcional, Por defecto: 'utf8'
+* `length` Number, Opcional, Por defecto: `buffer.length - offset`
+* `encoding` String, Opcional, Por defecto: 'utf8'
 
-Escribe `string` en el buffer en el `offset` usando el codificado dado.
-Por defecto `offset` es `0`, por defecto `codificado` es `'utf8'`. `longitud` es
-el número de bytes a escribir. Devuelve el numero de octetos escritos. Si `buffer` no contiene el espacio suficiente para alojar a string por completo, se escribirá el tamaño parcial de string. Por defecto `longitud` es `buffer.length - offset`.
+Escribe `string` en el buffer en el `offset` usando el encoding dado.
+Por defecto `offset` es `0`, por defecto `encoding` es `'utf8'`. `length` es
+el número de bytes a escribir. Devuelve el numero de octetos escritos. Si `buffer` no contiene el espacio suficiente para alojar a string por completo, se escribirá el tamaño parcial de string. Por defecto `length` es `buffer.length - offset`.
 Este método no escribirá caractéres parciales.
 
     buf = new Buffer(256);
     len = buf.write('\u00bd + \u00bc = \u00be', 0);
     console.log(len + " bytes: " + buf.toString('utf8', 0, len));
 
-### buf.writeUIntLE(valor, offset, byteLength[, noAssert])
-### buf.writeUIntBE(valor, offset, byteLength[, noAssert])
-### buf.writeIntLE(valor, offset, byteLength[, noAssert])
-### buf.writeIntBE(valor, offset, byteLength[, noAssert])
+### buf.writeUIntLE(value, offset, byteLength[, noAssert])
+### buf.writeUIntBE(value, offset, byteLength[, noAssert])
+### buf.writeIntLE(value, offset, byteLength[, noAssert])
+### buf.writeIntBE(value, offset, byteLength[, noAssert])
 
-* `valor` {Number} Bytes to be written to buffer
+* `value` {Number} Bytes a ser escritos en el buffer
 * `offset` {Number} `0 <= offset <= buf.length`
 * `byteLength` {Number} `0 < byteLength <= 6`
 * `noAssert` {Boolean} Por defecto: false
 * Devuelve: {Number}
 
-Escribe `valor` al buffer en el especificado `offset` y `byteLength`.
+Escribe `value` al buffer en el especificado `offset` y `byteLength`.
 Soporta hasta 48 bits de precisión. Por ejemplo:
 
     var b = new Buffer(6);
     b.writeUIntBE(0x1234567890ab, 0, 6);
     // <Buffer 12 34 56 78 90 ab>
 
-Si `noAssert` es `true` se pasará por alto la validación de `valor` y `offset`. Por defecto, este valor es `false`.
+Asignar `noAssert` a `true` para omitir la validación de `value` y `offset`. Por defecto, este valor es `false`.
 
 ### buf.readUIntLE(offset, byteLength[, noAssert])
 ### buf.readUIntBE(offset, byteLength[, noAssert])
@@ -194,24 +192,24 @@ Una versión generalizada para todos los métodos de lectura numéricos. Soporta
     b.readUIntLE(0, 6).toString(16);  // Especifica 6 bytes (48 bits)
     // output: '1234567890ab'
 
-Si `noAssert` es `true` se pasará por alto la validación de `offset`. Esto significa que `offset` puede estar más haya del buffer. Por defecto es `false`.
+Asignar `noAssert` a `true` para omitir la validación de `offset`. Esto significa que `offset` puede estar más haya del buffer. Por defecto es `false`.
 
-### buf.toString([codificado][, principio][, fin])
+### buf.toString([encoding][, principio][, fin])
 
-* `codificado` String, Opcional, Por defecto: 'utf8'
+* `encoding` String, Opcional, Por defecto: 'utf8'
 * `principio` Number, Opcional, Por defecto: 0
 * `fin` Number, Opcional, Por defecto: `buffer.length`
 
-Decodifica y devuelve string desde datos buffer codificados con `codificado`
-(por defecto `'utf8'`) empezando por `principio` (por defecto `0`) y acaba en
-`fin` (defaults to `buffer.length`).
+Decodifica y devuelve un string de los datos de un buffer codificados con `encoding`
+(por defecto `'utf8'`) empezando desde `principio` (por defecto `0`) y acaba en
+`fin` (por defecto `buffer.length`).
 
 Véase el ejemplo anterior `buffer.write()`.
 
 ### buf.toJSON()
 
 Devuelve una representación JSON de la instancia Buffer. `JSON.stringify`
-implicitamente llama a esta función cuando stringifica a una instancia Buffer.
+implícitamente llama a esta función cuando transforma en string una instancia Buffer.
 
 Ejemplo:
 
@@ -221,10 +219,10 @@ Ejemplo:
     console.log(json);
     // '{"type":"Buffer","data":[116,101,115,116]}'
 
-    var copia = JSON.parse(json, function(key, valor) {
-        return valor && valor.type === 'Buffer'
-          ? new Buffer(valor.data)
-          : valor;
+    var copia = JSON.parse(json, function(key, value) {
+        return value && value.type === 'Buffer'
+          ? new Buffer(value.data)
+          : value;
       });
 
     console.log(copia);
@@ -260,7 +258,7 @@ Devuelve un boolean distinguiendo entre si `this` y `otroBuffer` tienen los mism
 
 * `otroBuffer` {Buffer}
 
-Devuelve un número indicando si `this` viene antes o después o es lo igual a `otroBuffer` en orden de calsificación.
+Devuelve un número indicando si `this` viene antes o después o es igual a `otroBuffer` en orden de clasificación.
 
 ### buf.copy(targetBuffer[, targetStart][, sourceStart][, sourceEnd])
 
@@ -275,7 +273,7 @@ Por defecto `sourceEnd` es igual a `buffer.length`.
 
 Todos los valores pasados que son `undefined`/`NaN` o están fuera del límite son asignados sus valores por defecto respectivamente.
 
-Ejemplo: construir dos Buffers, luego copiar `buf1` desde el byte 16 hasta el byte 19 en el `buf2`, empezando en el 8º byte en `buf2`.
+Ejemplo: construir dos Buffers, luego copiar `buf1` desde el byte 16 hastal byte 19 en el `buf2`, empezando en el 8º byte en `buf2`.
 
     buf1 = new Buffer(26);
     buf2 = new Buffer(26);
@@ -494,15 +492,15 @@ Ejemplo:
 
     // 0.3333333333333333
 
-### buf.writeUInt8(valor, offset[, noAssert])
+### buf.writeUInt8(value, offset[, noAssert])
 
-* `valor` Number
+* `value` Number
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `valor` en el buffer usando el offset especificado. Téngase en cuenta que `valor` debe de ser un entero de 8 bits sin signo válido.
+Escribe `value` en el buffer usando el offset especificado. Téngase en cuenta que `value` debe de ser un entero de 8 bits sin signo válido.
 
-Si `noAssert` es true no se validará `valor` y `offset`. Esto significa que `valor` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
+Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
 Ejemplo:
 
@@ -516,16 +514,16 @@ Ejemplo:
 
     // <Buffer 03 04 23 42>
 
-### buf.writeUInt16LE(valor, offset[, noAssert])
-### buf.writeUInt16BE(valor, offset[, noAssert])
+### buf.writeUInt16LE(value, offset[, noAssert])
+### buf.writeUInt16BE(value, offset[, noAssert])
 
-* `valor` Number
+* `value` Number
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `valor` en el buffer en el offset especificado con el formato endiano dado. Nota que `valor` ha de ser un entero sin signo de 16 bits válido.
+Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un entero sin signo de 16 bits válido.
 
-Si `noAssert` es true no se validará `valor` y `offset`. Esto significa que `valor` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
+Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
 Ejemplo:
 
@@ -543,16 +541,16 @@ Ejemplo:
     // <Buffer de ad be ef>
     // <Buffer ad de ef be>
 
-### buf.writeUInt32LE(valor, offset[, noAssert])
-### buf.writeUInt32BE(valor, offset[, noAssert])
+### buf.writeUInt32LE(value, offset[, noAssert])
+### buf.writeUInt32BE(value, offset[, noAssert])
 
-* `valor` Number
+* `value` Number
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `valor` en el buffer en el offset especificado con el formato endiano dado. Nota que `valor` ha de ser un entero sin signo de 32 bits válido.
+Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un entero sin signo de 32 bits válido.
 
-Si `noAssert` es true no se validará `valor` y `offset`. Esto significa que `valor` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
+Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
 Ejemplo:
 
@@ -568,54 +566,54 @@ Ejemplo:
     // <Buffer fe ed fa ce>
     // <Buffer ce fa ed fe>
 
-### buf.writeInt8(valor, offset[, noAssert])
+### buf.writeInt8(value, offset[, noAssert])
 
-* `valor` Number
+* `value` Number
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `valor` en el buffer en el offset especificado con el formato endiano dado. Nota que `valor` ha de ser un entero con signo de 8 bits válido.
+Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un entero con signo de 8 bits válido.
 
-Si `noAssert` es true no se validará `valor` y `offset`. Esto significa que `valor` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
+Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
 Es como `buffer.writeUInt8`, excepto que valor se se escriben con signos complementarios de dos valores en el `buffer`.
 
-### buf.writeInt16LE(valor, offset[, noAssert])
-### buf.writeInt16BE(valor, offset[, noAssert])
+### buf.writeInt16LE(value, offset[, noAssert])
+### buf.writeInt16BE(value, offset[, noAssert])
 
-* `valor` Number
+* `value` Number
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `valor` en el buffer en el offset especificado con el formato endiano dado. Nota que `valor` ha de ser un entero con signo de 16 bits válido.
+Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un entero con signo de 16 bits válido.
 
-Si `noAssert` es true no se validará `valor` y `offset`. Esto significa que `valor` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
+Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
 Es como `buffer.writeUInt16*`, excepto que valor se se escriben con signos complementarios de dos valores en el `buffer`.
 
-### buf.writeInt32LE(valor, offset[, noAssert])
-### buf.writeInt32BE(valor, offset[, noAssert])
+### buf.writeInt32LE(value, offset[, noAssert])
+### buf.writeInt32BE(value, offset[, noAssert])
 
-* `valor` Number
+* `value` Number
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `valor` en el buffer en el offset especificado con el formato endiano dado. Nota que `valor` ha de ser un entero con signo de 32 bits válido.
+Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un entero con signo de 32 bits válido.
 
-Si `noAssert` es true no se validará `valor` y `offset`. Esto significa que `valor` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
+Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
 Es como `buffer.writeUInt32*`, excepto que valor se se escriben con signos complementarios de dos valores en el `buffer`.
 
-### buf.writeFloatLE(valor, offset[, noAssert])
-### buf.writeFloatBE(valor, offset[, noAssert])
+### buf.writeFloatLE(value, offset[, noAssert])
+### buf.writeFloatBE(value, offset[, noAssert])
 
-* `valor` Number
+* `value` Number
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `valor` en el buffer en el offset especificado con el formato endiano dado. Nota que, el comportamiento no está determinado si `valor` no es un float de 32 bit válido.
+Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que, el comportamiento no está determinado si `value` no es un float de 32 bit válido.
 
-Si `noAssert` es true no se validará `valor` y `offset`. Esto significa que `valor` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
+Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
 Ejemplo:
 
@@ -631,16 +629,16 @@ Ejemplo:
     // <Buffer 4f 4a fe bb>
     // <Buffer bb fe 4a 4f>
 
-### buf.writeDoubleLE(valor, offset[, noAssert])
-### buf.writeDoubleBE(valor, offset[, noAssert])
+### buf.writeDoubleLE(value, offset[, noAssert])
+### buf.writeDoubleBE(value, offset[, noAssert])
 
-* `valor` Number
+* `value` Number
 * `offset` Number
 * `noAssert` Boolean, Opcional, Por defecto: false
 
-Escribe `valor` en el buffer en el offset especificado con el formato endiano dado. Nota que `valor` ha de ser un double de 64 bit válido.
+Escribe `value` en el buffer en el offset especificado con el formato endiano dado. Nota que `value` ha de ser un double de 64 bit válido.
 
-Si `noAssert` es true no se validará `valor` y `offset`. Esto significa que `valor` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
+Si `noAssert` es true no se validará `value` y `offset`. Esto significa que `value` puede ser muy largo para la función específica y `offset` más allá del final del buffer llevando aque valores se pierdan silenciosamente. Esto no se debe de hacer a no ser que se esté seguro de su corrección. Por defecto `noAssert` es `false`.
 
 Ejemplo:
 
@@ -656,14 +654,14 @@ Ejemplo:
     // <Buffer 43 eb d5 b7 dd f9 5f d7>
     // <Buffer d7 5f f9 dd b7 d5 eb 43>
 
-### buf.fill(valor[, offset][, final])
+### buf.fill(value[, offset][, end])
 
-* `valor`
+* `value`
 * `offset` Number, Opcional
-* `final` Number, Opcional
+* `end` Number, Opcional
 
-Rellena el buffer con el valor especificado. Si el `offset` (por defecto `0`)
-y `final` (por defecto `buffer.length`) no se dan se rellenará el buffer por completo.
+Rellenal buffer con el valor especificado. Si el `offset` (por defecto `0`)
+y `end` (por defecto `buffer.length`) no se dan se rellenará el buffer por completo.
 
     var b = new Buffer(50);
     b.fill("h");
