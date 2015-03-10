@@ -37,7 +37,7 @@ Aunque más eficiente, introduce incompatibilidades sutiles con la especificaci�
 
 ## Clase: Buffer
 
-La clase Buffer es un typo global para tratar directamente con datos binaros.
+La clase Buffer es un tipo global para tratar directamente con datos binaros.
 Puede ser construida de distintas formas.
 
 ### new Buffer(size)
@@ -96,9 +96,9 @@ Ejemplo:
 
     // ½ + ¼ = ¾: 9 caractéres, 12 bytes
 
-### Método de Clase: Buffer.concat(lista[, totalLength])
+### Método de Clase: Buffer.concat(list[, totalLength])
 
-* `lista` {Array} Lista de objetos Buffer a concatenar.
+* `list` {Array} Lista de objetos Buffer a concatenar.
 * `totalLength` {Number} Longtiud total de los buffers una vez concatenados.
 
 Devuelve un buffer resultante al concatenar todos los buffers de la lista juntos.
@@ -320,7 +320,7 @@ Ejemplo: construye un Buffer con el alfabeto ASCII, tomando un recorte y luego m
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 8 bits sin signo del bufer en el offset especificado.
+Lee un entero de 8 bits sin signo del buffer en el offset especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -349,7 +349,7 @@ Ejemplo:
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 16 bits sin signo del bufer desde la posición especificada por el offset con el formato endian especificado.
+Lee un entero de 16 bits sin signo del buffer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -383,7 +383,7 @@ Ejemplo:
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 32 bits sin signo del bufer desde la posición especificada por el offset con el formato endian especificado.
+Lee un entero de 32 bits sin signo del buffer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -408,7 +408,7 @@ Ejemplo:
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 8 bits del bufer desde la posición especificada por el offset.
+Lee un entero de 8 bits del buffer desde la posición especificada por el offset.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -421,7 +421,7 @@ Funciona como `buffer.readUInt8`, excepto que los contenidos del buffer son trat
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 16 bits del bufer desde la posición especificada por el offset con el formato endian especificado.
+Lee un entero de 16 bits del buffer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -434,7 +434,7 @@ Funciona como  `buffer.readUInt16*`, excepto que los contenidos del buffer se tr
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 32 bits del bufer desde la posición especificada por el offset con el formato endian especificado.
+Lee un entero de 32 bits del buffer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -447,7 +447,7 @@ Funciona como `buffer.readUInt32*`, excepto que los contenidos del buffer se tra
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un float de 32 bits del bufer desde la posición especificada por el offset con el formato endian especificado.
+Lee un float de 32 bits del buffer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -471,7 +471,7 @@ Ejemplo:
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un float de 64 bits del bufer desde la posición especificada por el offset con el formato endian especificado.
+Lee un float de 64 bits del buffer desde la posición especificada por el offset con el formato endian especificado.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
@@ -678,7 +678,7 @@ Tengase en cuenta que esta propiedad se encuentra en el módulo buffer devuelto 
 
 Devuelve un `Buffer` desagrupado `Buffer`.
 
-Para ahorrar sobrecarga por recolección de basura a la hora de crear varios Buffers asignados individualmente, por defector asignaciones por debajo a 4KB son recortadas de un único bufer asignado. Este método mejora rendimiento y memoria ya que v8 no necesita rastrear y limpiar tantos objectos `Persistentes`.
+Para ahorrar sobrecarga por recolección de basura a la hora de crear varios Buffers asignados individualmente, por defector asignaciones por debajo a 4KB son recortadas de un único buffer asignado. Este método mejora rendimiento y memoria ya que v8 no necesita rastrear y limpiar tantos objectos `Persistentes`.
 
 En el caso que un desarrollador necesite mantener una parte pequeña de memoria de un pool por una cantidad de tiempo indeterminado puede que sea apropiado crear un una instancia de `Buffer` desagroupado usando SlowBuffer y copiar las partes relevantes.
 
@@ -694,4 +694,4 @@ En el caso que un desarrollador necesite mantener una parte pequeña de memoria 
       store.push(sb);
     });
 
-Aunque esto debería de ser usado de forma marginal y solo como último recurso *despues* de que el desarrollador ha observado activamente retención de memoria indevida en sus aplicaciones.
+Aunque esto debería de ser usado de forma marginal y solo como último recurso *después* de que el desarrollador ha observado activamente retención de memoria indevida en sus aplicaciones.
