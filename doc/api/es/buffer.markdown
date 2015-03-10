@@ -194,15 +194,15 @@ Una versión generalizada para todos los métodos de lectura numéricos. Soporta
 
 Asignar `noAssert` a `true` para omitir la validación de `offset`. Esto significa que `offset` puede estar más haya del buffer. Por defecto es `false`.
 
-### buf.toString([encoding][, principio][, fin])
+### buf.toString([encoding][, start][, end])
 
 * `encoding` String, Opcional, Por defecto: 'utf8'
-* `principio` Number, Opcional, Por defecto: 0
-* `fin` Number, Opcional, Por defecto: `buffer.length`
+* `start` Number, Opcional, Por defecto: 0
+* `end` Number, Opcional, Por defecto: `buffer.length`
 
 Decodifica y devuelve un string de los datos de un buffer codificados con `encoding`
-(por defecto `'utf8'`) empezando desde `principio` (por defecto `0`) y acaba en
-`fin` (por defecto `buffer.length`).
+(por defecto `'utf8'`) empezando desde `start` (por defecto `0`) y acaba en
+`end` (por defecto `buffer.length`).
 
 Véase el ejemplo anterior `buffer.write()`.
 
@@ -289,12 +289,12 @@ Ejemplo: construir dos Buffers, luego copiar `buf1` desde el byte 16 hastal byte
     // !!!!!!!!qrst!!!!!!!!!!!!!
 
 
-### buf.slice([comienzo][, final])
+### buf.slice([start][, end])
 
-* `comienzo` Number, Opcional, Por defecto: 0
-* `final` Number, Opcional, Por defecto: `buffer.length`
+* `start` Number, Opcional, Por defecto: 0
+* `end` Number, Opcional, Por defecto: `buffer.length`
 
-Devuelve un nuevo buffer el cual hace referencia a la misma memoria que el antiguio, pero siendo su offset recortado por los índices `comienzo` (por defecto `0`) y `final` (por defecto `buffer.length`). Índices negativos empiezan or el final del buffer.
+Devuelve un nuevo buffer el cual hace referencia a la misma memoria que el antiguio, pero siendo su offset recortado por los índices `start` (por defecto `0`) y `end` (por defecto `buffer.length`). Índices negativos empiezan or el final del buffer.
 
 **¡Modificar el nuevo recorte del buffer modificará la memoria del buffer original!**
 
@@ -408,11 +408,11 @@ Ejemplo:
 * `noAssert` Boolean, Opcional, Por defecto: false
 * Devuelve: Number
 
-Lee un entero de 8 bits de un buffer en la posición especificada por el offset con el formato endiano especificado.
+Lee un entero de 8 bits de un buffer en la posición especificada por el offset.
 
 Si `noAssert` es true la validación se pasará por alto desde `offset`. Esto significa que `offset` puede estar más allá del final del buffer. Es `false` por defecto.
 
-Es como `buffer.readUInt8`, excepto que los contenidos del buffer se tratan signos complementarios de dos valores.
+Es como `buffer.readUInt8`, excepto que los contenidos del buffer son tratados como valores complementarios con signo de dos valores.
 
 ### buf.readInt16LE(offset[, noAssert])
 ### buf.readInt16BE(offset[, noAssert])
