@@ -1,44 +1,44 @@
 # Addons
 
-Addons are dynamically linked shared objects. They can provide glue to C and
-C++ libraries. The API (at the moment) is rather complex, involving
-knowledge of several libraries:
+Los Addons son objetos compartidos (shared objects), dinámicamente enlazados.
+Pueden proporcionar conexión para bibliotecas de C y C++. La API (por el momento)
+es bastante compleja, requiriendo el conocimiento de varias bibliotecas:
 
- - V8 JavaScript, a C++ library. Used for interfacing with JavaScript:
-   creating objects, calling functions, etc.  Documented mostly in the
-   `v8.h` header file (`deps/v8/include/v8.h` in the Node source
-   tree), which is also available
-   [online](http://izs.me/v8-docs/main.html).
+  - V8 Javascript, una biblioteca de C++. Usada para interconectar con Javascript:
+    Crear objetos, llamar funciones, etc. Documentada, en su mayoría, en
+    el archivo de cabecera `v8.h` (`deps/v8/include/v8.h` en el árbol de
+    directorios de io.js), disponible también
+    [online](http://izs.me/v8-docs/main.html)
 
- - [libuv](https://github.com/joyent/libuv), C event loop library.
-   Anytime one needs to wait for a file descriptor to become readable,
-   wait for a timer, or wait for a signal to be received one will need
-   to interface with libuv. That is, if you perform any I/O, libuv will
-   need to be used.
+  - [libuv](https://github.com/libuv/libuv), biblioteca para bucle de eventos en C.
+    En cualquier momento en el que se necesite esperar a que un descriptor de
+    archivo pueda ser leído, esperar un temporizador, o esperar a que una señal
+    sea recibida, necesitarás libuv. Es decir, si realizas algún tipo de
+    E/S, necesitas usar libuv.
 
- - Internal Node libraries. Most importantly is the `node::ObjectWrap`
-   class which you will likely want to derive from.
+  - Bibliotecas internas de io.js. La más importante es la clase `node::ObjectWrap`
+    que será, probablemente, de la cual derives en la mayoría de tus proyectos.
 
- - Others. Look in `deps/` for what else is available.
+  - Otros. Hecha un vistazo en `deps/` para ver qué más hay disponible.
 
-Node statically compiles all its dependencies into the executable.
-When compiling your module, you don't need to worry about linking to
-any of these libraries.
+io.js compila estáticamente todas sus dependencias en un único ejecutable.
+Cuando compilas tu módulo, no necesitas preocuparte por enlazar ninguna de
+estas bibliotecas.
 
-All of the following examples are available for
-[download](https://github.com/rvagg/node-addon-examples) and may be
-used as a starting-point for your own Addon.
+Todos los ejemplos siguientes están disponibles para
+[descargar](https://github.com/SametSisartenep/ejemplos-addon-node)
+y deberían usarse como punto de partida para tu propio Addon.
 
-## Hello world
+## Hola mundo
 
-To get started let's make a small Addon which is the C++ equivalent of
-the following JavaScript code:
+Para empezar, hagamos un pequeño Addon que es el equivalente en C++ al
+siguiente código en Javascript:
 
-    module.exports.hello = function() { return 'world'; };
+    module.exports.hola = function() { return 'mundo'; };
 
-First we create a file `hello.cc`:
+Primero creamos el archivo `hola.cc`:
 
-    // hello.cc
+    // hola.cc
     #include <node.h>
 
     using namespace v8;
@@ -46,72 +46,75 @@ First we create a file `hello.cc`:
     void Method(const FunctionCallbackInfo<Value>& args) {
       Isolate* isolate = Isolate::GetCurrent();
       HandleScope scope(isolate);
-      args.GetReturnValue().Set(String::NewFromUtf8(isolate, "world"));
+      args.GetReturnValue().Set(String::NewFromUtf8(isolate, "mundo"));
     }
 
     void init(Handle<Object> exports) {
-      NODE_SET_METHOD(exports, "hello", Method);
+      NODE_SET_METHOD(exports, "hola", Method);
     }
 
-    NODE_MODULE(addon, init)
+    NODE_MODULE(hola, init)
 
-Note that all Node addons must export an initialization function:
+Observa que todos los Addons de io.js deben exportar una función de
+inicialización:
 
     void Initialize (Handle<Object> exports);
     NODE_MODULE(module_name, Initialize)
 
-There is no semi-colon after `NODE_MODULE` as it's not a function (see
-`node.h`).
+Después de `NODE_MODULE` no hay punto y coma `;` ya que no es una función
+(Échale un vistazo a `node.h`).
 
-The `module_name` needs to match the filename of the final binary (minus the
-.node suffix).
+El `module_name` será el nombre final del archivo binario (módulo)
+(menos el sufijo *.node*).
 
-The source code needs to be built into `addon.node`, the binary Addon. To
-do this we create a file called `binding.gyp` which describes the configuration
-to build your module in a JSON-like format. This file gets compiled by
+El código fuente tiene que compilarse en `hola.node`, el Addon binario.
+Para ello, creamos un archivo llamado `binding.gyp`, que describe la
+configuración para compilar el módulo en un formato similar a JSON.
+Este archivo es compilado mediante
 [node-gyp](https://github.com/TooTallNate/node-gyp).
 
     {
       "targets": [
         {
-          "target_name": "addon",
-          "sources": [ "hello.cc" ]
+          "target_name": "hola",
+          "sources": [ "hola.cc" ]
         }
       ]
     }
 
-The next step is to generate the appropriate project build files for the
-current platform. Use `node-gyp configure` for that.
+El siguiente paso es generar los archivos de compilación del proyecto
+para nuestro sistema. Utiliza `node-gyp configure`.
 
-Now you will have either a `Makefile` (on Unix platforms) or a `vcxproj` file
-(on Windows) in the `build/` directory. Next invoke the `node-gyp build`
-command.
+Ahora tendrás, o bien un `Makefile` (en sistemas Unix) o bien un
+archivo `vcxproj` (en Windows) en el directorio `build/`. Después
+ejecuta el comando `node-gyp build`.
 
-Now you have your compiled `.node` bindings file! The compiled bindings end up
-in `build/Release/`.
+¡Ya tienes tu archivo empaquetado (bindings file) `.node` compilado! Los archivos
+empaquetados se encuentran en `build/Release/`.
 
-You can now use the binary addon in a Node project `hello.js` by pointing
-`require` to the recently built `hello.node` module:
+Ahora puedes usar tu addon binario en el proyecto `hola.js` de io.js
+a través de un `require` al módulo `addon.node` recién compilado:
 
     // hello.js
     var addon = require('./build/Release/addon');
 
     console.log(addon.hello()); // 'world'
 
-Please see patterns below for further information or
-<https://github.com/arturadib/node-qt> for an example in production.
+Por favor, mira los siguientes modelos para más información ó
+<https://github.com/arturadib/node-qt> para ver un ejemplo en producción.
 
 
-## Addon patterns
+## Modelos de Addon
 
-Below are some addon patterns to help you get started. Consult the online
-[v8 reference](http://izs.me/v8-docs/main.html) for help with the various v8
-calls, and v8's [Embedder's Guide](http://code.google.com/apis/v8/embed.html)
-for an explanation of several concepts used such as handles, scopes,
-function templates, etc.
+Abajo se muestran algunos modelos de Addon para ayudarte a empezar.
+Consulta la [referencia online de v8](http://izs.me/v8-docs/main.html)
+para ayudarte con las diversas llamadas de v8, y la
+[Guía de Embebedores](http://code.google.com/apis/v8/embed.html)
+de v8 para una explicación de varios conceptos como manejadores (handles),
+ámbitos (scopes), plantillas de funciones (function templates), etc.
 
-In order to use these examples you need to compile them using `node-gyp`.
-Create the following `binding.gyp` file:
+Con el fín de utilizar estos ejemplos, necesitas compilarlos mediante
+`node-gyp`. Crea el siguiente archivo `binding.gyp`:
 
     {
       "targets": [
@@ -122,22 +125,22 @@ Create the following `binding.gyp` file:
       ]
     }
 
-In cases where there is more than one `.cc` file, simply add the file name to
-the `sources` array, e.g.:
+En situaciones donde hayan más de un archivo `.cc`, simplemente
+añade el nombre del archivo al Array de `sources`, e.g:
 
     "sources": ["addon.cc", "myexample.cc"]
 
-Now that you have your `binding.gyp` ready, you can configure and build the
-addon:
+Ahora que tienes el archivo `binding.gyp` listo, puedes configurar y
+compilar el addon:
 
     $ node-gyp configure build
 
 
-### Function arguments
+### Argumentos de funciones
 
-The following pattern illustrates how to read arguments from JavaScript
-function calls and return a result. This is the main and only needed source
-`addon.cc`:
+El siguiente modelo muestra cómo obtener argumentos de llamadas
+a funciones en Javascript y devolver un resultado. Este es el
+único archivo que vas a necesitar, `addon.cc`:
 
     // addon.cc
     #include <node.h>
@@ -172,7 +175,7 @@ function calls and return a result. This is the main and only needed source
 
     NODE_MODULE(addon, Init)
 
-You can test it with the following JavaScript snippet:
+Puedes probarlo con el siguiente fragmento de Javascript:
 
     // test.js
     var addon = require('./build/Release/addon');
@@ -182,8 +185,8 @@ You can test it with the following JavaScript snippet:
 
 ### Callbacks
 
-You can pass JavaScript functions to a C++ function and execute them from
-there. Here's `addon.cc`:
+Puedes pasar funciones de Javascript a una función de C++, y ejecutarlas
+desde ahí. Aquí está el archivo `addon.cc`:
 
     // addon.cc
     #include <node.h>
@@ -206,12 +209,12 @@ there. Here's `addon.cc`:
 
     NODE_MODULE(addon, Init)
 
-Note that this example uses a two-argument form of `Init()` that receives
-the full `module` object as the second argument. This allows the addon
-to completely overwrite `exports` with a single function instead of
-adding the function as a property of `exports`.
+Fíjate que en este ejemplo utilizamos la función `Init()` con dos argumentos,
+siendo el último un objeto `module` completo. Esto le permite al addon
+sobreescribir completamente el objeto `exports` con una única función
+en lugar de añadir la función como una propiedad del mismo.
 
-To test it run the following JavaScript snippet:
+Para probarlo, ejecuta el siguiente código de Javascript:
 
     // test.js
     var addon = require('./build/Release/addon');
@@ -221,11 +224,12 @@ To test it run the following JavaScript snippet:
     });
 
 
-### Object factory
+### Fábrica de objetos
 
-You can create and return new objects from within a C++ function with this
-`addon.cc` pattern, which returns an object with property `msg` that echoes
-the string passed to `createObject()`:
+Puedes crear y distribuir objetos nuevos desde una función en C++
+con este modelo de `addon.cc` que devuelve un objeto con la propiedad
+`msg` que emite la cadena de caracteres (string) introducida en
+`createObject()`:
 
     // addon.cc
     #include <node.h>
@@ -248,7 +252,7 @@ the string passed to `createObject()`:
 
     NODE_MODULE(addon, Init)
 
-To test it in JavaScript:
+Para probarlo en Javascript:
 
     // test.js
     var addon = require('./build/Release/addon');
@@ -258,10 +262,10 @@ To test it in JavaScript:
     console.log(obj1.msg+' '+obj2.msg); // 'hello world'
 
 
-### Function factory
+### Fábrica de funciones
 
-This pattern illustrates how to create and return a JavaScript function that
-wraps a C++ function:
+Este modelo muestra cómo crear y distribuir una función en Javascript
+que se conecta a una función de C++:
 
     // addon.cc
     #include <node.h>
@@ -293,7 +297,7 @@ wraps a C++ function:
 
     NODE_MODULE(addon, Init)
 
-To test:
+Para probarlo:
 
     // test.js
     var addon = require('./build/Release/addon');
@@ -302,11 +306,11 @@ To test:
     console.log(fn()); // 'hello world'
 
 
-### Wrapping C++ objects
+### Conectando objetos de C++
 
-Here we will create a wrapper for a C++ object/class `MyObject` that can be
-instantiated in JavaScript through the `new` operator. First prepare the main
-module `addon.cc`:
+Aquí vamos a crear un conector para el objeto/clase `MyObject` de C++,
+el cual se podrá instanciar a través del operador `new` en Javascript.
+Primero prepara el módulo principal, `addon.cc`:
 
     // addon.cc
     #include <node.h>
@@ -320,7 +324,8 @@ module `addon.cc`:
 
     NODE_MODULE(addon, InitAll)
 
-Then in `myobject.h` make your wrapper inherit from `node::ObjectWrap`:
+Entonces, en `myobject.h`, haz que tu conector herede de la clase
+`node::ObjectWrap`:
 
     // myobject.h
     #ifndef MYOBJECT_H
@@ -345,9 +350,9 @@ Then in `myobject.h` make your wrapper inherit from `node::ObjectWrap`:
 
     #endif
 
-And in `myobject.cc` implement the various methods that you want to expose.
-Here we expose the method `plusOne` by adding it to the constructor's
-prototype:
+Y en `myobject.cc`, implementa los diversos métodos que vas a exponer.
+Aquí vamos a exponer el método `plusOne`, añadiéndolo al prototipo
+(prototype) del constructor:
 
     // myobject.cc
     #include "myobject.h"
@@ -407,7 +412,7 @@ prototype:
       args.GetReturnValue().Set(Number::New(isolate, obj->value_));
     }
 
-Test it with:
+Pruébalo con:
 
     // test.js
     var addon = require('./build/Release/addon');
@@ -417,16 +422,16 @@ Test it with:
     console.log( obj.plusOne() ); // 12
     console.log( obj.plusOne() ); // 13
 
-### Factory of wrapped objects
+### Fábrica de objetos conectados
 
-This is useful when you want to be able to create native objects without
-explicitly instantiating them with the `new` operator in JavaScript, e.g.
+Esto es útil cuando quieres crear objetos nativos sin tener que recurrir
+al operador `new` en Javascript, e.g:
 
     var obj = addon.createObject();
     // instead of:
     // var obj = new addon.Object();
 
-Let's register our `createObject` method in `addon.cc`:
+Vamos a registrar nuestro método `createObject` en `addon.cc`:
 
     // addon.cc
     #include <node.h>
@@ -448,8 +453,9 @@ Let's register our `createObject` method in `addon.cc`:
 
     NODE_MODULE(addon, InitAll)
 
-In `myobject.h` we now introduce the static method `NewInstance` that takes
-care of instantiating the object (i.e. it does the job of `new` in JavaScript):
+En `myobject.h`, ahora incluimos el método estático `NewInstance` que
+se encarga de instanciar el objeto (es decir, hace el trabajo de `new`
+en Javascript):
 
     // myobject.h
     #ifndef MYOBJECT_H
@@ -475,7 +481,7 @@ care of instantiating the object (i.e. it does the job of `new` in JavaScript):
 
     #endif
 
-The implementation is similar to the above in `myobject.cc`:
+La implementación es similar al anterior `myobject.cc`:
 
     // myobject.cc
     #include <node.h>
@@ -545,7 +551,7 @@ The implementation is similar to the above in `myobject.cc`:
       args.GetReturnValue().Set(Number::New(isolate, obj->value_));
     }
 
-Test it with:
+Pruébalo con:
 
     // test.js
     var createObject = require('./build/Release/addon');
@@ -561,12 +567,12 @@ Test it with:
     console.log( obj2.plusOne() ); // 23
 
 
-### Passing wrapped objects around
+### Distribuyendo objetos conectados
 
-In addition to wrapping and returning C++ objects, you can pass them around
-by unwrapping them with Node's `node::ObjectWrap::Unwrap` helper function.
-In the following `addon.cc` we introduce a function `add()` that can take on two
-`MyObject` objects:
+Además de conectar y devolver objetos de C++, puedes distribuirlos
+desconectándolos mediante la función de ayuda `node::ObjectWrap::Unwrap`
+de io.js. En el siguiente `addon.cc` introducimos una función `add()`
+que puede hacer uso de dos objetos `MyObject`:
 
     // addon.cc
     #include <node.h>
@@ -603,8 +609,9 @@ In the following `addon.cc` we introduce a function `add()` that can take on two
 
     NODE_MODULE(addon, InitAll)
 
-To make things interesting we introduce a public method in `myobject.h` so we
-can probe private values after unwrapping the object:
+Para hacer las cosas más interesantes, vamos a introducir un un método
+público en `myobject.h`, así podemos probar valores privados después de
+desconectar el objeto:
 
     // myobject.h
     #ifndef MYOBJECT_H
@@ -630,7 +637,7 @@ can probe private values after unwrapping the object:
 
     #endif
 
-The implementation of `myobject.cc` is similar as before:
+La implementación de `myobject.cc` es similar a los anteriores:
 
     // myobject.cc
     #include <node.h>
@@ -688,7 +695,7 @@ The implementation of `myobject.cc` is similar as before:
       args.GetReturnValue().Set(instance);
     }
 
-Test it with:
+Pruébalo con:
 
     // test.js
     var addon = require('./build/Release/addon');
