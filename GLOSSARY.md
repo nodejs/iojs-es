@@ -36,6 +36,7 @@ some consistence, here you can find a glossary.
  * asynchronous: [asíncrono](http://es.wikipedia.org/wiki/Asincron%C3%ADa)
 
 #b
+ * build: compilar
  * boolean: [booleano](http://es.wikipedia.org/wiki/Tipo_de_dato_l%C3%B3gico)
 
 #d
@@ -43,6 +44,10 @@ some consistence, here you can find a glossary.
 
 #f
  * flag: flag
+
+#l
+ * lock: bloquear
+ * language: idioma
 
 #s
  * synchronous: [síncrono](http://www.sites.upiicsa.ipn.mx/polilibros/portal/polilibros/p_terminados/PolilibroFC/Unidad_II/Unidad%20II_5.htm)
