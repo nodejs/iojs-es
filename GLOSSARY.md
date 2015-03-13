@@ -37,6 +37,7 @@ some consistence, here you can find a glossary.
 
 #b
  * boolean: [booleano](http://es.wikipedia.org/wiki/Tipo_de_dato_l%C3%B3gico)
+ * build: compilar
 
 #c
  * cipher - noun: [cifrador](http://es.wikipedia.org/wiki/Cifrado_%28criptograf%C3%ADa%29)
@@ -51,6 +52,10 @@ some consistence, here you can find a glossary.
 
 #h
  * hash - noun: [hash](http://es.wikipedia.org/wiki/Funci%C3%B3n_hash)
+
+#l
+ * language: idioma
+ * lock: bloquear
 
 #s
  * synchronous: [síncrono](http://www.sites.upiicsa.ipn.mx/polilibros/portal/polilibros/p_terminados/PolilibroFC/Unidad_II/Unidad%20II_5.htm)
