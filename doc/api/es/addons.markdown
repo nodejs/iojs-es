@@ -64,7 +64,7 @@ inicialización:
 Después de `NODE_MODULE` no hay punto y coma `;` ya que no es una función
 (Échale un vistazo a `node.h`).
 
-El `module_name` será el nombre final del archivo binario (módulo)
+El `module_name` deberá coincidir con el nombre del archivo binario final (módulo)
 (menos el sufijo *.node*).
 
 El código fuente tiene que compilarse en `hola.node`, el Addon binario.
@@ -83,9 +83,9 @@ Este archivo es compilado mediante
     }
 
 El siguiente paso es generar los archivos de compilación del proyecto
-para nuestro sistema. Utiliza `node-gyp configure`.
+para nuestra plataforma (x86, x64, ARM, PPC, etc). Utiliza `node-gyp configure` para lograr esto.
 
-Ahora tendrás, o bien un `Makefile` (en sistemas Unix) o bien un
+Ahora tendrás, bien un `Makefile` (en sistemas Unix) o un
 archivo `vcxproj` (en Windows) en el directorio `build/`. Después
 ejecuta el comando `node-gyp build`.
 
@@ -126,7 +126,7 @@ Con el fín de utilizar estos ejemplos, necesitas compilarlos mediante
     }
 
 En situaciones donde hayan más de un archivo `.cc`, simplemente
-añade el nombre del archivo al Array de `sources`, e.g:
+añade el nombre del archivo al array `sources`, por ejemplo:
 
     "sources": ["addon.cc", "myexample.cc"]
 
@@ -138,9 +138,9 @@ compilar el addon:
 
 ### Argumentos de funciones
 
-El siguiente modelo muestra cómo obtener argumentos de llamadas
+El siguiente ejemplo muestra cómo obtener argumentos de llamadas
 a funciones en Javascript y devolver un resultado. Este es el
-único archivo que vas a necesitar, `addon.cc`:
+único archivo fuente que vas a necesitar, `addon.cc`:
 
     // addon.cc
     #include <node.h>
@@ -175,7 +175,7 @@ a funciones en Javascript y devolver un resultado. Este es el
 
     NODE_MODULE(addon, Init)
 
-Puedes probarlo con el siguiente fragmento de Javascript:
+Puedes probarlo con el siguiente fragmento de código de Javascript:
 
     // test.js
     var addon = require('./build/Release/addon');
