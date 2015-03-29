@@ -16,7 +16,7 @@ Colaborators by [time zone][x-timeZoneList]
 - [vrunoa][u-vrunoa], Rosario Argentina UTC−03:00 (ART)
 - [rcotrina94][u-rcotrina94], Chimbote Peru UTC−5:00 (PET)
 - [italoacasas][u-italoacasas], Miami Estados Unidos UTC−5:00 (EST)
-
+- [pandres95][u-pandres95], Bogotá Colombia UTC-05:00
 <!--
   u- is for user
   x- is for just a link
@@ -36,4 +36,5 @@ Colaborators by [time zone][x-timeZoneList]
 [u-ipeluffo]: https://github.com/ipeluffo
 [u-vrunoa]: https://github.com/vrunoa
 [u-rcotrina94]: https://github.com/rcotrina94
+[u-pandres95]: https://github.com/pandres95
 [x-timeZoneList]: http://en.wikipedia.org/wiki/List_of_time_zones_by_country
