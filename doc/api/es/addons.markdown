@@ -7,7 +7,7 @@ es bastante compleja, requiriendo el conocimiento de varias bibliotecas:
   - V8 Javascript, una biblioteca de C++. Usada para interconectar con Javascript:
     Crear objetos, llamar funciones, etc. Documentada, en su mayoría, en
     el archivo de cabecera `v8.h` (`deps/v8/include/v8.h` en el árbol de
-    directorios de io.js), disponible también
+    directorios de io.js), disponible también de manera
     [online](http://izs.me/v8-docs/main.html)
 
   - [libuv](https://github.com/libuv/libuv), biblioteca para bucle de eventos en C.
@@ -64,7 +64,7 @@ inicialización:
 Después de `NODE_MODULE` no hay punto y coma `;` ya que no es una función
 (Échale un vistazo a `node.h`).
 
-El `module_name` deberá coincidir con el nombre del archivo binario final (módulo)
+El `module_name` será el nombre final del archivo binario (módulo)
 (menos el sufijo *.node*).
 
 El código fuente tiene que compilarse en `hola.node`, el Addon binario.
@@ -83,13 +83,13 @@ Este archivo es compilado mediante
     }
 
 El siguiente paso es generar los archivos de compilación del proyecto
-para nuestra plataforma (x86, x64, ARM, PPC, etc). Utiliza `node-gyp configure` para lograr esto.
+para nuestro sistema. Utiliza `node-gyp configure`.
 
-Ahora tendrás, bien un `Makefile` (en sistemas Unix) o un
+Ahora tendrás, o bien un `Makefile` (en sistemas Unix) o bien un
 archivo `vcxproj` (en Windows) en el directorio `build/`. Después
 ejecuta el comando `node-gyp build`.
 
-¡Ya tienes tu archivo empaquetado (bindings file) `.node` compilado! Los archivos
+Ya tienes tu archivo empaquetado (bindings file) `.node` compilado! Los archivos
 empaquetados se encuentran en `build/Release/`.
 
 Ahora puedes usar tu addon binario en el proyecto `hola.js` de io.js
@@ -126,7 +126,7 @@ Con el fín de utilizar estos ejemplos, necesitas compilarlos mediante
     }
 
 En situaciones donde hayan más de un archivo `.cc`, simplemente
-añade el nombre del archivo al array `sources`, por ejemplo:
+añade el nombre del archivo al Array de `sources`, e.g:
 
     "sources": ["addon.cc", "myexample.cc"]
 
@@ -138,9 +138,9 @@ compilar el addon:
 
 ### Argumentos de funciones
 
-El siguiente ejemplo muestra cómo obtener argumentos de llamadas
+El siguiente modelo muestra cómo obtener argumentos de llamadas
 a funciones en Javascript y devolver un resultado. Este es el
-único archivo fuente que vas a necesitar, `addon.cc`:
+único archivo que vas a necesitar, `addon.cc`:
 
     // addon.cc
     #include <node.h>
@@ -175,7 +175,7 @@ a funciones en Javascript y devolver un resultado. Este es el
 
     NODE_MODULE(addon, Init)
 
-Puedes probarlo con el siguiente fragmento de código de Javascript:
+Puedes probarlo con el siguiente fragmento de Javascript:
 
     // test.js
     var addon = require('./build/Release/addon');
@@ -570,9 +570,9 @@ Pruébalo con:
 ### Distribuyendo objetos conectados
 
 Además de conectar y devolver objetos de C++, puedes distribuirlos
-desconectándolos mediante la función de ayuda `node::ObjectWrap::Unwrap`
-de io.js. En el siguiente `addon.cc` introducimos una función `add()`
-que puede hacer uso de dos objetos `MyObject`:
+desconectándolos mediante la función de ayuda (helper function)
+`node::ObjectWrap::Unwrap` de io.js. En el siguiente `addon.cc` introducimos
+una función `add()` que puede hacer uso de dos objetos `MyObject`:
 
     // addon.cc
     #include <node.h>
