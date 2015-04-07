@@ -15,13 +15,13 @@ Cualquier duda, pregúntala en este repositorio o [en gitter](https://gitter.im/
 
 # Grupos de Trabajo
 
-Cada grupo tiene un repositorio en [la organización iojs-es](http://github.com/iojs-es) que es un fork del repositorio original de iojs. El material se trabaja de forma independiente en cada uno de los repositorios, desde donde una vez revisado por el equipo de revisión, la traducción se agrega al material ya traducido de las y se hace un Pull Request al repositorio de iojs.
+Cada grupo tiene un repositorio en [la organización iojs-es](http://github.com/iojs-es) que es un fork del repositorio original de iojs. El material se trabaja de forma independiente en cada uno de los repositorios, desde donde una vez revisado por el equipo de revisión, la traducción se agrega al material ya traducido y se hace un Pull Request al repositorio de iojs.
 
 Una vez escojas eres libre de empezar a contribuir. La idea es que hagas lo que puedas cuando puedas. Tu pones el ritmo.
 
 ## ¿Dónde está el material pendiente?
 
-Dependiendo del grupo el material pendiente de traducción o revisión va estar en una forma u otra. En cualquier caso siempre puedes usar git para saber qué es lo que hay que actualizar. En la sección siguiente para ver una forma de hacerlo.
+Dependiendo del grupo el material pendiente de traducción o revisión va estar en una forma u otra. En cualquier caso siempre puedes usar git para saber qué es lo que hay que actualizar. En la sección siguiente puedes ver una forma de hacerlo.
 
 ### Website
 
@@ -30,20 +30,24 @@ Website trabaja con el repositorio [iojs-es/website](https://github.com/iojs-es/
 Para estar al día haz lo siguiente
 
 ```sh
+# las dos primeras lineas solo hay que hacerlas una vez
 git fork https://github.com/iojs-es/website.git
 git remote add upstream https://github.com/iojs/website.git
+# estas dos cada vez que quieras ver si hay algo que actualizar
 git remote update
+git merge master origin/master
 ```
-esto creará un repositorio que apunta al original de iojs y al fork que tenemos hecho. Hecho esto, basta con comparar los commits de iojs/website con iojs-es/website y ver qué falta por actualizar
+esto creará un repositorio que apunta al original de iojs y al fork que tenemos hecho. Con esto, basta con comparar los commits de iojs/website con iojs-es/website y ver qué falta por actualizar
 
 ```sh
+# commits de iojs/website
 git log upstream/master -p
-# en una pestaña del terminal a parte
+# commits de iojs-es/website
 git log origin/master -p
-# el -p muestra el texto/código que se actualizó en cada commit
+# -p (--pretty :D) muestra el texto/código que se actualizó junto a cada commit
 ```
 
-Una vez identificado lo que hay que actualizar, crea una branch local, haces los cambios y push al repositorio
+Una vez identificado lo que hay que actualizar, se crea una branch local, haces los cambios necesarios y por último push al repositorio iojs-es/website
 
 ```sh
 # el nombre de la branch no importa ;)
@@ -53,6 +57,18 @@ git push origin actualiza-<documento>
 ```
 
 Hecho el push lo que has actualizado está ya en el repositorio pero falta hacer la Pull Request. Para ello, vas a repositorio y creas una Pull Request pidiendo al Grupo de Trabajo de Revisión que te revise el documento para estar conformes.
+
+Si no recuerdas qué tenias puesto como `origin` y qué como `upstream` haz lo siguiente
+
+```sh
+git remote -v
+origin	https://github.com/iojs-es/website.git (fetch)
+origin	https://github.com/iojs-es/website.git (push)
+upstream	https://github.com/iojs/website.git (fetch)
+upstream	https://github.com/iojs/website.git (push)
+```
+
+y así ya sabes que `git push origin actualiza-<documento>` es el iojs-es/website
 
 ### Documentación
 
