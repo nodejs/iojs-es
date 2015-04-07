@@ -81,11 +81,11 @@ Estamos a la espera de que io.js integre las traducciones de la API en la web (y
 
 ### Evangelización
 
-Evangelización trabaja con el repositorio [iojs-es/evangelism](https://github.com/iojs-es/io.js), concretamente con [normalmente traduciendo los weekly-updates](https://github.com/iojs-es/evangelism/tree/master/weekly-updates) donde se van añadiendo las secciones de la API aún no traducidas.
-
-En el caso de evangelización lo más normal es tener que traducir un artículo a la semana.
+Evangelización trabaja con el repositorio [iojs-es/evangelism](https://github.com/iojs-es/io.js), normalmente traduciendo [weekly-updates](https://github.com/iojs-es/evangelism/tree/master/weekly-updates). Suele ser un artículo a la semana. 
 
 En este momento hay 4 artículos sin traducir empezando por el [weekly-update.2015-03-13.md](https://github.com/iojs-es/evangelism/tree/master/weekly-updates/weekly-update.2015-03-13.md)
+
+Una vez traducido el artículo se publica en [@medium](https://medium.com/@iojs_es). Si estás en evangelización y has traducido un artículo pero no tienes la cuenta para publicar el artículo [habre un issue](https://github.com/iojs/iojs-es/issues/new).
 
 ### Revisión
 
