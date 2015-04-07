@@ -41,9 +41,9 @@ esto creará un repositorio que apunta al original de iojs y al fork que tenemos
 
 ```sh
 # commits de iojs/website
-git log -p upstream/master content/es
+git log -p upstream/master content/en
 # commits de iojs-es/website
-git log -p origin/master content/en
+git log -p origin/master content/es
 # -p (--pretty :D) muestra el contenido que se actualizó junto a cada commit
 ```
 
