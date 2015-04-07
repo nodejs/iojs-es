@@ -41,10 +41,10 @@ esto creará un repositorio que apunta al original de iojs y al fork que tenemos
 
 ```sh
 # commits de iojs/website
-git log upstream/master -p
+git log -p upstream/master content/es
 # commits de iojs-es/website
-git log origin/master -p
-# -p (--pretty :D) muestra el texto/código que se actualizó junto a cada commit
+git log -p origin/master content/en
+# -p (--pretty :D) muestra el contenido que se actualizó junto a cada commit
 ```
 
 Una vez identificado lo que hay que actualizar, se crea una branch local, haces los cambios necesarios y por último push al repositorio iojs-es/website
