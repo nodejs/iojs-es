@@ -31,7 +31,7 @@ Para estar al día haz lo siguiente
 
 ```sh
 # las dos primeras lineas solo hay que hacerlas una vez
-git fork https://github.com/iojs-es/website.git
+git clone https://github.com/iojs-es/website.git && cd website
 git remote add upstream https://github.com/iojs/website.git
 # estas dos cada vez que quieras ver si hay algo que actualizar
 git remote update
