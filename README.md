@@ -5,7 +5,7 @@
 Localización y traducción de [io.js](https://iojs.org/) a Español
 
 ## ¿Quieres colaborar?
-Abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Colaborador) con el título *Colaborador* y cuéntanos acerca de ti.
+Échale un vistazo al [CONTRIBUTING.md](./CONTRIBUTING.md). Si hay algo que no te quede claro, abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Colaborador) con el título *Colaborador* y cuéntanos.
 
 ## ¿Quieres ayudarnos a traducir?
 Abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Traductor) con el título *Traductor* y te indicaremos los documentos que están pendientes de traducción o revisión.
