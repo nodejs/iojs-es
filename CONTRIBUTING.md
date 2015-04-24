@@ -76,3 +76,7 @@ En este momento hay 4 artículos sin traducir empezando por el [weekly-update.20
 Trabaja en conjunto con cualquiera de los grupos anteriores para garantizar que los documentos estén correctamente traducidos y no haya errores accidentales y/o de contexto. En concreto:
 
  - Ayuda a construir el [GLOSSARY.md](./GLOSSARY.md)
+
+### Publicación
+
+Una vez está echo el trabajo y se ha revisado, se pide a el org que lo aprueve. Después de que dos colaboradores den su visto bueno, se hace un merge al repositorio (el merge lo puede hacer la persona que ha hecho el trabajo igualmente) y PR al repositorio de iojs que corresponda. En el caso de ser un artículo de evangelización, también se publicará en [medium](https://medium.com/@iojs_es) y hará un twit.
