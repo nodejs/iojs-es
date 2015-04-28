@@ -11,7 +11,7 @@ Esta semana se liberaron dos versiones de io.js, la [v1.6.1](https://iojs.org/di
 
 #### 1.6.0
 
-* **node**: se ha añadido la opción `-r` or `--require` por línea de comandas, que puede ser usada para precargar módulos al inicio (Ali Ijaz Sheikh) [#881](https://github.com/iojs/io.js/pull/881).
+* **node**: se ha añadido la opción `-r` or `--require` por línea de comandos, que puede ser usada para precargar módulos al inicio (Ali Ijaz Sheikh) [#881](https://github.com/iojs/io.js/pull/881).
 * **querystring**: `parse()` y `stringify()` funcionan más rápidamente (Brian White) [#847](https://github.com/iojs/io.js/pull/847).
 * **http**: el método `http.ClientRequest#flush()` ha sido deprecado y se ha reemplazado con `http.ClientRequest#flushHeaders()` para coincidir con el mismo cambio realizado en Node.js v0.12 en [joyent/node#9048](https://github.com/joyent/node/pull/9048) (Yosuke Furukawa) [#1156](https://github.com/iojs/io.js/pull/1156).
 * **net**: se permite a `server.listen()` aceptar la opción `port` como un `String`, por ejemplo `{ port: "1234" }`, para coincidir con la misma opción en `net.connect()` de acuerdo a [joyent/node#9268](https://github.com/joyent/node/pull/9268) (Ben Noordhuis) [#1116](https://github.com/iojs/io.js/pull/1116).
@@ -30,14 +30,15 @@ Esta semana se liberaron dos versiones de io.js, la [v1.6.1](https://iojs.org/di
 
 # Actualizaciones de la comunidad
 
-* browserify ahora soporta io.js, you can check the announcement [here](https://twitter.com/yosuke_furukawa/status/577150547850969088)
+* browserify ahora soporta io.js, puedes ver el anuncio [aquí](https://twitter.com/yosuke_furukawa/status/577150547850969088)
 * express.js añadió  [soporte](https://github.com/strongloop/express/commit/165660811aa9ba5f3733a7b033894f3d9a9c5e60) para io.js
-* En las últimas dos semanas obtuvimos acceso a hardware de Joyent y subimos un parche a V8 de manera que obtuvimos la compilación de io.js. Después de esto, trabajamos en pasar los test tanto para [SmartOS](https://github.com/iojs/build/pull/64) como [FreeBSD](https://github.com/iojs/io.js/pull/1167) los cuales desde hace dos días funcionan, esto fue gracias al increible trabajo del equipo de compilación y de [Johan Bergström](https://github.com/jbergstroem)
+* En las dos últimas semanas se tuvo acceso a hardware de Joyent y se subió un parche a V8 que se pudo compilar en io.js. . Después de esto, trabajamos en pasar los test tanto para [SmartOS](https://github.com/iojs/build/pull/64) como [FreeBSD](https://github.com/iojs/io.js/pull/1167) los cuales desde hace dos días funcionan, esto fue gracias al increible trabajo del equipo de compilación y de [Johan Bergström](https://github.com/jbergstroem)
 * [Petka Antonov](https://github.com/petkaantonov) está proponiendo una implementación de workers en io.js bajo un flag experimental, puedes unirte a la discusión [aquí](https://github.com/iojs/io.js/pull/1159)
 * io.js [actualizó](https://github.com/iojs/io.js/pull/1206) openssl a `1.0.1m`
 
 # Próximos eventos
 
-* Los tiquetes para la [NodeConf](http://nodeconf.com/) están a la venta, el evento será del 8 y 9 de junio en Oakland, CA y la NodeConf Adventure del 11 al 14 de junio en Walker Creek Ranch, CA
-* Los tioquetes para [CascadiaJS](http://2015.cascadiajs.com/) están a la venta, el evento será del 8 al 10 de julio en Washington State
-* Los tiquetes para la [NodeConf EU](http://nodeconf.eu/) están a la venta, el evento será del 6 al 9 de septiembre en Waterford, Irlanda
+
+* Los tickets para la [NodeConf](http://nodeconf.com/) están ya a la venta, el evento será del 8 y 9 de junio en Oakland, CA y la NodeConf Adventure del 11 al 14 de junio en Walker Creek Ranch, CA
+* Los tickets para [CascadiaJS](http://2015.cascadiajs.com/) están ya a la venta, el evento será del 8 al 10 de julio en el Estado de Washington
+* Los tickets para la [NodeConf EU](http://nodeconf.eu/) están ya a la venta, el evento será del 6 al 9 de Septiembre en Waterford, Irlanda
