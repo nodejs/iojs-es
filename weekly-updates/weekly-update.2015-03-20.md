@@ -6,13 +6,13 @@ Esta semana se liberaron dos versiones de io.js, la [v1.6.1](https://iojs.org/di
 
 #### 1.6.1
 
-* **path**: la comprobación de tipos en `path.resolve()` [#1153](https://github.com/iojs/io.js/pull/1153) no cubría algunos casos extremos que podían ser invocados en ambientes naturales, siendo el más notable `path.dirname(undefined)`. Esta se ha suavizado para `path.dirname()`, `path.basename()`, y `path.extname()` (Colin Ihrig) [#1216](https://github.com/iojs/io.js/pull/1216).
-* **querystring**: optimizciones internas en `querystring.parse()` y `querystring.stringify()` [#847](https://github.com/iojs/io.js/pull/847) previenen que los literales `Number` sean apropiadamente convertidos mediante `querystring.escape()` [#1208](https://github.com/iojs/io.js/issues/1208), exponiendo un punto ciego en el conjunto de pruebas. El bug y las pruebas han sido corregidos (Jeremiah Senkpiel) [#1213](https://github.com/iojs/io.js/pull/1213).
+* **path**: la comprobación de tipos en `path.resolve()` [#1153](https://github.com/iojs/io.js/pull/1153) no cubría algunos casos extremos que podían ser invocados en ambientes naturales, siendo el más notable `path.dirname(undefined)`. La verificación de tipos ha sido relajada para `path.dirname()`, `path.basename()`, y `path.extname()` (Colin Ihrig) [#1216](https://github.com/iojs/io.js/pull/1216).
+* **querystring**: optimizciones internas en `querystring.parse()` y `querystring.stringify()` [#847](https://github.com/iojs/io.js/pull/847) previenen que los literales `Number` sean propiamente convertidos mediante `querystring.escape()` [#1208](https://github.com/iojs/io.js/issues/1208), exponiendo un punto ciego en el conjunto de pruebas. El bug y las pruebas han sido corregidos (Jeremiah Senkpiel) [#1213](https://github.com/iojs/io.js/pull/1213).
 
 #### 1.6.0
 
 * **node**: se ha añadido la opción `-r` or `--require` por línea de comandos, que puede ser usada para precargar módulos al inicio (Ali Ijaz Sheikh) [#881](https://github.com/iojs/io.js/pull/881).
-* **querystring**: `parse()` y `stringify()` funcionan más rápidamente (Brian White) [#847](https://github.com/iojs/io.js/pull/847).
+* **querystring**: `parse()` y `stringify()` son ahora más rápidos (Brian White) [#847](https://github.com/iojs/io.js/pull/847).
 * **http**: el método `http.ClientRequest#flush()` ha sido deprecado y se ha reemplazado con `http.ClientRequest#flushHeaders()` para coincidir con el mismo cambio realizado en Node.js v0.12 en [joyent/node#9048](https://github.com/joyent/node/pull/9048) (Yosuke Furukawa) [#1156](https://github.com/iojs/io.js/pull/1156).
 * **net**: se permite a `server.listen()` aceptar la opción `port` como un `String`, por ejemplo `{ port: "1234" }`, para coincidir con la misma opción en `net.connect()` de acuerdo a [joyent/node#9268](https://github.com/joyent/node/pull/9268) (Ben Noordhuis) [#1116](https://github.com/iojs/io.js/pull/1116).
 * **tls**: hay que seguir trabajando en la pérdida de memoria reportada, aunque parece que la fuga restante para el caso de uso en cuestión es menor, siga el progreso en [#1075](https://github.com/iojs/io.js/issues/1075).
