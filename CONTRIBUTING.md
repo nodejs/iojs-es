@@ -95,7 +95,7 @@ Trabaja en conjunto con cualquiera de los grupos anteriores para garantizar que 
 
 ### Publicación
 
-Una vez está echo el trabajo y se ha revisado, se pide a el org que lo aprueve. Después de que dos colaboradores den su visto bueno, se hace un merge al repositorio (el merge lo puede hacer la persona que ha hecho el trabajo igualmente) y PR al repositorio de iojs que corresponda. En el caso de ser un artículo de evangelización, también se publicará en [medium](https://medium.com/@iojs_es) y hará un twit.
+Una vez está echo el trabajo y se ha revisado, se pide a el org que lo aprueve. Después de que dos colaboradores den su visto bueno, se hace un merge al repositorio (el merge lo puede hacer la persona que ha hecho el trabajo igualmente) y PR al repositorio de iojs que corresponda. En el caso de ser un artículo de evangelización, también se publicará en [medium](https://medium.com/@iojs_es) y hará un tuit.
 
 Si algo de lo descrito arriba falla, se puede acudir a una de las siguientes situaciones:
 
