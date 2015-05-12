@@ -85,10 +85,19 @@ Evangelización trabaja con el repositorio [iojs-es/evangelism](https://github.c
 
 En este momento hay 4 artículos sin traducir empezando por el [weekly-update.2015-03-13.md](https://github.com/iojs-es/evangelism/tree/master/weekly-updates/weekly-update.2015-03-13.md)
 
-Una vez traducido el artículo se publica en [@medium](https://medium.com/@iojs_es). Si estás en evangelización y has traducido un artículo pero no tienes la cuenta para publicar el artículo [habre un issue](https://github.com/iojs/iojs-es/issues/new).
+Una vez traducido el artículo se publica en [@medium](https://medium.com/@iojs_es). Si estás en evangelización y has traducido un artículo pero no tienes la cuenta para publicar el artículo [abre un issue](https://github.com/iojs/iojs-es/issues/new).
 
 ### Revisión
 
 Trabaja en conjunto con cualquiera de los grupos anteriores para garantizar que los documentos estén correctamente traducidos y no haya errores accidentales y/o de contexto. En concreto:
 
  - Ayuda a construir el [GLOSSARY.md](./GLOSSARY.md)
+
+### Publicación
+
+Una vez está echo el trabajo y se ha revisado, se pide a el org que lo aprueve. Después de que dos colaboradores den su visto bueno, se hace un merge al repositorio (el merge lo puede hacer la persona que ha hecho el trabajo igualmente) y PR al repositorio de iojs que corresponda. En el caso de ser un artículo de evangelización, también se publicará en [medium](https://medium.com/@iojs_es) y hará un tuit.
+
+Si algo de lo descrito arriba falla, se puede acudir a una de las siguientes situaciones:
+
+- [_Rule of thumb_](http://en.wikipedia.org/wiki/Rule_of_thumb):
+el trabajajo ya está hecho, pero no es revisado y/o votado después de dos semanas. Si la persona que lo ha hecho considera que está bien, se puede hacer el merge directamente con el contenido y/o publicarlo sin necesidad de esperar a que como mínimo dos personas del grupo de trabajo lo aprueven.
