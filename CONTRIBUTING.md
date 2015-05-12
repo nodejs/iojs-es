@@ -85,7 +85,7 @@ Evangelización trabaja con el repositorio [iojs-es/evangelism](https://github.c
 
 En este momento hay 4 artículos sin traducir empezando por el [weekly-update.2015-03-13.md](https://github.com/iojs-es/evangelism/tree/master/weekly-updates/weekly-update.2015-03-13.md)
 
-Una vez traducido el artículo se publica en [@medium](https://medium.com/@iojs_es). Si estás en evangelización y has traducido un artículo pero no tienes la cuenta para publicar el artículo [habre un issue](https://github.com/iojs/iojs-es/issues/new).
+Una vez traducido el artículo se publica en [@medium](https://medium.com/@iojs_es). Si estás en evangelización y has traducido un artículo pero no tienes la cuenta para publicar el artículo [abre un issue](https://github.com/iojs/iojs-es/issues/new).
 
 ### Revisión
 
