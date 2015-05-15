@@ -39,6 +39,7 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Traductor) con 
 - Julian Duque ([@julianduque](https://github.com/julianduque))
 - Italo A. Casas ([@italoacasas](https://github.com/italoacasas))
 - Jose Lopez ([@GolloDev](https://github.com/GolloDev))
+- Pablo A. Dorado ([@pandres95](https://github.com/pandres95))
 
 ## The MIT License (MIT)
 
