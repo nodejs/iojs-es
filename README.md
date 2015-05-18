@@ -1,6 +1,6 @@
 # iojs-es
 
-[![Gitter chat](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/iojs/iojs-es)
+[![Gitter chat](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/nodejs/iojs-es)
 
 Localización y traducción de [io.js](https://iojs.org/) a Español
 
