@@ -8,7 +8,7 @@ Puedes acceder a este módulo con:
 
 Esto ofrece enlaces a las clases Gzip/Gunzip, Deflate/Inflate, y
 DeflateRaw/InflateRaw. Cada clase recoge las mismas opciones, y
-es un readable/writable Stream.
+es un Stream del que se puede leer o escribir.
 
 ## Ejemplos
 
@@ -23,8 +23,8 @@ fs.WriteStream.
 
     inp.pipe(gzip).pipe(out);
 
-Se pueden comprimir y descomprimir datos, en un paso, mediante los
-métodos convenientes.
+Se pueden comprimir y descomprimir datos en un solo paso puede hacerse
+usando los métodos convenientes.
 
     var input = '.................................';
     zlib.deflate(input, function(err, buffer) {
@@ -43,9 +43,9 @@ métodos convenientes.
 Para usar este módulo en un cliente o servidor HTTP, usa el
 header
 [accept-encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.3)
-en peticiones, y el header
+en peticiones (requests), y el header
 [content-encoding](http://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.11)
-en respuestas.
+en respuestas (responses).
 
 **Nota: Estos ejemplos están simplificados drásticamente para mostrar
 el concepto básico.** La codificación Zlib puede ser costosa, y los
@@ -110,62 +110,62 @@ compresión involucrado en el uso de zlib.
 
 ## zlib.createGzip([opciones])
 
-Genera un nuevo objeto [Gzip](#zlib_class_zlib_gzip) con unas
+Devuelve un nuevo objeto [Gzip](#zlib_class_zlib_gzip) con unas
 [opciones](#zlib_options).
 
 ## zlib.createGunzip([opciones])
 
-Genera un nuevo objeto [Gunzip](#zlib_class_zlib_gunzip) con unas
+Devuelve un nuevo objeto [Gunzip](#zlib_class_zlib_gunzip) con unas
 [opciones](#zlib_options).
 
 ## zlib.createDeflate([opciones])
 
-Genera un nuevo objeto [Deflate](#zlib_class_zlib_deflate) con unas
+Devuelve un nuevo objeto [Deflate](#zlib_class_zlib_deflate) con unas
 [opciones](#zlib_options).
 
 ## zlib.createInflate([opciones])
 
-Genera un nuevo objeto [Inflate](#zlib_class_zlib_inflate) con unas
+Devuelve un nuevo objeto [Inflate](#zlib_class_zlib_inflate) con unas
 [opciones](#zlib_options).
 
 ## zlib.createDeflateRaw([opciones])
 
-Genera un nuevo objeto [DeflateRaw](#zlib_class_zlib_deflateraw) con unas
+Devuelve un nuevo objeto [DeflateRaw](#zlib_class_zlib_deflateraw) con unas
 [opciones](#zlib_options).
 
 ## zlib.createInflateRaw([opciones])
 
-Genera un nuevo objeto [InflateRaw](#zlib_class_zlib_inflateraw) con unas
+Devuelve un nuevo objeto [InflateRaw](#zlib_class_zlib_inflateraw) con unas
 [opciones](#zlib_options).
 
 ## zlib.createUnzip([opciones])
 
-Genera un nuevo objeto [Unzip](#zlib_class_zlib_unzip) con unas
+Devuelve un nuevo objeto [Unzip](#zlib_class_zlib_unzip) con unas
 [opciones](#zlib_options).
 
 
 ## Clase: zlib.Zlib
 
 No se exporta mediante el módulo `zlib`. Está documentada aquí
-por que es la base para las clases de compresión y decompresión.
+porque es la clase base para las clases "compressor/decompressor".
 
-### zlib.flush([tipo], callback)
+### zlib.flush([kind], callback)
 
-`tipo` es por defecto `zlib.Z_FULL_FLUSH`.
+`kind` es por defecto `zlib.Z_FULL_FLUSH`.
 
 Limpia datos pendientes. No es recomendable hacer uso de esta
-función de forma frívola, pues puede impactar de forma negativa
-en la efectividad del algoritmo de compresión.
+función de forma frívola, limpiezas/vaciamientos prematuros impactan de
+forma negativa en la efectividad del algoritmo de compresión.
 
 ### zlib.params(nivel, estrategia, callback)
 
 Actualiza dinámicamente el nivel y la estrategia de compresión.
-Solo se aplica al algoritmo de desinflado.
+Solo se aplica al algoritmo de desinflado (deflate).
 
 ### zlib.reset()
 
-Reinicializa el compresor y descompresor a los valores por defecto.
-Solo se aplica a los algoritmos de inflación y desinflación.
+Reinicia/Resetea el "compressor" y "decompressor" a los valores por defecto.
+Solo se aplica a los algoritmos de inflado (inflate) y desinflado (deflate).
 
 ## Class: zlib.Gzip
 
@@ -177,23 +177,23 @@ Descomprime un stream gzip.
 
 ## Class: zlib.Deflate
 
-Comprime datos utilizando desinflación.
+Comprime datos utilizando "Deflate".
 
 ## Class: zlib.Inflate
 
-Descomprime datos utilizando inflación.
+Descomprime datos utilizando "Inflate".
 
 ## Class: zlib.DeflateRaw
 
-Comprime datos utilizando desinflación, y no adhiere la cabecera zlib.
+Comprime datos utilizando desinflado, y no adhiere la cabecera zlib.
 
 ## Class: zlib.InflateRaw
 
-Descomprime un stream de desinflación crudo (sin la cabecera zlib).
+Descomprime un stream de desinflado crudo (sin la cabecera zlib).
 
 ## Class: zlib.Unzip
 
-Descomprime un stream comprimido mediante Gzip o desinflación a través
+Descomprime un stream comprimido mediante Gzip o desinflado a través
 de la identificación automática de la cabecera.
 
 ## Métodos de conveniencia
@@ -211,12 +211,12 @@ mismos argumentos pero no necesita el callback.
 ## zlib.deflate(buf[, opciones], callback)
 ## zlib.deflateSync(buf[, opciones])
 
-Comprime un string con desinflación.
+Comprime un string con "Deflate".
 
 ## zlib.deflateRaw(buf[, opciones], callback)
 ## zlib.deflateRawSync(buf[, opciones])
 
-Comprime un string con desinflación en crudo.
+Comprime un string con "deflateRaw".
 
 ## zlib.gzip(buf[, opciones], callback)
 ## zlib.gzipSync(buf[, opciones])
@@ -226,17 +226,17 @@ Comprime un string con Gzip.
 ## zlib.gunzip(buf[, opciones], callback)
 ## zlib.gunzipSync(buf[, opciones])
 
-Descomprime un Buffer con Gunzip.
+Descomprime un Buffer crudo (raw) con Gunzip.
 
 ## zlib.inflate(buf[, opciones], callback)
 ## zlib.inflateSync(buf[, opciones])
 
-Descomprime un Buffer con inflación.
+Descomprime un Buffer crudo con "Inflate".
 
 ## zlib.inflateRaw(buf[, opciones], callback)
 ## zlib.inflateRawSync(buf[, opciones])
 
-Descomprime un Buffer con inflación en crudo.
+Descomprime un Buffer con "InflateRaw".
 
 ## zlib.unzip(buf[, options], callback)
 ## zlib.unzipSync(buf[, options])
@@ -247,7 +247,7 @@ Descomprime un Buffer con Unzip.
 
 <!--type=misc-->
 
-Cada clase necesita un objeto de opciones. Todas las opciones son
+Cada clase requiere un objeto de opciones. Todas las opciones son
 opcionales.
 
 Ten en cuenta que algunas opciones solo son relevantes a la hora de
@@ -279,8 +279,8 @@ Esto es: 128K para un tamaño de pantalla de 15 bits + 128K para un
 nivel de memoria de 8 (valores por defecto) más algunos kilobytes
 para objetos pequeños.
 
-Por ejemplo, si quieres reducir los requerimientos de memoria de 256K
-a 128K, establece las opciones a:
+Por ejemplo, si quieres reducir los requerimientos de memoria por defecto
+de 256K a 128K, establece las opciones a:
 
     { windowBits: 14, memLevel: 7 }
 
@@ -366,7 +366,7 @@ Valores disponibles para el campo `data_type`.
 * `zlib.Z_ASCII`
 * `zlib.Z_UNKNOWN`
 
-El método de compresión por desinflación (el único soportado en esta
+El método de compresión por Deflate (el único soportado en esta
 versión).
 
 * `zlib.Z_DEFLATED`
