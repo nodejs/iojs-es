@@ -2,13 +2,13 @@
 
 [![Gitter chat](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/nodejs/iojs-es)
 
-Localización y traducción de [io.js](https://iojs.org/) a Español
+Localización y traducción de [Node.js](https://node.org/) a Español
 
 ## ¿Quieres colaborar?
-Échale un vistazo al [CONTRIBUTING.md](./CONTRIBUTING.md). Si hay algo que no te quede claro, abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Colaborador) con el título *Colaborador* y cuéntanos.
+Échale un vistazo al [CONTRIBUTING.md](./CONTRIBUTING.md). Si hay algo que no te quede claro, abre un [issue](https://github.com/nodejs/iojs-es/issues/new?title=Colaborador) con el título *Colaborador* y cuéntanos.
 
 ## ¿Quieres ayudarnos a traducir?
-Abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Traductor) con el título *Traductor* y te indicaremos los documentos que están pendientes de traducción o revisión.
+Abre un [issue](https://github.com/nodejs/iojs-es/issues/new?title=Traductor) con el título *Traductor* y te indicaremos los documentos que están pendientes de traducción o revisión.
 
 ## En Redes Sociales
 
@@ -43,7 +43,7 @@ Abre un [issue](https://github.com/iojs/iojs-es/issues/new?title=Traductor) con 
 
 ## The MIT License (MIT)
 
-Copyright (c) 2015 - io.js
+Copyright (c) 2015 - Node.js
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
