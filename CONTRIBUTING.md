@@ -2,14 +2,14 @@
 
 Muy buenas, te dejamos aquí lo más importante para empezar a colaborar. Estamos organizados en Grupos de Trabajo. En el enlace de abajo tienes un resumen de cada uno
 
-https://github.com/iojs/iojs-es/issues/83
+https://github.com/nodejs/iojs-es/issues/83
 
 Elige un _máximo de dos grupos de trabajo_ y escribe que quieres participar en el issue correspondiente a ese grupo:
 
-* [Website](https://github.com/iojs/iojs-es/issues/96)
-* [Documentación](https://github.com/iojs/iojs-es/issues/94)
-* [Evangelización](https://github.com/iojs/iojs-es/issues/95)
-* [Revisión](https://github.com/iojs/iojs-es/issues/97)
+* [Website](https://github.com/nodejs/iojs-es/issues/96)
+* [Documentación](https://github.com/nodejs/iojs-es/issues/94)
+* [Evangelización](https://github.com/nodejs/iojs-es/issues/95)
+* [Revisión](https://github.com/nodejs/iojs-es/issues/97)
 
 Cualquier duda, pregúntala en este repositorio o [en gitter](https://gitter.im/iojs/iojs-es).
 
@@ -32,7 +32,7 @@ Para estar al día haz lo siguiente
 ```sh
 # las dos primeras lineas solo hay que hacerlas una vez
 git clone https://github.com/iojs-es/website.git && cd website
-git remote add upstream https://github.com/iojs/website.git
+git remote add upstream https://github.com/nodejs/website.git
 # estas dos cada vez que quieras ver si hay algo que actualizar
 git remote update
 git merge master origin/master
@@ -64,8 +64,8 @@ Si no recuerdas qué tenias puesto como `origin` y qué como `upstream` haz lo s
 git remote -v
 origin	https://github.com/iojs-es/website.git (fetch)
 origin	https://github.com/iojs-es/website.git (push)
-upstream	https://github.com/iojs/website.git (fetch)
-upstream	https://github.com/iojs/website.git (push)
+upstream	https://github.com/nodejs/website.git (fetch)
+upstream	https://github.com/nodejs/website.git (push)
 ```
 
 y así ya sabes que `git push origin actualiza-<documento>` es el iojs-es/website
@@ -77,7 +77,7 @@ Documentación trabaja con el repositorio [iojs-es/io.js](https://github.com/ioj
 Estamos a la espera de que io.js integre las traducciones de la API en la web (y aún parece que tardará un tiempo). Así que este grupo puede trabajar sin prisa.
 
 #### Issues de referencia:
- - io.js API localization: open questions. En [ iojs/website#211](https://github.com/iojs/website/issues/211)
+ - io.js API localization: open questions. En [ nodejs/website#211](https://github.com/nodejs/website/issues/211)
 
 ### Evangelización
 
@@ -85,7 +85,7 @@ Evangelización trabaja con el repositorio [iojs-es/evangelism](https://github.c
 
 En este momento hay 4 artículos sin traducir empezando por el [weekly-update.2015-03-13.md](https://github.com/iojs-es/evangelism/tree/master/weekly-updates/weekly-update.2015-03-13.md)
 
-Una vez traducido el artículo se publica en [@medium](https://medium.com/@iojs_es). Si estás en evangelización y has traducido un artículo pero no tienes la cuenta para publicar el artículo [abre un issue](https://github.com/iojs/iojs-es/issues/new).
+Una vez traducido el artículo se publica en [@medium](https://medium.com/@iojs_es). Si estás en evangelización y has traducido un artículo pero no tienes la cuenta para publicar el artículo [abre un issue](https://github.com/nodejs/iojs-es/issues/new).
 
 ### Revisión
 
