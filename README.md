@@ -1,14 +1,14 @@
-# iojs-es
+# Node.js en Español
 
-[![Gitter chat](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/nodejs/iojs-es)
+[![Gitter chat](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/nodejs/nodejs-es)
 
 Localización y traducción de [Node.js](https://node.org/) a Español
 
 ## ¿Quieres colaborar?
-Échale un vistazo al [CONTRIBUTING.md](./CONTRIBUTING.md). Si hay algo que no te quede claro, abre un [issue](https://github.com/nodejs/iojs-es/issues/new?title=Colaborador) con el título *Colaborador* y cuéntanos.
+Échale un vistazo al [CONTRIBUTING.md](./CONTRIBUTING.md). Si hay algo que no te quede claro, abre un [issue](https://github.com/nodejs/nodejs-es/issues/new?title=Colaborador) con el título *Colaborador* y cuéntanos.
 
 ## ¿Quieres ayudarnos a traducir?
-Abre un [issue](https://github.com/nodejs/iojs-es/issues/new?title=Traductor) con el título *Traductor* y te indicaremos los documentos que están pendientes de traducción o revisión.
+Abre un [issue](https://github.com/nodejs/nodejs-es/issues/new?title=Traductor) con el título *Traductor* y te indicaremos los documentos que están pendientes de traducción o revisión.
 
 ## En Redes Sociales
 
