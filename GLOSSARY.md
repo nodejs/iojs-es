@@ -55,6 +55,7 @@ some consistence, here you can find a glossary.
 
 #l
  * language: idioma
+ * language (programming): lenguaje
  * lock: bloquear
 
 #s
