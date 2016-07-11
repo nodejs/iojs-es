@@ -1,7 +1,7 @@
 ---
 layout: download-releases.hbs
 title: Versiones Anteriores
-modules: "<code>NODE_MODULE_VERSION</code> se refiere al número de versión ABI (application binary interface) de Node.js, usado para determinar cuales versiones de los binarios de los complementos en C++ pueden ser cargados sin necesidad de ser re-compilados. Este solía ser almacenado como un valor hexadecimal en versiones anteriores, pero ahora es representado como un entero."
+modules: "<code>NODE_MODULE_VERSION</code> se refiere al número de versión ABI (application binary interface) de Node.js, usado para determinar que versiones de los binarios de los complementos en C++ pueden ser cargados sin necesidad de ser re-compilados. Este solía ser almacenado como un valor hexadecimal en versiones anteriores, pero ahora es representado como un entero."
 ---
 
 ### io.js &amp; Node.js

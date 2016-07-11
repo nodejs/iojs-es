@@ -1,11 +1,11 @@
 ---
 layout: page.hbs
-title: Instalando Node.js usando un manejador de paquetes
+title: Instalando Node.js usando un gestor de paquetes
 ---
 
-# Instalando Node.js usando un manejador de paquetes
+# Instalando Node.js usando un gestor de paquetes
 
-***Nota:*** Los paquetes en esta página son mantenidos y soportados por sus respectivos responsables, **no** el equipo central de Node.js. Por favor reporte cualquier problema que usted encuentre al mantenedor del paquete. Sí su problema resulta ser un error en Node.js mismo, el mantenedor reportará y escalará el error.
+***Nota:*** Los paquetes en esta página son mantenidos y soportados por sus respectivos responsables, **no** el equipo central de Node.js. Por favor reporte cualquier problema que usted encuentre al responsable del paquete. Sí su problema resulta ser un error en Node.js mismo, el encargado reportará y escalará el error.
 
 ----------------------------
 
@@ -38,7 +38,7 @@ También incluidas: **Linux Mint**, **Linux Mint Debian Edition (LMDE)**, **elem
 
 Node.js está disponible desde el repositorio de binarios para Debian y Ubuntu de [NodeSource](https://nodesource.com) (antiguamente soportado por [Chris Lea](https://github.com/chrislea) en Launchpad mediante PPA). Soporte para este repositorio y sus scripts, pueden ser encontrados en GitHub bajo [nodesource/distributions](https://github.com/nodesource/distributions).
 
-**NOTA:** Si usted esta usando Ubuntu Precise ó Debian Wheezy, Usted probablemente deba leer sobre [ejecutar Node.js >= 4.x en distribuciones antiguas](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
+**NOTA:** Si usted está usando Ubuntu Precise ó Debian Wheezy, Usted probablemente deba leer sobre [ejecutar Node.js >= 4.x en distribuciones antiguas](https://github.com/nodesource/distributions/blob/master/OLDER_DISTROS.md).
 
 ```bash
 curl -sL https://deb.nodesource.com/setup_4.x | sudo -E bash -
@@ -186,7 +186,7 @@ Paquetes oficiales para **Fedora** de [Node.js](https://apps.fedoraproject.org/p
 sudo yum install nodejs npm
 ```
 
-Buscando las últimas actualizaciones?  [Instalelas desde updates-testing.](https://fedoraproject.org/wiki/QA:Updates_Testing)
+Buscando las últimas actualizaciones?  [Instálelas desde updates-testing.](https://fedoraproject.org/wiki/QA:Updates_Testing)
 
 **Enterprise Linux** (RHEL y CentOS) Los usuarios pueden usar paquetes de Node.js y npm desde el repositorio [EPEL](https://fedoraproject.org/wiki/EPEL).
 
@@ -196,7 +196,7 @@ Instale el paquete RPM *epel-release* para su versión (Encuentrelo en la págin
 sudo yum install nodejs npm --enablerepo=epel
 ```
 
-Buscando las últimas actualizaciones?  [Instalelas desde epel-testing.](https://fedoraproject.org/wiki/EPEL/testing)
+Buscando las últimas actualizaciones?  [Instálelas desde epel-testing.](https://fedoraproject.org/wiki/EPEL/testing)
 
 **Arquitecturas disponibles:**
 
@@ -210,7 +210,7 @@ Buscando las últimas actualizaciones?  [Instalelas desde epel-testing.](https:/
 * **RHEL 6** (i686/x86_64)
 * **RHEL 7** (x86_64)
 
-Adicionalmente, versiones de **CentOS** y **Scientific Linux** correspondientes a las versiones arriba descritas de RHEL están también oficialmente soportadas para todos los paquetes EPEL, incluyendo nodejs.  Amazon Linux no está oficialmente soportado por EPEL debido a incompatibilidades significativas previamente reportadas en la lista de correo de epel-devel, sin embargo usted encontrará que por lo menos nodejs al menos funciona.
+Adicionalmente, versiones de **CentOS** y **Scientific Linux** correspondientes a las versiones arriba descritas de RHEL están también oficialmente soportadas para todos los paquetes EPEL, incluyendo nodejs.  Amazon Linux no está oficialmente soportado por EPEL debido a incompatibilidades significativas previamente reportadas en la lista de correo de epel-devel, sin embargo usted encontrará que por lo menos nodejs funciona.
 
 **Versiones de Fedora soportadas:**
 
@@ -222,7 +222,7 @@ Adicionalmente, versiones de **CentOS** y **Scientific Linux** correspondientes 
 
 ## FreeBSD y OpenBSD
 
-Node.js esta disponible mediante el sistema de ports.
+Node.js está disponible mediante el sistema de ports.
 
 ```bash
 /usr/ports/www/node
@@ -325,7 +325,7 @@ Instale el paquete binario:
 pkgin -y install nodejs
 ```
 
-Ó compilelo manualmente desde pkgsrc:
+Ó compílelo manualmente desde pkgsrc:
 
 ```bash
 cd pkgsrc/lang/nodejs && bmake install
