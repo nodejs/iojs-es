@@ -6,7 +6,7 @@ title: Seguridad
 
 ## Reporte de errores
 
-Todos los problemas de seguridad en Node.js son tomados seriamente y deben ser reportados enviando un correo a [security@nodejs.org](mailto:security@nodejs.org).
+Todos los problemas de seguridad en Node.js se tratan seriamente y deben ser reportados enviando un correo a [security@nodejs.org](mailto:security@nodejs.org).
 Este será recibido por un subgrupo del equipo central encargado de los problemas de seguridad.
 
 Su correo será revisado en 24 horas, y usted recibirá una respuesta detallada a su mensaje en las siguientes 48 horas indicando los pasos a seguir en el proceso de su reporte.
@@ -52,5 +52,5 @@ Las notificaciones de seguridad serán distribuidas usando los siguientes medios
 
 ## Comentarios sobre esta política
 
-Si usted tiene sugerencias sobre como puede ser mejorado ese proceso, por favor envié un [pull request](https://github.com/nodejs/nodejs.org)
+Si usted tiene sugerencias sobre como puede ser mejorado ese proceso, por favor envíe un [pull request](https://github.com/nodejs/nodejs.org)
 ó un mensaje a [security@nodejs.org](mailto:security@nodejs.org) para discutirlo.
