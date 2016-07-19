@@ -16,7 +16,7 @@ downloads:
 additional:
     headline: Plataformas adicionales
     intro: >
-        Miembros de la comunidad de Node.js proveen paquetes pre-compilados de forma no oficial para plataformas adicionales no soportadas por el equipo central de Node.js que pueden no estar al mismo nivel de las versiones actuales oficiales de Node.js.
+        Miembros de la comunidad de Node.js proveén paquetes pre-compilados de forma no oficial para plataformas adicionales no soportadas por el equipo central de Node.js que pueden no estar al mismo nivel de las versiones actuales oficiales de Node.js.
     platform: Plataforma
     provider: Proveedor
 ---
