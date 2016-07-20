@@ -359,7 +359,7 @@ xbps-install -Sy nodejs
 
 Simplemente descargue el [Instalador para Windows](http://nodejs.org/#download) directamente desde el sitio web de [nodejs.org](http://nodejs.org).
 
-### Alternatives
+### Alternativas
 
 Usando **[Chocolatey](http://chocolatey.org)**:
 
