@@ -21,7 +21,7 @@ y que proveé un marco para la administración a largo plazo de un ecosistema qu
 <div style="text-align:center; margin-bottom:5px">
     <strong>
         <a href="//www.slideshare.net/NodejsFoundation/node-foundation-membership-overview-20150505"
-            title="Node.js Foundation Membership Overview 20150505"
+            title="Visión general de la membresía en la fundación de Node.js 20150505"
             target="_blank">
             Visión general de la membresía en la fundación de Node.js 2015-05-05
         </a>

@@ -5,8 +5,8 @@ trademark: Trademark
 ---
 # Acerca de Node.js&reg;
 
-Concebido como un entorno de ejecución de JavaScript orientado a eventos asíncronos, Node esta diseñado
-para construir aplicaciones de red escalables. En la siguiente aplicación de ejemplo "hola mundo", se pueden
+Concebido como un entorno de ejecución de JavaScript orientado a eventos asíncronos, Node está diseñado
+para construir aplicaciones en red escalables. En la siguiente aplicación de ejemplo "hola mundo", se pueden
 manejar muchas conexiones concurrentes. Por cada conexión el *callback* será ejecutado, sin embargo
 si no hay trabajo que hacer Node estará durmiendo.
 
@@ -41,18 +41,18 @@ Si alguno de estos términos no le es familiar, hay un artículo completo en
 
 Node tiene un diseño similar y está influenciado por sistemas como
 [Event Machine][] de Ruby ó [Twisted][] de Python. Node lleva el modelo de eventos un poco
-más alla, este presenta un [bucle de eventos][] como una entorno en vez de una librería. En otros sistemas siempre existe una llamada
+más allá, este presenta un [bucle de eventos][] como un entorno en vez de una librería. En otros sistemas siempre existe una llamada
 que bloquea para iniciar el bucle de eventos. El comportamiento es típicamente definido a través de *callbacks* al inicio
 del script y al final se inicia el servidor mediante una llamada de bloqueo como `EventMachine::run()`. En Node no existe esta llamada.
-Node simplemente ingresa el bucle de eventos luego de ejecutar el script de entrada.
+Node simplemente ingresa el bucle de eventos después de ejecutar el script de entrada.
 Node sale del bucle de eventos cuando no hay más *callbacks* que ejecutar. Se comporta de una
-forma similar a JavaScript en el navegador - el bucle de eventos esta oculto al usuario.
+forma similar a JavaScript en el navegador - el bucle de eventos está oculto al usuario.
 
 HTTP es ciudadano de primera clase en Node, diseñado con operaciones de streaming y baja latencia
 en mente. Esto hace a Node candidato para ser la base de una librería o un framework web.
 
-Solo por que Node este diseñado sin hilos, no significa que usted no puede
-aprovechar los multiples cores de su sistema. Procesos hijos pueden ser lanzados
+Solo porque Node esté diseñado sin hilos, no significa que usted no puede
+aprovechar los múltiples cores de su sistema. Procesos hijos pueden ser lanzados
 usando nuestra API [`child_process.fork()`][], la cual está diseñada para comunicarse
 fácilmente con el proceso principal. Construida sobre la misma interfaz está el módulo [`cluster`][],
 el cual permite compartir sockets entre procesos para activar el balanceo de cargas en sus múltiples cores.
