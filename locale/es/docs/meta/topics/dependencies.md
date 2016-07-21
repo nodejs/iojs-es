@@ -59,7 +59,7 @@ Para una rapida comprecion y descomprecion, Node.Js usa esta libreria estandar d
 
 - [Documentacion](http://www.zlib.net/manual.html)
 
-## Tools
+## Herramientas
 
 ### npm
 
