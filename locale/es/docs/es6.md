@@ -1,8 +1,8 @@
 ---
-title: ECMAScript 2015 (ES6) and beyond
+title: ES6 y más allá
 layout: docs.hbs
 ---
-# ECMAScript 2015 (ES6) y mas alla
+# ES6 y más allá
 
 Node.Js esta construyendo en nuevas versiones de [motor V8](https://developers.google.com/v8/). Manteniendo dia a dia, con las ultimas versiones, podemos asegurar que tendera nuevas caracteristas de [JavaScript ECMA-262 specification](http://www.ecma-international.org/publications/standards/Ecma-262.htm) que seran llevadas por los desarrolladores Node.js a su tiempo y forma, así como las continuas mejoras de rendimiento y estabilidad.
 
