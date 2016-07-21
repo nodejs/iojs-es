@@ -7,8 +7,6 @@ layout: docs.hbs
 
 Aqui estan todas las dependecias de Node.Js con las cuales trabaja
 
-There are several dependencies that Node.js relies on to work the way it does.
-
 - [Librerias](#Librerias)
   - [V8](#V8)
   - [libuv](#libuv)
