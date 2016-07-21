@@ -6,7 +6,7 @@ layout: foundation.hbs
 # Fundación de Node.js
 
 La misión de la fundación de Node.js es permitir la adopción generalizada, ayudar a acelerar el desarrollo de Node.js
-y otros módulos relacionados, a través de un modelo de gobierno abierto que alienta la participación, contribución técnica
+y otros módulos relacionados, a través de un modelo de gobierno abierto que fomenta la participación, contribución técnica
 y que proveé un marco para la administración a largo plazo de un ecosistema que invierte en el éxito Node.js.
 
 ## Visión general

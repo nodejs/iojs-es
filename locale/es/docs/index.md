@@ -19,7 +19,7 @@ La [Referencia de la API](/api/) proporciona información detallada sobre una fu
 documentación indica que argumentos acepta un método, el valor que retorna este método y que errores pueden estar
 relacionados al mismo. También indica qué métodos están disponibles para las diferentes versiones de Node.js
 
-Esta documentación describe los módulos incluidos que proporciona Node.js. Esta no documenta los módulos que proporciona la comunidad.
+También describe los módulos incluidos que proporciona Node.js, mas no documenta los módulos que proporciona la comunidad.
 
 <div class="highlight-box">
     <h4>¿Buscando la referencia de la API para una versión anterior?</h4>
