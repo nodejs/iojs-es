@@ -32,7 +32,7 @@ La comportamiento actual del argumento `--harmony` en Nodejs, estas caracteristi
 
 ## ¿Cómo encuentro la versión del motor V8 con una versión particular de Node.js?
 
-Node.js porve una simple via para ver la lista de **todas** las dependecias y sus respectivas versiones, que se entregan con el binario, estan especificados en el objeto global `process`. En este caso el motor V8, se puede ejecutar en su terminal asi.
+Node.js porve un simple objeto de **todas** las dependecias y sus respectivas versiones, que se entregan con el binario, estan especificados en el objeto global `process`. En este caso el motor V8, se puede ejecutar en su terminal asi.
 
 ```bash
 node -p process.versions.v8
