@@ -34,7 +34,7 @@
         "text": "Acerca",
         "governance": {
             "link": "about/governance",
-            "text": "Gobernanza"
+            "text": "Gobierno"
         },
         "workinggroups": {
             "link": "about/working-groups",
@@ -119,7 +119,7 @@
         },
         "tsc": {
             "link": "foundation/tsc",
-            "text": "Gobernanza técnica"
+            "text": "Gobierno técnico"
         },
         "itn": {
              "link": "foundation/in-the-news",
