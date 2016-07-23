@@ -3,7 +3,7 @@ title: Participa
 layout: contribute.hbs
 ---
 
-# Alentamos toda clase de contribuciones de la comunidad.
+# Fomentamos toda clase de contribuciones de la comunidad.
 
 La comunidad de Node.js es grande, inclusiva y alegre de ayudar al mayor número de usuarios
 a contribuir de cualquier forma posible. Si usted quiere [reportar un error](https://github.com/nodejs/node/issues),
@@ -13,7 +13,7 @@ a contribuir de cualquier forma posible. Si usted quiere [reportar un error](htt
 
 ## Discusión
 
-- La [lista de errores en ](https://github.com/nodejs/node/issues) es el lugar para discutir las características del core de Node.js.
+- La [lista de errores en ](https://github.com/nodejs/node/issues) es el lugar para discutir las características del núcleo de Node.js.
 
 - Para chatear en tiempo real sobre el desarrollo de Node vaya a `irc.freenode.net` en el canal `#node.js` usando un [cliente de IRC](http://es.wikipedia.org/wiki/Anexo:Clientes_IRC) ó conéctese con su navegador al canal usando [WebChat de freenode](http://webchat.freenode.net/?channels=node.js).
 
@@ -32,7 +32,7 @@ a contribuir de cualquier forma posible. Si usted quiere [reportar un error](htt
 
 - La [Documentación oficial de la API](/api) detalla la API de Node.
 
-- [NodeSchool.io](http://nodeschool.io) le enseñará conceptos de Node.js usando juegos en la línea de comandos de forma interactiva.
+- [NodeSchool.io](http://nodeschool.io) le enseñará conceptos de Node.js de forma interactiva mediante juegos utilizando la línea de comandos.
 
 - La [etiqueta de Node.js en StackOverflow](http://stackoverflow.com/questions/tagged/node.js) colecciona nueva información cada día.
 
@@ -50,12 +50,12 @@ a contribuir de cualquier forma posible. Si usted quiere [reportar un error](htt
 - [Comunidad Alemana de Node.js](http://nodecode.de)
 - [Comunidad en Google+ de usuarios Franceses de Node.js](https://plus.google.com/communities/113346206415381691435)
 - [Comunidad de Hungría(Magyar)](http://nodehun.blogspot.com/)
-- [Grupo de Iran en persa](http://nodejs.ir)
+- [Grupo de Irán en persa](http://nodejs.ir)
 - [Grupo de usuarios de Japón](http://nodejs.jp/)
 - [Sitio de Node.js para Kiwis](http://nodejs.geek.nz/)
 - [Sitio Ruso](http://node-center.ru/)
 - [Comunidad Servia de Node.js](http://nodejs.rs/)
 - [Comunidad de lenguaje hispano](http://nodehispano.com)
-- [Comunidad de Taiwan](http://nodejs.tw)
+- [Comunidad de Taiwán](http://nodejs.tw)
 - [Comunidad de Nicaragua de Node.js](http://nodenica.com/)
 - [Comunidad Coreana de Node.js](http://nodejs.github.io/nodejs-ko/)
