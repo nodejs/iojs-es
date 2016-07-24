@@ -5,13 +5,13 @@ layout: contribute.hbs
 
 # Contribuye
 
-¡Gracias! Por tu interés para contribuir en Node.Js, nosotros tenemos múltiples formas y lugares en los que puedes contribuir y estamos aquí para ayudar a facilitar eso.
+¡Gracias! Por tu interés para contribuir en Node.Js, nosotros tenemos múltiples formas y lugares en los que puedes contribuir y estamos aquí, para ayudar a facilitar eso.
 
 ## Reporte un problema/issue
 
-Si has encontrado algo que crees que es un problema con Node.Js por favor no dude presentar el problema en los Issues en el proyecto de Github. Recuerda que debes decir el procedimiento que ejecutaste, debe ser reproducible, no debe incluir ningún dependencias externas, y en inglés. Es decir en ese caso de la prueba se puede ejecutar el error sin nada más que Node.Js.
+Si usted a encontrado algo que cree que es un problema con Node.Js por favor no dude presentar el problema en los Issues en el proyecto de Github. Recuerde que debe mencionar el procedimiento que ejecuto, debe ser reproducible, no debe incluir  ningún dependencias externas, y en inglés. Es decir, que se ejecutar el mismo error sin nada mas que Node.Js.
 
-Al informar del problema necesitamos la mayor cantidad de información que puedas darnos sobre tu entorno. Nunca se sabe que información será importante para resolver el problema. Por favor incluya estos datos.
+Al informar del problema necesitamos la mayor cantidad de información, que usted darnos sobre tu entorno. Nunca se sabe que información será importante para resolver el problema. Por favor incluya estos datos.
 
 * Versión de Node.Js
 * Plataforma, en este caso donde está corriendo (OS X, SunOS, Linux, Windows, etc..)
@@ -31,4 +31,4 @@ Antes de hacer cualquier contribución puede ser aceptado y en cualquier parte d
 
 ## Conviértase en un colaborador
 
-Recuerda que al convertirse en un colaborador, tus contribuciones son de mayor impacto para el proyecto. Ellos pueden ayudar a otros contribuyentes y colaboradores mediante la revisión de sus aportes, colaboración de resolución de problemas (Issues) y tomar parte en la dirección que llevará el proyecto. Node.js siempre está buscando personas que estén interesadas en convertirse en colaboradores. Si te interesa, tendrás que seguir la [Política de Desarrollo Node.js](/es/get-involved/development/)
+Recuerde que al convertirse en un colaborador, sus contribuciones son de mayor impacto para el proyecto. Ellos pueden ayudar a otros contribuyentes y colaboradores mediante la revisión de sus aportes, colaboración de resolución de problemas (Issues) y tomar parte en la dirección que llevará el proyecto. Node.js siempre está buscando personas que estén interesadas en convertirse en colaboradores. Si le interesa, tendra que seguir la [Política de Desarrollo Node.js](/es/get-involved/development/)
