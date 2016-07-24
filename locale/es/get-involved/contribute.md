@@ -9,7 +9,7 @@ layout: contribute.hbs
 
 ## Reporte un problema/issue
 
-Si usted a encontrado algo que cree que es un problema con Node.Js por favor no dude presentar el problema en los Issues en el proyecto de Github. Recuerde que debe mencionar el procedimiento que ejecuto, debe ser reproducible, no debe incluir  ningún dependencias externas, y en inglés. Es decir, que se ejecutar el mismo error sin nada mas que Node.Js.
+Si usted a encontrado algo que cree que es un problema con Node.Js por favor no dude presentar el problema en los Issues en el proyecto de Github. Recuerde que debe mencionar el procedimiento que ejecuto, debe ser reproducible, no debe incluir  ningún dependencias externas, y en inglés. Es decir, se podra ejecutar el mismo error solo con Node.Js.
 
 Al informar del problema necesitamos la mayor cantidad de información, que usted darnos sobre tu entorno. Nunca se sabe que información será importante para resolver el problema. Por favor incluya estos datos.
 
