@@ -5,7 +5,7 @@ layout: contribute.hbs
 
 # Contribuye
 
-¡Gracias! Por su interés para contribuir en Node.Js, nosotros tenemos múltiples formas y lugares en los que puedes contribuir y estamos aquí, para ayudar a facilitar eso.
+¡Gracias! Por su interés para contribuir en Node.Js, nosotros tenemos múltiples formas y lugares, en los cuales usted puede contribuir y estamos aquí, para ayudar a facilitar eso.
 
 ## Reporte un problema/issue
 
