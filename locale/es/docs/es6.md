@@ -20,7 +20,7 @@ En la Web [node.green](http://node.green) provee un excelente resumen de las car
 
 Las nuevas características, que estamos incorporando para el motor V8. Generalmente se hablan, y se espera que sean lanzadas en las versiones futuras de Node.Js, pero no sabemos cuando.
 
-Usted puede ver la lista de *in progress*, estas caracteristicas estan disponibles en cada versión final de Node.Js puede verlas con el argumento `--v8-options`. Recuerde que estas características están incompletas en el motor V8, uselas bajo su propio riesgo.
+Usted puede leer la lista de *in progress*, estas caracteristicas estan disponibles en cada versión final de Node.Js puede verlas con el argumento `--v8-options`. Recuerde que estas características están incompletas en el motor V8, uselas bajo su propio riesgo.
 
 ```bash
 node --v8-options | grep "in progress"
@@ -28,7 +28,7 @@ node --v8-options | grep "in progress"
 
 ## En mi infraestructura se esta usando el argumento `--harmony`. ¿Debería quitarlo?
 
-La comportamiento actual del argumento `--harmony` en Nodejs, estas características están activas en **staged**. Pero antes de todo, es un sinónimo a `--es_staging`. Como se mencionó anteriormente, estas son características, aun son inestables. Si quieres ir a lo seguro, especialmente en entornos de producción, deberia considerar la eliminación de ese argumento del runtime hasta que las características esten forma predeterminada en V8 y, en consecuencia, en Node.js. Si, mantiene el argumento activado, usted debe estar preparado para más actualizaciones Node.js para romper su código dado que la semántica pueda cambiar.
+La comportamiento actual del argumento `--harmony` en Nodejs, estas características están activas en **staged**. Pero antes de todo, es un sinónimo a `--es_staging`. Como se mencionó anteriormente, estas son características, aun son inestables. Si usted desea ir a lo seguro, especialmente en entornos de producción, deberia considerar la eliminación de ese argumento del runtime hasta que las características esten forma predeterminada en V8 y, en consecuencia, en Node.js. Si, mantiene el argumento activado, usted debe estar preparado para más actualizaciones Node.js para romper o modificarlo su código dado que la semántica puede cambiar.
 
 ## ¿Cómo encuentro la versión del motor V8 con una versión particular de Node.js?
 
