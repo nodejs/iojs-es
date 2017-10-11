@@ -1,6 +1,6 @@
 # Node.js en Español
 
-[![Gitter chat](https://badges.gitter.im/Join Chat.svg)](https://gitter.im/nodejs/nodejs-es)
+[![Gitter chat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/nodejs/nodejs-es)
 
 Localización y traducción de [Node.js](https://node.org/) a Español
 
