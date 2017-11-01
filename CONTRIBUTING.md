@@ -100,4 +100,4 @@ Una vez está echo el trabajo y se ha revisado, se pide a el org que lo aprueve.
 Si algo de lo descrito arriba falla, se puede acudir a una de las siguientes situaciones:
 
 - [_Rule of thumb_](http://en.wikipedia.org/wiki/Rule_of_thumb):
-el trabajajo ya está hecho, pero no es revisado y/o votado después de dos semanas. Si la persona que lo ha hecho considera que está bien, se puede hacer el merge directamente con el contenido y/o publicarlo sin necesidad de esperar a que como mínimo dos personas del grupo de trabajo lo aprueven.
+el trabajajo ya está hecho, pero no es revisado y/o votado después de dos semanas. Si la persona que lo ha hecho considera que está bien, se puede hacer el merge directamente con el contenido y/o publicarlo sin necesidad de esperar a que como mínimo dos personas del grupo de trabajo lo aprueben.
